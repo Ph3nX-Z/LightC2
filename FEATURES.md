@@ -15,7 +15,7 @@
 * DB format
 * Server multithreaded process
 * Client cli
-
+* Possibilité de mettre en place des modules (host un script powershell et iex en runtime)
 
 
 
