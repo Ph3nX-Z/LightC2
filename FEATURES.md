@@ -16,6 +16,9 @@
 * Server multithreaded process
 * Client cli
 * Possibilité de mettre en place des modules (host un script powershell et iex en runtime)
+* Messages de signalisation sur une page dediée pour avoir le status de l'agent
+* Jitter et timeout (0 par defaut, interactif)
+* Pipename hardcodé pour execution des commandes et recuperation stdout via pipe
 
 
 
