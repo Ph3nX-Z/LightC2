@@ -5,13 +5,14 @@
 * Possibility to execute-assembly (powershell)
 * Possibility to migrate shell
 * Malleable loader templates and loader store
-* Shellcode store
+* Shellcode store (only bin)
 * Template store for basic things like adding a local administrator via a service
 * Possibility to upload files and make it available from the c2 (upload or host)
 * possibility to stage the shellcodes
 * authentication on the c2 server (from cli)
 * Team server and client differents (according to the arguments -client / -server)
 * Possibility to use system proxy
+* DB format
 
 
 
