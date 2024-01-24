@@ -19,7 +19,7 @@
 * Messages de signalisation sur une page dediée pour avoir le status de l'agent
 * Jitter et timeout (0 par defaut, interactif)
 * Pipename hardcodé pour execution des commandes et recuperation stdout via pipe
-* Mettre des champs remplacable au niveau des templates (pouvoir afficher un prompt en fonctiond d'un fichier conf donné par l'utilisateur pour configurer une template)
+* Mettre des champs remplacable au niveau des templates (pouvoir afficher un prompt en fonctiond d'un fichier conf donné par l'utilisateur pour configurer une template), avec characteres a remplacer, description et typage de l'entrée utilisateur
 
 
 
