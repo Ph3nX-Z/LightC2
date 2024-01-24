@@ -21,6 +21,7 @@
 * Pipename hardcodé pour execution des commandes et recuperation stdout via pipe
 * Mettre des champs remplacable au niveau des templates (pouvoir afficher un prompt en fonctiond d'un fichier conf donné par l'utilisateur pour configurer une template), avec characteres a remplacer, description et typage de l'entrée utilisateur
 * Compilation via make, le fichier make doit etre fourni par l'utilisateur avec une commande de compilation pour chaques loaders, si aucune methode n'est entrée, il prendra une chaine par defaut
+* Handle des ^C dans le shell
 
 
 
