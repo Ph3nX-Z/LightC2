@@ -13,6 +13,8 @@
 * Team server and client differents (according to the arguments -client / -server)
 * Possibility to use system proxy
 * DB format
+* Server multithreaded process
+* Client cli
 
 
 
