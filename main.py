@@ -96,6 +96,8 @@ LightC2 Client - By Ph3nX
 """
         print(header)
         client = CLI_Client(teamserver,username,password,register,register_key)
+        if register:
+            print(client.register_user())
         client.cli_main_loop()
         #print(client.is_api_alive())
         #print(client.authenticate())

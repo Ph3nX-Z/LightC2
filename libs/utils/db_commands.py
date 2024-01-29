@@ -50,5 +50,9 @@ def stop_listener_update_db(port:int)->str:
     return command
 
 def is_listener_started(port:int)->str:
-    command = f"SELECT active FROM listeners WHERE port=={port}"
+    command = f"SELECT active FROM listeners WHERE port=={port};"
+    return command
+
+def rm_listener_from_db(port:int)->str:
+    command = f"DELETE FROM listeners WHERE port=={port};"
     return command

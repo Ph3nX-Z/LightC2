@@ -46,36 +46,44 @@ class C2_Rest_API:
         def index():
             return "Welcome in LightC2's Rest API, check documentation for more informations"
         
-        @api.route("/auth",methods=["POST"])
+        @api.route("/auth",methods=["POST","GET"])
         def auth():
-            data_from_post = request.json #curl -X POST https://127.0.0.1:8375/auth/ -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"data":"coucou"}' -k
-            username = data_from_post["username"]
-            password = data_from_post["password"]
-            log_info(f"Trying to authenticate '{username}'","running")
-            if re.match(r"^[a-z0-9_-]+$",username):
-                hash = db_exec(check_user_in_db(username),self.db_path)
-                if len(hash)!=0:
-                    retained_hash = hash[0][0]
-                    if verify_password(retained_hash,password,username):
-                        log_info(f"Authenticated '{username}'","success")
-                        now,nonce,token = self.gen_token(username)
-                        log_info(f"Token generated and stored","success")
-                        return token
+            if request.method == "POST":
+                data_from_post = request.json #curl -X POST https://127.0.0.1:8375/auth/ -H 'Content-Type: application/json' -H 'Accept: application/json' -d '{"data":"coucou"}' -k
+                username = data_from_post["username"]
+                password = data_from_post["password"]
+                log_info(f"Trying to authenticate '{username}'","running")
+                if re.match(r"^[a-z0-9_-]+$",username):
+                    hash = db_exec(check_user_in_db(username),self.db_path)
+                    if len(hash)!=0:
+                        retained_hash = hash[0][0]
+                        if verify_password(retained_hash,password,username):
+                            log_info(f"Authenticated '{username}'","success")
+                            now,nonce,token = self.gen_token(username)
+                            log_info(f"Token generated and stored","success")
+                            return token
+                        else:
+                            log_info(f"Failed to authenticate '{username}'","error")
+                            return '[Error] Wrong Username or Password'
                     else:
                         log_info(f"Failed to authenticate '{username}'","error")
                         return '[Error] Wrong Username or Password'
+                    
                 else:
+                    log_info(f"Invalid Username Format","error")
                     log_info(f"Failed to authenticate '{username}'","error")
-                    return '[Error] Wrong Username or Password'
-                
-            else:
-                log_info(f"Invalid Username Format","error")
-                log_info(f"Failed to authenticate '{username}'","error")
-                return "[Error] Invalid username format, please match the pattern : ^[a-z0-9_]+$"
+                    return "[Error] Invalid username format, please match the pattern : ^[a-z0-9_]+$"
+            elif request.method == "GET":
+                if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                    return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+                else:
+                    return "[Success] You are authenticated !"
     
         @api.route("/register",methods=["POST"])
         def register():
             data_from_post = request.json
+            if not "register_code" in data_from_post.keys() or not "username" in data_from_post.keys() or not "password" in data_from_post.keys():
+                return "[Error] Please specify all the required fields !"
             username = data_from_post["username"]
             password = data_from_post["password"]
             register_code = data_from_post["register_code"]
@@ -210,6 +218,37 @@ class C2_Rest_API:
                 else:
                     return "[Error] Non-Existent listener"
 
+        @api.route("/listeners/rm",methods=["POST"])
+        def remove_listener():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            data = request.json
+            if not "id" in data.keys():
+                log_info(f"Attempt to rm a listener without providing id by '{username}'","error")
+                return "[Error] please specify the identifier ('id':'host:port') of the listener to remove"
+            else:
+                identifier = data["id"]
+                bind_port = identifier.split(":")[1]
+                if not identifier in self.all_listeners.keys():
+                    log_info(f"'{username}' Tried to remove an invalid listener {identifier}","error")
+                    return "[Error] Tried to remove an invalid listener"
+                if int(db_exec(is_listener_started(bind_port),self.db_path)[0][0])==1:
+                    log_info(f"'{username}' Stopping listener {identifier}","running")
+                    self.all_listeners[identifier].stop_listener()
+                    self.all_processes[identifier].terminate()
+                    self.all_processes[identifier].join()
+                    db_exec(stop_listener_update_db(bind_port),self.db_path)
+                    log_info(f"Stopped listener {identifier} for {username}","success")
+                log_info(f"'{username}' Removing listener {identifier}","running")
+                if identifier in self.all_processes.keys():
+                    del(self.all_processes[identifier])
+                del(self.all_listeners[identifier])
+                db_exec(rm_listener_from_db(bind_port),self.db_path)
+                log_info(f"Removed listener {identifier} for {username}","success")
+                return "[Success] Listener Successfully stopped"
 
         self.api = api
         
