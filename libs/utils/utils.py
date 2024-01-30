@@ -7,8 +7,8 @@ import sys
 
 def generate_random_name()->str:
 
-    adjectives = ["happy","crazy","sleepy","fabulous","joyfull","cloudy","fancy","gentle","gigantic","lethal","dangerous","creepy","poisoned","anxious","sad","angry","frustrated","excited"]
-    words = ["vegetables","rhino","ghost","biscuit","arrow","lightning","pivot","tunnel","pudding","salad","kiwi","whale","mountain","lake","volcano"]
+    adjectives = ["happy","crazy","sleepy","fabulous","joyfull","cloudy","fancy","gentle","gigantic","lethal","dangerous","creepy","poisoned","anxious","sad","angry","frustrated","excited","good","bad","salty","super","mad","stealthy","giant","scary"]
+    words = ["vegetables","rhino","ghost","biscuit","arrow","lightning","pivot","tunnel","pudding","salad","kiwi","whale","mountain","lake","volcano","girl","man","bro","car","cat","dog","bird","dino"]
 
     return " ".join([random.choice(adjectives),random.choice(words)])
 
@@ -37,7 +37,7 @@ def db_exec(command:str,db_path:str):
 
 def log_info(message:str,status:str)->None:
     now=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    status_and_startstring = {"success":'\033[92m',"error":'\033[91m',"running":'\033[93m',"info":'\033[96m'}
+    status_and_startstring = {"success":'\033[92m',"error":'\033[91m',"running":'\033[93m',"info":'\033[96m',"listener":'\33[35m'}
     log = status_and_startstring[status] + f"[{now}] {message}" + f" - {status}"+ '\033[0m'
     print(log)
     with open("./logs/lightc2.logs",'a') as logfile:

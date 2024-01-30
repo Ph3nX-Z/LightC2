@@ -1,1079 +1,182 @@
-[2024-01-28 18:22:20] Server mode asked, starting api - info
-[2024-01-28 18:22:20] Register Key RkRrcitEQ29vdUdeMmhfNlsoMi45TSVRWz1FbE1PNnRTYytAUzo8RUQqcXJJQmd0KCtEYiEwIj4icipw - info
-[2024-01-28 18:22:20] Starting Rest API - running
-[2024-01-28 18:22:20] Re-Generating listeners from db - running
-[2024-01-28 18:22:20] Re-Generated listeners from db - success
-[2024-01-28 18:22:31] 'erwan' successfully added a listener - success
-[2024-01-28 18:22:43] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 18:22:43] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 18:22:50] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 18:22:50] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 18:22:59] Server mode asked, starting api - info
-[2024-01-28 18:22:59] Register Key RkRrcitEQ291YTFnYDQ1K1ljbDo7L1w9MkZBYihsQTZNR2c3b3JZR0IzL1loNUIoVSY7KTtIZ0VhTWorPCQ+IkZFYlM8Ng== - info
-[2024-01-28 18:22:59] Starting Rest API - running
-[2024-01-28 18:22:59] Re-Generating listeners from db - running
-[2024-01-28 18:22:59] Listener 0.0.0.0:8182 created - success
-[2024-01-28 18:22:59] Re-Generated listeners from db - success
-[2024-01-28 19:39:44] Server mode asked, starting api - info
-[2024-01-28 19:39:44] Register Key RkRrcitEQ3AnLDspOld1P1krMU8ySE1TVkRJdUZjQFVFa2o9QTNPNCtcWV1jMklVRHJCNkgiSz0hVi1xOyM= - info
-[2024-01-28 19:39:44] Starting Rest API - running
-[2024-01-28 19:39:44] Re-Generating listeners from db - running
-[2024-01-28 19:39:44] Listener 0.0.0.0:8182 created - success
-[2024-01-28 19:39:44] Re-Generated listeners from db - success
-[2024-01-28 19:40:03] Server mode asked, starting api - info
-[2024-01-28 19:40:03] Register Key RkRrcitEQ29bNzNEKShlOGtOISsvUGc4JjdsPUAsRllTIm1DK3I9akJMLEYhRyMoKFVERlxcIj1gU0NaPCY4U20yPw== - info
-[2024-01-28 19:40:03] Starting Rest API - running
-[2024-01-28 19:40:03] Re-Generating listeners from db - running
-[2024-01-28 19:40:03] Listener 0.0.0.0:8182 created - success
-[2024-01-28 19:40:03] Re-Generated listeners from db - success
-[2024-01-28 19:47:51] Server mode asked, starting api - info
-[2024-01-28 19:47:51] Register Key RkRrcitEQ25DSTpHPjpJNlQtaSM1PnRUVz9XXnFxQDpFXGhFSDUmWUVBQj1iNUJnc2k9I0RhN0VFPWtuSDttc14+WHAl - info
-[2024-01-28 19:47:51] Starting Rest API - running
-[2024-01-28 19:47:51] Re-Generating listeners from db - running
-[2024-01-28 19:47:51] Listener 0.0.0.0:8182 created - success
-[2024-01-28 19:47:51] Re-Generated listeners from db - success
-[2024-01-28 20:04:26] Trying to authenticate 'admin' - running
-[2024-01-28 20:04:26] Authenticated 'admin' - success
-[2024-01-28 20:04:26] Token generated and stored - success
-[2024-01-28 20:04:30] Trying to authenticate 'admin' - running
-[2024-01-28 20:04:30] Failed to authenticate 'admin' - error
-[2024-01-28 20:08:08] Trying to authenticate 'toto' - running
-[2024-01-28 20:08:08] Failed to authenticate 'toto' - error
-[2024-01-28 20:08:21] Trying to authenticate 'toto' - running
-[2024-01-28 20:08:21] Failed to authenticate 'toto' - error
-[2024-01-28 20:09:04] Trying to authenticate '1234567890' - running
-[2024-01-28 20:09:04] Failed to authenticate '1234567890' - error
-[2024-01-28 20:09:10] Trying to authenticate '1234567890' - running
-[2024-01-28 20:09:10] Failed to authenticate '1234567890' - error
-[2024-01-28 20:09:48] Trying to authenticate 'erwan' - running
-[2024-01-28 20:09:48] Failed to authenticate 'erwan' - error
-[2024-01-28 20:09:53] Trying to authenticate 'admin' - running
-[2024-01-28 20:09:53] Authenticated 'admin' - success
-[2024-01-28 20:09:53] Token generated and stored - success
-[2024-01-28 20:13:22] Trying to authenticate 'admin' - running
-[2024-01-28 20:13:23] Authenticated 'admin' - success
-[2024-01-28 20:13:23] Token generated and stored - success
-[2024-01-28 20:13:23] Providing list of listeners to 'admin' - running
-[2024-01-28 20:13:23] Provided list of listeners to 'admin' - success
-[2024-01-28 20:13:44] Trying to authenticate 'admin' - running
-[2024-01-28 20:13:45] Authenticated 'admin' - success
-[2024-01-28 20:13:45] Token generated and stored - success
-[2024-01-28 20:13:45] Providing list of listeners to 'admin' - running
-[2024-01-28 20:13:45] Provided list of listeners to 'admin' - success
-[2024-01-28 20:13:53] Trying to authenticate 'admin' - running
-[2024-01-28 20:13:53] Authenticated 'admin' - success
-[2024-01-28 20:13:53] Token generated and stored - success
-[2024-01-28 20:13:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:13:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:13:58] Trying to authenticate 'admin' - running
-[2024-01-28 20:13:58] Authenticated 'admin' - success
-[2024-01-28 20:13:58] Token generated and stored - success
-[2024-01-28 20:13:58] Providing list of listeners to 'admin' - running
-[2024-01-28 20:13:58] Provided list of listeners to 'admin' - success
-[2024-01-28 20:14:52] Trying to authenticate 'admin' - running
-[2024-01-28 20:14:52] Authenticated 'admin' - success
-[2024-01-28 20:14:52] Token generated and stored - success
-[2024-01-28 20:14:52] Providing list of listeners to 'admin' - running
-[2024-01-28 20:14:52] Provided list of listeners to 'admin' - success
-[2024-01-28 20:14:59] Server mode asked, starting api - info
-[2024-01-28 20:14:59] Register Key RkRrcitEQ29hO0dcTSM8ODRjJF88KDhpXzkvOmcrPlgpW14xMm9jVzk0OydsMUhBUVI5bGBv - info
-[2024-01-28 20:14:59] Starting Rest API - running
-[2024-01-28 20:14:59] Re-Generating listeners from db - running
-[2024-01-28 20:14:59] Listener 0.0.0.0:8182 created - success
-[2024-01-28 20:14:59] Re-Generated listeners from db - success
-[2024-01-28 20:15:02] Trying to authenticate 'admin' - running
-[2024-01-28 20:15:02] Authenticated 'admin' - success
-[2024-01-28 20:15:02] Token generated and stored - success
-[2024-01-28 20:15:02] Providing list of listeners to 'admin' - running
-[2024-01-28 20:15:02] Provided list of listeners to 'admin' - success
-[2024-01-28 20:15:37] Trying to authenticate 'admin' - running
-[2024-01-28 20:15:38] Authenticated 'admin' - success
-[2024-01-28 20:15:38] Token generated and stored - success
-[2024-01-28 20:15:38] Providing list of listeners to 'admin' - running
-[2024-01-28 20:15:38] Provided list of listeners to 'admin' - success
-[2024-01-28 20:15:43] Server mode asked, starting api - info
-[2024-01-28 20:15:43] Register Key RkRrcitEQ20iaUVdPj1YR3RNW0E5MWpAbjAvNzNkPlZcJltCMiFNQjc3aGJxO2VMRFs5Z2BKSTdWRzddL01NSEU8RDVz - info
-[2024-01-28 20:15:43] Starting Rest API - running
-[2024-01-28 20:15:43] Re-Generating listeners from db - running
-[2024-01-28 20:15:43] Listener 0.0.0.0:8182 created - success
-[2024-01-28 20:15:43] Re-Generated listeners from db - success
-[2024-01-28 20:15:46] Trying to authenticate 'admin' - running
-[2024-01-28 20:15:46] Authenticated 'admin' - success
-[2024-01-28 20:15:46] Token generated and stored - success
-[2024-01-28 20:15:46] Providing list of listeners to 'admin' - running
-[2024-01-28 20:15:46] Provided list of listeners to 'admin' - success
-[2024-01-28 20:18:42] Trying to authenticate 'admin' - running
-[2024-01-28 20:18:42] Authenticated 'admin' - success
-[2024-01-28 20:18:42] Token generated and stored - success
-[2024-01-28 20:18:42] Providing list of listeners to 'admin' - running
-[2024-01-28 20:18:42] Provided list of listeners to 'admin' - success
-[2024-01-28 20:18:42] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 20:18:42] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:18:53] Trying to authenticate 'admin' - running
-[2024-01-28 20:18:53] Authenticated 'admin' - success
-[2024-01-28 20:18:53] Token generated and stored - success
-[2024-01-28 20:18:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:18:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:18:53] 'admin' Tried to start a listener that is already started - error
-[2024-01-28 20:19:48] Trying to authenticate 'admin' - running
-[2024-01-28 20:19:48] Authenticated 'admin' - success
-[2024-01-28 20:19:48] Token generated and stored - success
-[2024-01-28 20:19:48] Providing list of listeners to 'admin' - running
-[2024-01-28 20:19:48] Provided list of listeners to 'admin' - success
-[2024-01-28 20:19:48] 'admin' Tried to start a listener that is already started - error
-[2024-01-28 20:19:50] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 20:19:50] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:20:10] Trying to authenticate 'admin' - running
-[2024-01-28 20:20:10] Authenticated 'admin' - success
-[2024-01-28 20:20:10] Token generated and stored - success
-[2024-01-28 20:20:10] Providing list of listeners to 'admin' - running
-[2024-01-28 20:20:10] Provided list of listeners to 'admin' - success
-[2024-01-28 20:20:10] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 20:20:10] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:20:10] Providing list of listeners to 'admin' - running
-[2024-01-28 20:20:10] Provided list of listeners to 'admin' - success
-[2024-01-28 20:20:12] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 20:20:12] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:29:52] Trying to authenticate 'admin' - running
-[2024-01-28 20:29:53] Authenticated 'admin' - success
-[2024-01-28 20:29:53] Token generated and stored - success
-[2024-01-28 20:29:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:29:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:29:53] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 20:29:53] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:29:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:29:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:29:55] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 20:29:55] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:29:55] Missing fields in 'admin' request - error
-[2024-01-28 20:29:57] Providing list of listeners to 'admin' - running
-[2024-01-28 20:29:57] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:42] Trying to authenticate 'admin' - running
-[2024-01-28 20:32:42] Authenticated 'admin' - success
-[2024-01-28 20:32:42] Token generated and stored - success
-[2024-01-28 20:32:42] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:42] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:42] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 20:32:42] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:32:42] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:42] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:44] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 20:32:44] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:32:44] 'admin' successfully added a listener - success
-[2024-01-28 20:32:46] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:46] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:53] Trying to authenticate 'admin' - running
-[2024-01-28 20:32:53] Authenticated 'admin' - success
-[2024-01-28 20:32:53] Token generated and stored - success
-[2024-01-28 20:32:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:53] 'admin' Starting listener 0.0.0.0:8182 - running
-[2024-01-28 20:32:53] Started listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:32:53] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:53] Provided list of listeners to 'admin' - success
-[2024-01-28 20:32:55] 'admin' Stopping listener 0.0.0.0:8182 - running
-[2024-01-28 20:32:55] Stopped listener 0.0.0.0:8182 for admin - success
-[2024-01-28 20:32:55] 'admin' tried to add an existing listener - error
-[2024-01-28 20:32:57] Providing list of listeners to 'admin' - running
-[2024-01-28 20:32:57] Provided list of listeners to 'admin' - success
-[2024-01-28 20:38:52] Trying to authenticate 'admin' - running
-[2024-01-28 20:38:52] Authenticated 'admin' - success
-[2024-01-28 20:38:52] Token generated and stored - success
-[2024-01-28 20:38:52] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:39:03] Trying to authenticate 'admin' - running
-[2024-01-28 20:39:03] Authenticated 'admin' - success
-[2024-01-28 20:39:03] Token generated and stored - success
-[2024-01-28 20:39:03] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:39:11] Trying to authenticate 'admin' - running
-[2024-01-28 20:39:11] Authenticated 'admin' - success
-[2024-01-28 20:39:11] Token generated and stored - success
-[2024-01-28 20:39:11] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:40:02] Trying to authenticate 'admin' - running
-[2024-01-28 20:40:02] Authenticated 'admin' - success
-[2024-01-28 20:40:02] Token generated and stored - success
-[2024-01-28 20:40:03] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:40:48] Server mode asked, starting api - info
-[2024-01-28 20:40:48] Register Key RkRrcitEQ21lOEE1LSc2Oy8nMDk6LEgnLj4nVnRrRClQNzAxM2x0a0g/TS9FR1Uq - info
-[2024-01-28 20:40:48] Starting Rest API - running
-[2024-01-28 20:40:48] Re-Generating listeners from db - running
-[2024-01-28 20:40:48] Listener 0.0.0.0:8182 created - success
-[2024-01-28 20:40:48] Listener 0.0.0.0:8282 created - success
-[2024-01-28 20:40:48] Re-Generated listeners from db - success
-[2024-01-28 20:40:56] Trying to authenticate 'admin' - running
-[2024-01-28 20:40:56] Authenticated 'admin' - success
-[2024-01-28 20:40:57] Token generated and stored - success
-[2024-01-28 20:40:57] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:41:05] Trying to authenticate 'admin' - running
-[2024-01-28 20:41:06] Authenticated 'admin' - success
-[2024-01-28 20:41:06] Token generated and stored - success
-[2024-01-28 20:41:06] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:41:57] Trying to authenticate 'admin' - running
-[2024-01-28 20:41:57] Authenticated 'admin' - success
-[2024-01-28 20:41:57] Token generated and stored - success
-[2024-01-28 20:41:57] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:45:58] Trying to authenticate 'admin' - running
-[2024-01-28 20:45:58] Authenticated 'admin' - success
-[2024-01-28 20:45:58] Token generated and stored - success
-[2024-01-28 20:45:58] Providing a list of all operators to: 'admin' - success
-[2024-01-28 20:54:21] Server mode asked, starting api - info
-[2024-01-28 20:54:21] Register Key RkRrcitEQ25qYjhqQCxIRz47ZypBaEE0TjVBK1ZFOFMxUnIzLF9rbj9TWig5OmdAaWs5NE1wXjpoYi8wNTY= - info
-[2024-01-28 20:54:21] Starting Rest API - running
-[2024-01-28 20:54:21] Re-Generating listeners from db - running
-[2024-01-28 20:54:21] Listener 0.0.0.0:8182 created - success
-[2024-01-28 20:54:21] Listener 0.0.0.0:8282 created - success
-[2024-01-28 20:54:21] Re-Generated listeners from db - success
-[2024-01-28 21:51:56] Server mode asked, starting api - info
-[2024-01-28 21:51:56] Register Key RkRrcitEQ29FZTxiP1loQW5iLlMwMUEzRUgjWlchPGBfZEoyLGNxMjErZEVAQFRbYlJAUnIoUztGVz5vPiZG - info
-[2024-01-28 21:51:56] Starting Rest API - running
-[2024-01-28 21:51:56] Re-Generating listeners from db - running
-[2024-01-28 21:51:56] Re-Generated listeners from db - success
-[2024-01-28 22:12:53] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-28 22:19:50] Trying to authenticate 'admin' - running
-[2024-01-28 22:19:50] Authenticated 'admin' - success
-[2024-01-28 22:19:50] Token generated and stored - success
-[2024-01-28 22:19:57] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:20:15] Trying to authenticate 'admin' - running
-[2024-01-28 22:20:15] Authenticated 'admin' - success
-[2024-01-28 22:20:15] Token generated and stored - success
-[2024-01-28 22:20:17] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:20:52] Trying to authenticate 'admin' - running
-[2024-01-28 22:20:52] Authenticated 'admin' - success
-[2024-01-28 22:20:52] Token generated and stored - success
-[2024-01-28 22:20:54] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:20:54] Trying to authenticate 'admin' - running
-[2024-01-28 22:20:54] Authenticated 'admin' - success
-[2024-01-28 22:20:54] Token generated and stored - success
-[2024-01-28 22:21:50] Trying to authenticate 'admin' - running
-[2024-01-28 22:21:50] Authenticated 'admin' - success
-[2024-01-28 22:21:50] Token generated and stored - success
-[2024-01-28 22:21:53] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:21:53] Trying to authenticate 'admin' - running
-[2024-01-28 22:21:53] Authenticated 'admin' - success
-[2024-01-28 22:21:53] Token generated and stored - success
-[2024-01-28 22:23:10] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:10] Authenticated 'admin' - success
-[2024-01-28 22:23:10] Token generated and stored - success
-[2024-01-28 22:23:12] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:23:12] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:12] Authenticated 'admin' - success
-[2024-01-28 22:23:12] Token generated and stored - success
-[2024-01-28 22:23:23] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:23] Authenticated 'admin' - success
-[2024-01-28 22:23:23] Token generated and stored - success
-[2024-01-28 22:23:26] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:23:26] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:26] Authenticated 'admin' - success
-[2024-01-28 22:23:26] Token generated and stored - success
-[2024-01-28 22:23:36] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:36] Authenticated 'admin' - success
-[2024-01-28 22:23:36] Token generated and stored - success
-[2024-01-28 22:23:41] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:23:41] Trying to authenticate 'admin' - running
-[2024-01-28 22:23:41] Authenticated 'admin' - success
-[2024-01-28 22:23:41] Token generated and stored - success
-[2024-01-28 22:25:34] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:34] Authenticated 'admin' - success
-[2024-01-28 22:25:34] Token generated and stored - success
-[2024-01-28 22:25:36] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:36] Authenticated 'admin' - success
-[2024-01-28 22:25:36] Token generated and stored - success
-[2024-01-28 22:25:38] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:38] Authenticated 'admin' - success
-[2024-01-28 22:25:38] Token generated and stored - success
-[2024-01-28 22:25:41] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:41] Authenticated 'admin' - success
-[2024-01-28 22:25:41] Token generated and stored - success
-[2024-01-28 22:25:42] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:42] Authenticated 'admin' - success
-[2024-01-28 22:25:42] Token generated and stored - success
-[2024-01-28 22:25:45] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:25:46] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:46] Authenticated 'admin' - success
-[2024-01-28 22:25:46] Token generated and stored - success
-[2024-01-28 22:25:51] Trying to authenticate 'admin' - running
-[2024-01-28 22:25:51] Authenticated 'admin' - success
-[2024-01-28 22:25:51] Token generated and stored - success
-[2024-01-28 22:26:06] Trying to authenticate 'admin' - running
-[2024-01-28 22:26:06] Authenticated 'admin' - success
-[2024-01-28 22:26:06] Token generated and stored - success
-[2024-01-28 22:26:15] Trying to authenticate 'admin' - running
-[2024-01-28 22:26:15] Authenticated 'admin' - success
-[2024-01-28 22:26:15] Token generated and stored - success
-[2024-01-28 22:26:36] Server mode asked, starting api - info
-[2024-01-28 22:26:36] Register Key RkRrcitEQ25GbDZYIVQpQDttbDQ2InRJVEBOZlQkQzAiaydDaFJhKDtmPy9IRWJmUGoxZWgrMkVFRkFfMGgjRyc= - info
-[2024-01-28 22:26:36] Starting Rest API - running
-[2024-01-28 22:26:36] Re-Generating listeners from db - running
-[2024-01-28 22:26:36] Re-Generated listeners from db - success
-[2024-01-28 22:26:48] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:27:00] Trying to authenticate 'admin' - running
-[2024-01-28 22:27:00] Authenticated 'admin' - success
-[2024-01-28 22:27:00] Token generated and stored - success
-[2024-01-28 22:27:20] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:27:31] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:29:17] Trying to authenticate 'admin' - running
-[2024-01-28 22:29:17] Authenticated 'admin' - success
-[2024-01-28 22:29:17] Token generated and stored - success
-[2024-01-28 22:29:23] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:29:33] Providing a list of all operators to: 'admin' - success
-[2024-01-28 22:30:29] Trying to authenticate 'admin' - running
-[2024-01-28 22:30:29] Authenticated 'admin' - success
-[2024-01-28 22:30:29] Token generated and stored - success
-[2024-01-28 22:30:51] Trying to authenticate 'admin' - running
-[2024-01-28 22:30:51] Authenticated 'admin' - success
-[2024-01-28 22:30:51] Token generated and stored - success
-[2024-01-28 22:31:16] Trying to authenticate 'admin' - running
-[2024-01-28 22:31:16] Authenticated 'admin' - success
-[2024-01-28 22:31:16] Token generated and stored - success
-[2024-01-28 22:32:14] Trying to authenticate 'admin' - running
-[2024-01-28 22:32:14] Authenticated 'admin' - success
-[2024-01-28 22:32:14] Token generated and stored - success
-[2024-01-28 22:32:46] Trying to authenticate 'admin' - running
-[2024-01-28 22:32:46] Authenticated 'admin' - success
-[2024-01-28 22:32:46] Token generated and stored - success
-[2024-01-28 22:32:50] Trying to authenticate 'admin' - running
-[2024-01-28 22:32:50] Authenticated 'admin' - success
-[2024-01-28 22:32:50] Token generated and stored - success
-[2024-01-28 22:33:01] Trying to authenticate 'admin' - running
-[2024-01-28 22:33:01] Authenticated 'admin' - success
-[2024-01-28 22:33:01] Token generated and stored - success
-[2024-01-29 08:58:20] Server mode asked, starting api - info
-[2024-01-29 08:58:21] Register Key RkRrcitEQ25eZTJML0NdNzxFTkRGQDArX0NHcEtWNXU7OFs9I05CWjtfO0teQjVoKlU7S0d0ZDxAcVdLNzc7PlM8cg== - info
-[2024-01-29 08:58:21] Starting Rest API - running
-[2024-01-29 08:58:21] Re-Generating listeners from db - running
-[2024-01-29 08:58:21] Re-Generated listeners from db - success
-[2024-01-29 08:59:08] Trying to register 'matt' - running
-[2024-01-29 08:59:09] User Added to DB: 'matt' - success
-[2024-01-29 08:59:23] Trying to authenticate 'matt' - running
-[2024-01-29 08:59:23] Authenticated 'matt' - success
-[2024-01-29 08:59:23] Token generated and stored - success
-[2024-01-29 08:59:36] Providing a list of all operators to: 'matt' - success
-[2024-01-29 09:00:10] 'erwan' successfully added a listener - success
-[2024-01-29 09:00:20] Server mode asked, starting api - info
-[2024-01-29 09:00:20] Register Key RkRrcitEQ24uLjIsYzUvQTUkaVVHWUNlJD4mLzImRVxfJldGQEEyVThsS1ks - info
-[2024-01-29 09:00:20] Starting Rest API - running
-[2024-01-29 09:00:20] Re-Generating listeners from db - running
-[2024-01-29 09:00:20] Listener 0.0.0.0:8182 created - success
-[2024-01-29 09:00:20] Re-Generated listeners from db - success
-[2024-01-29 10:12:42] Server mode asked, starting api - info
-[2024-01-29 10:12:42] Register Key RkRrcitEQ29gc0UsNz0hQlIiQXEvUSQ7KTU+WWZVMU42OEdHXHFcPTJHLj1tOi1Xa0g5a2Nv - info
-[2024-01-29 10:12:42] Starting Rest API - running
-[2024-01-29 10:12:42] Re-Generating listeners from db - running
-[2024-01-29 10:12:42] Listener 0.0.0.0:8182 created - success
-[2024-01-29 10:12:42] Re-Generated listeners from db - success
-[2024-01-29 10:12:46] Trying to authenticate 'matt' - running
-[2024-01-29 10:12:46] Authenticated 'matt' - success
-[2024-01-29 10:12:46] Token generated and stored - success
-[2024-01-29 10:12:48] Providing list of listeners to 'matt' - running
-[2024-01-29 10:12:48] Provided list of listeners to 'matt' - success
-[2024-01-29 10:13:25] Trying to authenticate 'matt' - running
-[2024-01-29 10:13:25] Authenticated 'matt' - success
-[2024-01-29 10:13:25] Token generated and stored - success
-[2024-01-29 10:13:27] Providing list of listeners to 'matt' - running
-[2024-01-29 10:13:27] Provided list of listeners to 'matt' - success
-[2024-01-29 10:14:23] Trying to authenticate 'matt' - running
-[2024-01-29 10:14:23] Authenticated 'matt' - success
-[2024-01-29 10:14:23] Token generated and stored - success
-[2024-01-29 10:14:25] Providing list of listeners to 'matt' - running
-[2024-01-29 10:14:25] Provided list of listeners to 'matt' - success
-[2024-01-29 10:15:09] Trying to authenticate 'matt' - running
-[2024-01-29 10:15:09] Authenticated 'matt' - success
-[2024-01-29 10:15:09] Token generated and stored - success
-[2024-01-29 10:15:10] Providing list of listeners to 'matt' - running
-[2024-01-29 10:15:10] Provided list of listeners to 'matt' - success
-[2024-01-29 10:26:26] Trying to authenticate 'matt' - running
-[2024-01-29 10:26:26] Authenticated 'matt' - success
-[2024-01-29 10:26:26] Token generated and stored - success
-[2024-01-29 10:27:19] Trying to authenticate 'matt' - running
-[2024-01-29 10:27:19] Authenticated 'matt' - success
-[2024-01-29 10:27:19] Token generated and stored - success
-[2024-01-29 10:27:45] Providing list of listeners to 'matt' - running
-[2024-01-29 10:27:45] Provided list of listeners to 'matt' - success
-[2024-01-29 10:27:58] 'matt' Starting listener 0.0.0.0:8182 - running
-[2024-01-29 10:27:58] Started listener 0.0.0.0:8182 for matt - success
-[2024-01-29 10:28:01] Providing list of listeners to 'matt' - running
-[2024-01-29 10:28:01] Provided list of listeners to 'matt' - success
-[2024-01-29 10:28:30] 'matt' Stopping listener 0.0.0.0:8182 - running
-[2024-01-29 10:28:30] Stopped listener 0.0.0.0:8182 for matt - success
-[2024-01-29 10:47:25] Trying to authenticate 'matt' - running
-[2024-01-29 10:47:25] Authenticated 'matt' - success
-[2024-01-29 10:47:25] Token generated and stored - success
-[2024-01-29 10:55:42] Trying to authenticate 'matt2' - running
-[2024-01-29 10:55:42] Failed to authenticate 'matt2' - error
-[2024-01-29 10:55:44] Trying to authenticate 'matt2' - running
-[2024-01-29 10:55:44] Failed to authenticate 'matt2' - error
-[2024-01-29 10:55:46] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-29 10:55:46] Trying to authenticate 'matt2' - running
-[2024-01-29 10:55:46] Failed to authenticate 'matt2' - error
-[2024-01-29 10:55:50] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-29 10:55:50] Trying to authenticate 'matt2' - running
-[2024-01-29 10:55:50] Failed to authenticate 'matt2' - error
-[2024-01-29 10:58:14] Trying to authenticate 'matt2' - running
-[2024-01-29 10:58:14] Failed to authenticate 'matt2' - error
-[2024-01-29 10:58:45] Trying to authenticate 'matt2' - running
-[2024-01-29 10:58:45] Failed to authenticate 'matt2' - error
-[2024-01-29 11:00:12] Server mode asked, starting api - info
-[2024-01-29 11:00:12] Register Key RkRrcitEQ21WXUE3bmVjR1dCTUcvVCE3WkNjJDlSQ2cpKCs/ViIxITBtQClRNjo1KyFCZUs= - info
-[2024-01-29 11:00:12] Starting Rest API - running
-[2024-01-29 11:00:12] Re-Generating listeners from db - running
-[2024-01-29 11:00:12] Listener 0.0.0.0:8182 created - success
-[2024-01-29 11:00:12] Re-Generated listeners from db - success
-[2024-01-29 11:00:24] Trying to authenticate 'matt2' - running
-[2024-01-29 11:00:24] Failed to authenticate 'matt2' - error
-[2024-01-29 11:00:57] Trying to authenticate 'matt2' - running
-[2024-01-29 11:00:57] Failed to authenticate 'matt2' - error
-[2024-01-29 11:01:17] Server mode asked, starting api - info
-[2024-01-29 11:01:17] Register Key RkRrcitEQ25bLjhQajpwNnUrQS85a1FhTkUoVmY5NT9NVDczRykzKzsnQk9SO0lxZ0FAOTdQbjpkZE5j - info
-[2024-01-29 11:01:17] Starting Rest API - running
-[2024-01-29 11:01:17] Re-Generating listeners from db - running
-[2024-01-29 11:01:17] Listener 0.0.0.0:8182 created - success
-[2024-01-29 11:01:17] Re-Generated listeners from db - success
-[2024-01-29 11:01:22] Trying to register 'matt2' - running
-[2024-01-29 11:01:22] Invalid register code - error
-[2024-01-29 11:01:22] Failed to register 'matt2' - error
-[2024-01-29 11:01:22] Trying to authenticate 'matt2' - running
-[2024-01-29 11:01:22] Failed to authenticate 'matt2' - error
-[2024-01-29 11:01:55] Trying to register 'matt2' - running
-[2024-01-29 11:01:55] User Added to DB: 'matt2' - success
-[2024-01-29 11:01:55] Trying to authenticate 'matt2' - running
-[2024-01-29 11:01:55] Authenticated 'matt2' - success
-[2024-01-29 11:01:55] Token generated and stored - success
-[2024-01-29 11:02:14] Providing a list of all operators to: 'matt2' - success
-[2024-01-29 11:02:16] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:02:16] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:09:09] Trying to authenticate 'matt2' - running
-[2024-01-29 11:09:09] Authenticated 'matt2' - success
-[2024-01-29 11:09:09] Token generated and stored - success
-[2024-01-29 11:11:43] Trying to authenticate 'matt2' - running
-[2024-01-29 11:11:43] Authenticated 'matt2' - success
-[2024-01-29 11:11:43] Token generated and stored - success
-[2024-01-29 11:17:43] Trying to authenticate 'matt2' - running
-[2024-01-29 11:17:43] Authenticated 'matt2' - success
-[2024-01-29 11:17:43] Token generated and stored - success
-[2024-01-29 11:19:35] Trying to authenticate 'matt2' - running
-[2024-01-29 11:19:35] Authenticated 'matt2' - success
-[2024-01-29 11:19:35] Token generated and stored - success
-[2024-01-29 11:20:21] Trying to authenticate 'matt2' - running
-[2024-01-29 11:20:21] Authenticated 'matt2' - success
-[2024-01-29 11:20:21] Token generated and stored - success
-[2024-01-29 11:22:53] Trying to authenticate 'matt2' - running
-[2024-01-29 11:22:53] Authenticated 'matt2' - success
-[2024-01-29 11:22:53] Token generated and stored - success
-[2024-01-29 11:23:24] Trying to authenticate 'matt2' - running
-[2024-01-29 11:23:24] Authenticated 'matt2' - success
-[2024-01-29 11:23:24] Token generated and stored - success
-[2024-01-29 11:24:41] Trying to authenticate 'matt2' - running
-[2024-01-29 11:24:41] Authenticated 'matt2' - success
-[2024-01-29 11:24:41] Token generated and stored - success
-[2024-01-29 11:25:02] Trying to authenticate 'matt2' - running
-[2024-01-29 11:25:02] Authenticated 'matt2' - success
-[2024-01-29 11:25:02] Token generated and stored - success
-[2024-01-29 11:31:14] Trying to authenticate 'matt2' - running
-[2024-01-29 11:31:14] Authenticated 'matt2' - success
-[2024-01-29 11:31:14] Token generated and stored - success
-[2024-01-29 11:31:26] 'matt2' successfully added a listener - success
-[2024-01-29 11:31:40] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:31:40] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:34:29] Trying to authenticate 'matt2' - running
-[2024-01-29 11:34:29] Authenticated 'matt2' - success
-[2024-01-29 11:34:29] Token generated and stored - success
-[2024-01-29 11:34:46] 'matt2' successfully added a listener - success
-[2024-01-29 11:34:50] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:34:50] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:35:02] 'matt2' Starting listener 0.0.0.0:4679 - running
-[2024-01-29 11:35:02] Started listener 0.0.0.0:4679 for matt2 - success
-[2024-01-29 11:35:06] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:35:06] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:35:13] 'matt2' Stopping listener 0.0.0.0:4679 - running
-[2024-01-29 11:35:13] Stopped listener 0.0.0.0:4679 for matt2 - success
-[2024-01-29 11:35:14] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:35:14] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:36:35] 'matt2' Tried to stop a listener that is already stopped - error
-[2024-01-29 11:48:27] Server mode asked, starting api - info
-[2024-01-29 11:48:27] Register Key RkRrcitEQ29PMjtfTixCMytjMkk6TTMnXkZhN3EuPiUpPjhGKWFvS0QvOyUyQDUxSlk6ZlZPJz1DazlJQGtb - info
-[2024-01-29 11:48:27] Starting Rest API - running
-[2024-01-29 11:48:27] Re-Generating listeners from db - running
-[2024-01-29 11:48:27] Listener 0.0.0.0:8182 created - success
-[2024-01-29 11:48:27] Listener 0.0.0.0:8383 created - success
-[2024-01-29 11:48:27] Listener 0.0.0.0:4679 created - success
-[2024-01-29 11:48:27] Re-Generated listeners from db - success
-[2024-01-29 11:48:33] Trying to authenticate 'matt2' - running
-[2024-01-29 11:48:33] Authenticated 'matt2' - success
-[2024-01-29 11:48:33] Token generated and stored - success
-[2024-01-29 11:48:34] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:48:34] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:48:42] 'matt2' Removing listener 0.0.0.0:4679 - running
-[2024-01-29 11:50:16] Server mode asked, starting api - info
-[2024-01-29 11:50:16] Register Key RkRrcitEQ3AmaEE3ZVteMmMzOks2ckA7S0RnNGlkNnQ3dV5CL0QyTD9ZNDFYPlpyZ2Q+Ik5JPTVs - info
-[2024-01-29 11:50:16] Starting Rest API - running
-[2024-01-29 11:50:16] Re-Generating listeners from db - running
-[2024-01-29 11:50:16] Listener 0.0.0.0:8182 created - success
-[2024-01-29 11:50:16] Listener 0.0.0.0:8383 created - success
-[2024-01-29 11:50:16] Listener 0.0.0.0:4679 created - success
-[2024-01-29 11:50:16] Re-Generated listeners from db - success
-[2024-01-29 11:50:21] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:50:21] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:50:22] 'matt2' Removing listener 0.0.0.0:4679 - running
-[2024-01-29 11:50:22] Removed listener 0.0.0.0:4679 for matt2 - success
-[2024-01-29 11:52:07] Server mode asked, starting api - info
-[2024-01-29 11:52:07] Register Key RkRrcitEQ29wVC9VQjBsMl4pOUs3UG5nW0JtMyptLFhZPG8yXkNhWkMxMFBQRzthXEpGJmk= - info
-[2024-01-29 11:52:07] Starting Rest API - running
-[2024-01-29 11:52:07] Re-Generating listeners from db - running
-[2024-01-29 11:52:07] Listener 0.0.0.0:8182 created - success
-[2024-01-29 11:52:07] Listener 0.0.0.0:8383 created - success
-[2024-01-29 11:52:07] Re-Generated listeners from db - success
-[2024-01-29 11:52:14] 'matt2' Tried to remove an invalid listener 0.0.0.0:4679 - error
-[2024-01-29 11:52:31] 'matt2' Removing listener 0.0.0.0:8383 - running
-[2024-01-29 11:52:31] Removed listener 0.0.0.0:8383 for matt2 - success
-[2024-01-29 11:52:33] 'matt2' Tried to remove an invalid listener 0.0.0.0:8383 - error
-[2024-01-29 11:52:37] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:52:37] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:52:43] 'matt2' Removing listener 0.0.0.0:8182 - running
-[2024-01-29 11:52:43] Removed listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 11:52:45] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:52:45] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:52:55] 'matt2' successfully added a listener - success
-[2024-01-29 11:52:57] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:52:57] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:56:21] Trying to authenticate 'matt2' - running
-[2024-01-29 11:56:21] Authenticated 'matt2' - success
-[2024-01-29 11:56:21] Token generated and stored - success
-[2024-01-29 11:56:27] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:56:27] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:56:41] 'matt2' successfully added a listener - success
-[2024-01-29 11:56:43] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:56:43] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:56:51] 'matt2' Starting listener 0.0.0.0:8383 - running
-[2024-01-29 11:56:51] Started listener 0.0.0.0:8383 for matt2 - success
-[2024-01-29 11:56:53] 'matt2' Tried to start a listener that is already started - error
-[2024-01-29 11:56:57] 'matt2' Stopping listener 0.0.0.0:8383 - running
-[2024-01-29 11:56:57] Stopped listener 0.0.0.0:8383 for matt2 - success
-[2024-01-29 11:56:58] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:56:58] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:57:03] 'matt2' Removing listener 0.0.0.0:8383 - running
-[2024-01-29 11:57:03] Removed listener 0.0.0.0:8383 for matt2 - success
-[2024-01-29 11:57:04] Providing list of listeners to 'matt2' - running
-[2024-01-29 11:57:04] Provided list of listeners to 'matt2' - success
-[2024-01-29 11:58:46] Trying to authenticate 'matt2' - running
-[2024-01-29 11:58:46] Authenticated 'matt2' - success
-[2024-01-29 11:58:46] Token generated and stored - success
-[2024-01-29 12:02:34] Trying to authenticate 'matt2' - running
-[2024-01-29 12:02:34] Authenticated 'matt2' - success
-[2024-01-29 12:02:34] Token generated and stored - success
-[2024-01-29 12:03:56] Trying to authenticate 'matt2' - running
-[2024-01-29 12:03:56] Authenticated 'matt2' - success
-[2024-01-29 12:03:56] Token generated and stored - success
-[2024-01-29 12:04:05] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:05] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:04:17] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:17] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:04:30] 'matt2' Starting listener 0.0.0.0:8182 - running
-[2024-01-29 12:04:30] Started listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:04:32] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:32] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:04:40] 'matt2' Stopping listener 0.0.0.0:8182 - running
-[2024-01-29 12:04:40] Stopped listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:04:41] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:41] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:04:43] 'matt2' Starting listener 0.0.0.0:8182 - running
-[2024-01-29 12:04:43] Started listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:04:45] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:45] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:04:47] 'matt2' Stopping listener 0.0.0.0:8182 - running
-[2024-01-29 12:04:47] Stopped listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:04:49] Providing list of listeners to 'matt2' - running
-[2024-01-29 12:04:49] Provided list of listeners to 'matt2' - success
-[2024-01-29 12:05:01] 'matt2' Starting listener 0.0.0.0:8182 - running
-[2024-01-29 12:05:01] Started listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:05:05] 'matt2' Stopping listener 0.0.0.0:8182 - running
-[2024-01-29 12:05:05] Stopped listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:05:05] 'matt2' Removing listener 0.0.0.0:8182 - running
-[2024-01-29 12:05:05] Removed listener 0.0.0.0:8182 for matt2 - success
-[2024-01-29 12:06:15] Providing a list of all operators to: 'matt2' - success
-[2024-01-29 12:06:22] Server mode asked, starting api - info
-[2024-01-29 12:06:22] Register Key RkRrcitEQ25MaTxfWUdOQy1RdSM2OyhaRTovdUZaN1FHNkEzJj11W0UtRmlvMks7YnFGQWsu - info
-[2024-01-29 12:06:22] Starting Rest API - running
-[2024-01-29 12:06:22] Re-Generating listeners from db - running
-[2024-01-29 12:06:22] Re-Generated listeners from db - success
-[2024-01-29 12:06:30] Providing a list of all operators to: 'matt2' - success
-[2024-01-29 12:13:06] Server mode asked, starting api - info
-[2024-01-29 12:13:06] Register Key RkRrcitEQ25hQTInRzpkOmhocExDaGUzPUREKyJQNjs7Pl46SmJtcTwobkdpMDM6LEQ6ZnIkXUQtcSRvRz9mNjIxQg== - info
-[2024-01-29 12:13:06] Starting Rest API - running
-[2024-01-29 12:13:06] Re-Generating listeners from db - running
-[2024-01-29 12:13:06] Re-Generated listeners from db - success
-[2024-01-29 12:13:09] Trying to authenticate 'matt2' - running
-[2024-01-29 12:13:09] Authenticated 'matt2' - success
-[2024-01-29 12:13:09] Token generated and stored - success
-[2024-01-29 12:13:25] Server mode asked, starting api - info
-[2024-01-29 12:13:25] Register Key RkRrcitEQ24odTpnXEVARSZKdF8ySmpeWEFUTSFfOWglbyUzKkI8X0NlLllSMGxDIThBNUdqLg== - info
-[2024-01-29 12:13:25] Starting Rest API - running
-[2024-01-29 12:13:25] Re-Generating listeners from db - running
-[2024-01-29 12:13:25] Re-Generated listeners from db - success
-[2024-01-29 12:13:32] Trying to authenticate 'matt2' - running
-[2024-01-29 12:13:32] Authenticated 'matt2' - success
-[2024-01-29 12:13:32] Token generated and stored - success
-[2024-01-29 12:13:46] Server mode asked, starting api - info
-[2024-01-29 12:13:46] Register Key RkRrcitEQ21nbjlPREAzRkQ9Zmg4MiMrM0BYMzhRRURwQ2Q3Ol1KODFpUjtEOkI= - info
-[2024-01-29 12:13:46] Starting Rest API - running
-[2024-01-29 12:13:46] Re-Generating listeners from db - running
-[2024-01-29 12:13:46] Re-Generated listeners from db - success
-[2024-01-29 12:13:49] Trying to authenticate 'matt2' - running
-[2024-01-29 12:13:49] Authenticated 'matt2' - success
-[2024-01-29 12:13:49] Token generated and stored - success
-[2024-01-29 12:14:35] Server mode asked, starting api - info
-[2024-01-29 12:14:35] Register Key RkRrcitEQ25wakRlO3NgMmM9XU9Dai9yVSteQFFIREtTUW03czZSVUNLYj1GOTUldQ== - info
-[2024-01-29 12:14:35] Starting Rest API - running
-[2024-01-29 12:14:35] Re-Generating listeners from db - running
-[2024-01-29 12:14:35] Re-Generated listeners from db - success
-[2024-01-29 12:14:37] Trying to authenticate 'matt2' - running
-[2024-01-29 12:14:37] Authenticated 'matt2' - success
-[2024-01-29 12:14:37] Token generated and stored - success
-[2024-01-29 12:15:51] Server mode asked, starting api - info
-[2024-01-29 12:15:51] Register Key RkRrcitEQ28lOUVgLT0qMTJUSDMxZHRidDhpQkk8R1ZGPjFAOVEpYUUraVpWRkNuJ0EwMnNONERa - info
-[2024-01-29 12:15:51] Starting Rest API - running
-[2024-01-29 12:15:51] Re-Generating listeners from db - running
-[2024-01-29 12:15:51] Re-Generated listeners from db - success
-[2024-01-29 12:15:54] Trying to authenticate 'matt2' - running
-[2024-01-29 12:15:54] Authenticated 'matt2' - success
-[2024-01-29 12:15:54] Token generated and stored - success
-[2024-01-29 12:16:05] Providing a list of all operators to: 'matt2' - success
-[2024-01-29 13:14:16] Server mode asked, starting api - info
-[2024-01-29 13:14:16] Register Key RkRrcitEQ21ZMUdxailTQ2dwJSk9JTVQdDotZ1JHO2BAPCs3cEpZRzg4V0hsQ0pRclk6aTpQWDEm - info
-[2024-01-29 13:14:16] Starting Rest API - running
-[2024-01-29 13:14:16] Re-Generating listeners from db - running
-[2024-01-29 13:14:16] Re-Generated listeners from db - success
-[2024-01-29 13:16:14] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-29 13:16:34] Trying to authenticate 'matt2' - running
-[2024-01-29 13:16:34] Authenticated 'matt2' - success
-[2024-01-29 13:16:34] Token generated and stored - success
-[2024-01-29 13:17:13] Providing list of listeners to 'matt2' - running
-[2024-01-29 13:17:13] Provided list of listeners to 'matt2' - success
-[2024-01-29 13:17:48] Providing list of listeners to 'matt2' - running
-[2024-01-29 13:17:48] Provided list of listeners to 'matt2' - success
-[2024-01-29 15:25:52] Server mode asked, starting api - info
-[2024-01-29 15:25:52] Register Key RkRrcitEQ249ODEuPjtBMGk6NScyKSVIU0JlVV1BRl89J0AsWkpKXDxcbkpbOmJ1NlJFYjk8MjkzTQ== - info
-[2024-01-29 15:25:52] Starting Rest API - running
-[2024-01-29 15:25:52] Re-Generating listeners from db - running
-[2024-01-29 15:25:52] Re-Generated listeners from db - success
-[2024-01-29 15:25:56] Trying to authenticate 'matt2' - running
-[2024-01-29 15:25:56] Authenticated 'matt2' - success
-[2024-01-29 15:25:56] Token generated and stored - success
-[2024-01-29 15:26:03] Providing list of listeners to 'matt2' - running
-[2024-01-29 15:26:03] Provided list of listeners to 'matt2' - success
-[2024-01-29 15:26:12] 'matt2' successfully added a listener - success
-[2024-01-29 15:26:14] Providing list of listeners to 'matt2' - running
-[2024-01-29 15:26:14] Provided list of listeners to 'matt2' - success
-[2024-01-29 15:26:24] 'matt2' Starting listener 0.0.0.0:8282 - running
-[2024-01-29 15:26:24] Started listener 0.0.0.0:8282 for matt2 - success
-[2024-01-29 15:26:26] Providing list of listeners to 'matt2' - running
-[2024-01-29 15:26:26] Provided list of listeners to 'matt2' - success
-[2024-01-29 19:38:00] Server mode asked, starting api - info
-[2024-01-29 19:38:00] Register Key RkRrcitEQ29nQ0FtbUpxOydcInAxZmxGWERgMGdWOFNDZGI3UktkKzdRIz9gMjBgN1xHI2k5QDpHWzY5MGYpP2VDQg== - info
-[2024-01-29 19:38:00] Starting Rest API - running
-[2024-01-29 19:38:00] Re-Generating listeners from db - running
-[2024-01-29 19:38:00] Listener 0.0.0.0:8282 created - success
-[2024-01-29 19:38:00] Re-Generated listeners from db - success
-[2024-01-29 19:38:04] Trying to authenticate 'matt2' - running
-[2024-01-29 19:38:04] Authenticated 'matt2' - success
-[2024-01-29 19:38:04] Token generated and stored - success
-[2024-01-29 20:46:36] Server mode asked, starting api - info
-[2024-01-29 20:46:36] Register Key RkRrcitEQ29hMDk1QCRiNTtiR1s9RUpGSkE5VXNqOWlQX0RIOF1QOEFQZC8vQFNmST05MiYmWUFPcDBBPEBwbA== - info
-[2024-01-29 20:46:36] Starting Rest API - running
-[2024-01-29 20:46:36] Re-Generating listeners from db - running
-[2024-01-29 20:46:36] Listener 0.0.0.0:8282 created - success
-[2024-01-29 20:46:36] Re-Generated listeners from db - success
-[2024-01-29 20:46:50] Trying to authenticate 'admin' - running
-[2024-01-29 20:46:50] Failed to authenticate 'admin' - error
-[2024-01-29 20:47:01] Trying to authenticate 'admin' - running
-[2024-01-29 20:47:01] Authenticated 'admin' - success
-[2024-01-29 20:47:01] Token generated and stored - success
-[2024-01-29 20:48:00] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-29 20:48:12] Missing fields in 'admin' request - error
-[2024-01-29 20:48:25] Vault creation asked by 'admin' - running
-[2024-01-29 20:49:43] Server mode asked, starting api - info
-[2024-01-29 20:49:43] Register Key RkRrcitEQ29AIzdVLmxKQVAsZEY8K1JnVUg/RkwkRiZiW2Q7ZCkrbzItNHAlN1hBRVQ8JiU5bEclaVhBL1FkJFE= - info
-[2024-01-29 20:49:43] Starting Rest API - running
-[2024-01-29 20:49:43] Re-Generating listeners from db - running
-[2024-01-29 20:49:43] Listener 0.0.0.0:8282 created - success
-[2024-01-29 20:49:43] Re-Generated listeners from db - success
-[2024-01-29 20:49:48] Vault creation asked by 'admin' - running
-[2024-01-29 20:49:48] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-29 20:51:20] Server mode asked, starting api - info
-[2024-01-29 20:51:20] Register Key RkRrcitEQ28qZ0FRaF0vSCIvZDQyXihrM0UodC4oOW1BWzkwaTpKLTJeKiRARWMsciM/VSZjcT0+RFVJ - info
-[2024-01-29 20:51:20] Starting Rest API - running
-[2024-01-29 20:51:20] Re-Generating listeners from db - running
-[2024-01-29 20:51:20] Listener 0.0.0.0:8282 created - success
-[2024-01-29 20:51:20] Re-Generated listeners from db - success
-[2024-01-29 20:51:23] Vault creation asked by 'admin' - running
-[2024-01-29 20:51:23] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-29 20:51:23] Vault encrypted by 'admin' - success
-[2024-01-29 20:51:34] Server mode asked, starting api - info
-[2024-01-29 20:51:34] Register Key RkRrcitEQ29XW0NIa2NyMkV0LDdGWkRCN0JKPTZqQmQjdU0wNT0qVkZZLldDNnRCKSpHJ1tDWzxy - info
-[2024-01-29 20:51:34] Starting Rest API - running
-[2024-01-29 20:51:34] Re-Generating listeners from db - running
-[2024-01-29 20:51:34] Listener 0.0.0.0:8282 created - success
-[2024-01-29 20:51:34] Re-Generated listeners from db - success
-[2024-01-29 20:51:36] Vault creation asked by 'admin' - running
-[2024-01-29 20:51:36] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-29 20:51:36] Vault encrypted by 'admin' - success
-[2024-01-29 20:51:36] Vault created by 'admin' - success
-[2024-01-29 21:00:08] Server mode asked, starting api - info
-[2024-01-29 21:00:08] Register Key RkRrcitEQ288bzlOY0lAO2MuIXA9IVVPND0+c3U+RllSaTI3PDtDLDMmRjkhOUpBSVw+VyREKDwtXl04PUVTbUs= - info
-[2024-01-29 21:00:08] Starting Rest API - running
-[2024-01-29 21:00:19] Server mode asked, starting api - info
-[2024-01-29 21:00:19] Register Key RkRrcitEQ21GdTpLOjRuQk9gYygxY1JnNEdWOj1SQjYlWCI9W1EiQDFjQSxgMFFLV0JDZHBtNDxHR1Qr - info
-[2024-01-29 21:00:19] Starting Rest API - running
-[2024-01-29 21:00:19] Re-Generating listeners from db - running
-[2024-01-29 21:00:19] Listener 0.0.0.0:8282 created - success
-[2024-01-29 21:00:19] Re-Generated listeners from db - success
-[2024-01-29 21:00:39] Vault list asked by 'admin' - running
-[2024-01-29 21:04:50] Server mode asked, starting api - info
-[2024-01-29 21:04:50] Register Key RkRrcitEQ25GXz0mM0krRj8iLD05TyhGZkFQJCdHPV9XKSIrXFBMUkBxOV5eOTNQUkQ2dFRMVA== - info
-[2024-01-29 21:04:50] Starting Rest API - running
-[2024-01-29 21:04:50] Re-Generating listeners from db - running
-[2024-01-29 21:04:50] Listener 0.0.0.0:8282 created - success
-[2024-01-29 21:04:50] Re-Generated listeners from db - success
-[2024-01-29 21:04:53] Trying to authenticate 'matt2' - running
-[2024-01-29 21:04:53] Authenticated 'matt2' - success
-[2024-01-29 21:04:53] Token generated and stored - success
-[2024-01-29 21:05:22] Trying to authenticate 'admin' - running
-[2024-01-29 21:05:22] Authenticated 'admin' - success
-[2024-01-29 21:05:22] Token generated and stored - success
-[2024-01-29 21:06:30] Trying to authenticate 'admin' - running
-[2024-01-29 21:06:30] Authenticated 'admin' - success
-[2024-01-29 21:06:30] Token generated and stored - success
-[2024-01-29 21:06:31] Vault list asked by 'admin' - running
-[2024-01-29 21:06:45] Trying to authenticate 'admin' - running
-[2024-01-29 21:06:45] Authenticated 'admin' - success
-[2024-01-29 21:06:45] Token generated and stored - success
-[2024-01-29 21:06:46] Vault list asked by 'admin' - running
-[2024-01-29 21:08:06] Server mode asked, starting api - info
-[2024-01-29 21:08:06] Register Key RkRrcitEQ25tWzY6RWhKRGZCLD1AUSRcMkA3aUNXRyZoMXM8J2tBIThPUixkOykyJGo4cE81aTdyTCwkRzU= - info
-[2024-01-29 21:08:06] Starting Rest API - running
-[2024-01-29 21:08:06] Re-Generating listeners from db - running
-[2024-01-29 21:08:06] Listener 0.0.0.0:8282 created - success
-[2024-01-29 21:08:06] Re-Generated listeners from db - success
-[2024-01-29 21:08:09] Trying to authenticate 'admin' - running
-[2024-01-29 21:08:09] Authenticated 'admin' - success
-[2024-01-29 21:08:09] Token generated and stored - success
-[2024-01-29 21:08:11] Vault list asked by 'admin' - running
-[2024-01-29 21:08:17] Trying to authenticate 'matt2' - running
-[2024-01-29 21:08:17] Authenticated 'matt2' - success
-[2024-01-29 21:08:17] Token generated and stored - success
-[2024-01-29 21:08:18] Vault list asked by 'matt2' - running
-[2024-01-30 08:40:48] Trying to authenticate 'matt2' - running
-[2024-01-30 08:40:48] Authenticated 'matt2' - success
-[2024-01-30 08:40:48] Token generated and stored - success
-[2024-01-30 08:40:50] Vault list asked by 'matt2' - running
-[2024-01-30 08:41:05] Trying to authenticate 'admin' - running
-[2024-01-30 08:41:05] Authenticated 'admin' - success
-[2024-01-30 08:41:05] Token generated and stored - success
-[2024-01-30 08:41:06] Vault list asked by 'admin' - running
-[2024-01-30 08:59:23] Server mode asked, starting api - info
-[2024-01-30 08:59:23] Register Key RkRrcitEQ286M0VHQjkmNzkzO3FESF1JdTBrIWFTPiJXcFxCNi0iQTJIV21yMWJfVSc1QjA6ZjFoTHE= - info
-[2024-01-30 08:59:23] Starting Rest API - running
-[2024-01-30 08:59:23] Re-Generating listeners from db - running
-[2024-01-30 08:59:23] Listener 0.0.0.0:8282 created - success
-[2024-01-30 08:59:23] Re-Generated listeners from db - success
-[2024-01-30 08:59:38] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-30 08:59:50] Trying to authenticate 'admin' - running
-[2024-01-30 08:59:50] Authenticated 'admin' - success
-[2024-01-30 08:59:50] Token generated and stored - success
-[2024-01-30 08:59:52] Vault list asked by 'admin' - running
-[2024-01-30 09:00:09] Vault list asked by 'admin' - running
-[2024-01-30 09:00:09] Vault list asked by 'admin' - running
-[2024-01-30 09:00:10] Vault list asked by 'admin' - running
-[2024-01-30 09:00:15] Vault list asked by 'admin' - running
-[2024-01-30 09:01:12] Server mode asked, starting api - info
-[2024-01-30 09:01:12] Register Key RkRrcitEQ25MZzZXbjdfK1xtPj82WmQ/ST0kZ3BvRUgjQU8xZVVELTkxKEhtRCpxMkU6MVJzV0ds - info
-[2024-01-30 09:01:12] Starting Rest API - running
-[2024-01-30 09:01:12] Re-Generating listeners from db - running
-[2024-01-30 09:01:12] Listener 0.0.0.0:8282 created - success
-[2024-01-30 09:01:12] Re-Generated listeners from db - success
-[2024-01-30 09:02:13] Vault recuperation asked by 'admin' - running
-[2024-01-30 09:02:22] Vault recuperation asked by 'admin' - running
-[2024-01-30 09:34:08] Trying to authenticate 'admin' - running
-[2024-01-30 09:34:08] Authenticated 'admin' - success
-[2024-01-30 09:34:08] Token generated and stored - success
-[2024-01-30 09:34:10] Vault list asked by 'admin' - running
-[2024-01-30 09:34:10] Vault list provided to 'admin' - success
-[2024-01-30 09:34:15] Vault recuperation asked by 'admin' - running
-[2024-01-30 09:34:47] Trying to authenticate 'admin' - running
-[2024-01-30 09:34:47] Authenticated 'admin' - success
-[2024-01-30 09:34:47] Token generated and stored - success
-[2024-01-30 09:34:48] Vault list asked by 'admin' - running
-[2024-01-30 09:34:48] Vault list provided to 'admin' - success
-[2024-01-30 09:34:51] Vault recuperation asked by 'admin' - running
-[2024-01-30 09:37:39] Vault recuperation asked by 'admin' - running
-[2024-01-30 09:38:39] Trying to authenticate 'admin' - running
-[2024-01-30 09:38:39] Authenticated 'admin' - success
-[2024-01-30 09:38:39] Token generated and stored - success
-[2024-01-30 09:38:41] Vault list asked by 'admin' - running
-[2024-01-30 09:38:41] Vault list provided to 'admin' - success
-[2024-01-30 09:38:48] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:23:01] Server mode asked, starting api - info
-[2024-01-30 10:23:01] Register Key RkRrcitEQ25JT0c/ZChKO2UnSzREZDctc0NJS3BDMEwnNSk7L2dKQDxkN1xKRyRkXjw1cl5OL0E3QThUSDpc - info
-[2024-01-30 10:23:01] Starting Rest API - running
-[2024-01-30 10:23:01] Re-Generating listeners from db - running
-[2024-01-30 10:23:01] Listener 0.0.0.0:8282 created - success
-[2024-01-30 10:23:01] Re-Generated listeners from db - success
-[2024-01-30 10:23:04] Someone tried to access a webpage without being authenticated/giving a good password - error
-[2024-01-30 10:23:07] Trying to authenticate 'admin' - running
-[2024-01-30 10:23:07] Authenticated 'admin' - success
-[2024-01-30 10:23:07] Token generated and stored - success
-[2024-01-30 10:23:16] Vault list asked by 'admin' - running
-[2024-01-30 10:23:16] Vault list provided to 'admin' - success
-[2024-01-30 10:23:26] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:23:47] Trying to authenticate 'admin' - running
-[2024-01-30 10:23:47] Authenticated 'admin' - success
-[2024-01-30 10:23:47] Token generated and stored - success
-[2024-01-30 10:23:48] Vault list asked by 'admin' - running
-[2024-01-30 10:23:48] Vault list provided to 'admin' - success
-[2024-01-30 10:23:51] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:23:57] 'admin' Adding entry to vault - running
-[2024-01-30 10:25:17] Server mode asked, starting api - info
-[2024-01-30 10:25:17] Register Key RkRrcitEQ21TRkI0I2pUQFVoLTozRlFmJTxDMERvM0VUaXFBOEdwc0UoTy5yL01nZnE6SyhNOkc+TTpYMSwpXkxANUk= - info
-[2024-01-30 10:25:17] Starting Rest API - running
-[2024-01-30 10:25:17] Re-Generating listeners from db - running
-[2024-01-30 10:25:17] Listener 0.0.0.0:8282 created - success
-[2024-01-30 10:25:17] Re-Generated listeners from db - success
-[2024-01-30 10:25:30] Vault list asked by 'admin' - running
-[2024-01-30 10:25:30] Vault list provided to 'admin' - success
-[2024-01-30 10:25:37] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:25:42] 'admin' Adding entry to vault - running
-[2024-01-30 10:26:13] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:26:28] 'admin' Adding entry to vault - running
-[2024-01-30 10:26:38] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:29:46] Trying to authenticate 'admin' - running
-[2024-01-30 10:29:46] Authenticated 'admin' - success
-[2024-01-30 10:29:46] Token generated and stored - success
-[2024-01-30 10:29:48] Vault list asked by 'admin' - running
-[2024-01-30 10:29:48] Vault list provided to 'admin' - success
-[2024-01-30 10:29:53] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:30:07] 'admin' Adding entry to vault - running
-[2024-01-30 10:30:35] Trying to authenticate 'admin' - running
-[2024-01-30 10:30:35] Authenticated 'admin' - success
-[2024-01-30 10:30:35] Token generated and stored - success
-[2024-01-30 10:30:42] Trying to authenticate 'admin' - running
-[2024-01-30 10:30:42] Authenticated 'admin' - success
-[2024-01-30 10:30:42] Token generated and stored - success
-[2024-01-30 10:30:44] Vault list asked by 'admin' - running
-[2024-01-30 10:30:44] Vault list provided to 'admin' - success
-[2024-01-30 10:30:52] 'admin' Adding entry to vault - running
-[2024-01-30 10:31:43] Trying to authenticate 'admin' - running
-[2024-01-30 10:31:43] Authenticated 'admin' - success
-[2024-01-30 10:31:43] Token generated and stored - success
-[2024-01-30 10:31:49] 'admin' Adding entry to vault - running
-[2024-01-30 10:32:03] Trying to authenticate 'admin' - running
-[2024-01-30 10:32:03] Authenticated 'admin' - success
-[2024-01-30 10:32:03] Token generated and stored - success
-[2024-01-30 10:32:05] 'admin' Adding entry to vault - running
-[2024-01-30 10:32:11] Vault list asked by 'admin' - running
-[2024-01-30 10:32:11] Vault list provided to 'admin' - success
-[2024-01-30 10:32:17] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:33:05] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:33:11] 'admin' Adding entry to vault - running
-[2024-01-30 10:33:29] 'admin' Adding entry to vault - running
-[2024-01-30 10:33:40] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:36:47] Trying to authenticate 'admin' - running
-[2024-01-30 10:36:48] Authenticated 'admin' - success
-[2024-01-30 10:36:48] Token generated and stored - success
-[2024-01-30 10:36:55] Vault recuperation asked by 'admin' - running
-[2024-01-30 10:37:16] Trying to authenticate 'admin' - running
-[2024-01-30 10:37:16] Authenticated 'admin' - success
-[2024-01-30 10:37:16] Token generated and stored - success
-[2024-01-30 10:37:27] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:00:16] Trying to authenticate 'admin' - running
-[2024-01-30 11:00:16] Authenticated 'admin' - success
-[2024-01-30 11:00:16] Token generated and stored - success
-[2024-01-30 11:00:20] Trying to authenticate 'admin' - running
-[2024-01-30 11:00:20] Authenticated 'admin' - success
-[2024-01-30 11:00:20] Token generated and stored - success
-[2024-01-30 11:00:22] Vault list asked by 'admin' - running
-[2024-01-30 11:00:22] Vault list provided to 'admin' - success
-[2024-01-30 11:03:49] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:04:05] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:06:09] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:08:17] Server mode asked, starting api - info
-[2024-01-30 11:08:17] Register Key RkRrcitEQ24+Jj9VU051PGQ4cEcwaGNJRkA6aVNHSCNSNHE5Syw6NEViLXNgQmVyZElGX1ApOQ== - info
-[2024-01-30 11:08:17] Starting Rest API - running
-[2024-01-30 11:08:17] Re-Generating listeners from db - running
-[2024-01-30 11:08:17] Listener 0.0.0.0:8282 created - success
-[2024-01-30 11:08:17] Re-Generated listeners from db - success
-[2024-01-30 11:08:22] Vault list asked by 'admin' - running
-[2024-01-30 11:08:22] Vault list provided to 'admin' - success
-[2024-01-30 11:08:28] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:08:28] Vault provided to 'admin' - success
-[2024-01-30 11:08:32] 'admin' Removing entry from vault - running
-[2024-01-30 11:08:32] 'admin' tried to remove an entry from a vault without giving password/id/cred index - error
-[2024-01-30 11:09:20] Trying to authenticate 'admin' - running
-[2024-01-30 11:09:20] Authenticated 'admin' - success
-[2024-01-30 11:09:20] Token generated and stored - success
-[2024-01-30 11:09:22] Vault list asked by 'admin' - running
-[2024-01-30 11:09:22] Vault list provided to 'admin' - success
-[2024-01-30 11:09:30] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:09:30] Vault provided to 'admin' - success
-[2024-01-30 11:09:34] 'admin' Removing entry from vault - running
-[2024-01-30 11:09:34] 'admin' Successfully removed cred from vault - success
-[2024-01-30 11:09:37] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:09:37] Vault provided to 'admin' - success
-[2024-01-30 11:09:44] 'admin' Removing entry from vault - running
-[2024-01-30 11:09:44] 'admin' entered an invalid index number - error
-[2024-01-30 11:09:49] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:09:49] Vault provided to 'admin' - success
-[2024-01-30 11:09:59] 'admin' Removing entry from vault - running
-[2024-01-30 11:09:59] 'admin' Successfully removed cred from vault - success
-[2024-01-30 11:10:03] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:10:03] Vault provided to 'admin' - success
-[2024-01-30 11:19:38] Vault list asked by 'admin' - running
-[2024-01-30 11:19:38] Vault list provided to 'admin' - success
-[2024-01-30 11:19:59] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:19:59] Vault provided to 'admin' - success
-[2024-01-30 11:20:13] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:20:13] Vault provided to 'admin' - success
-[2024-01-30 11:55:20] Trying to authenticate 'admin' - running
-[2024-01-30 11:55:20] Authenticated 'admin' - success
-[2024-01-30 11:55:20] Token generated and stored - success
-[2024-01-30 11:55:23] Vault list asked by 'admin' - running
-[2024-01-30 11:55:23] Vault list provided to 'admin' - success
-[2024-01-30 11:55:29] Vault recuperation asked by 'admin' - running
-[2024-01-30 11:55:29] Vault provided to 'admin' - success
-[2024-01-30 11:55:36] Vault list asked by 'admin' - running
-[2024-01-30 11:55:36] Vault list provided to 'admin' - success
-[2024-01-30 11:56:11] Server mode asked, starting api - info
-[2024-01-30 11:56:11] Register Key RkRrcitEQ29nRUFsPDVVOi1XKipFYXMmVzxGZmA4PSUsR2lCSydqKUNmPGYuRGVXMCk4Yw== - info
-[2024-01-30 11:56:11] Starting Rest API - running
-[2024-01-30 11:56:11] Re-Generating listeners from db - running
-[2024-01-30 11:56:11] Listener 0.0.0.0:8282 created - success
-[2024-01-30 11:56:11] Re-Generated listeners from db - success
-[2024-01-30 11:56:19] Trying to authenticate 'admin' - running
-[2024-01-30 11:56:19] Authenticated 'admin' - success
-[2024-01-30 11:56:19] Token generated and stored - success
-[2024-01-30 11:56:20] Vault list asked by 'admin' - running
-[2024-01-30 11:56:20] Vault list provided to 'admin' - success
-[2024-01-30 11:56:30] Vault deletion initialised by 'admin' - running
-[2024-01-30 11:56:33] Vault list asked by 'admin' - running
-[2024-01-30 11:56:33] Vault list provided to 'admin' - success
-[2024-01-30 11:56:56] Server mode asked, starting api - info
-[2024-01-30 11:56:56] Register Key RkRrcitEQ25wODVBPGtqNzowVkxEZU43IUgiaExyME5ET3A+IzBCPkQsNTQrRGEr - info
-[2024-01-30 11:56:56] Starting Rest API - running
-[2024-01-30 11:56:56] Re-Generating listeners from db - running
-[2024-01-30 11:56:56] Listener 0.0.0.0:8282 created - success
-[2024-01-30 11:56:56] Re-Generated listeners from db - success
-[2024-01-30 11:57:00] Trying to authenticate 'admin' - running
-[2024-01-30 11:57:00] Authenticated 'admin' - success
-[2024-01-30 11:57:00] Token generated and stored - success
-[2024-01-30 11:57:03] Vault list asked by 'admin' - running
-[2024-01-30 11:57:03] Vault list provided to 'admin' - success
-[2024-01-30 11:57:09] Vault deletion initialised by 'admin' - running
-[2024-01-30 11:57:09] Vault RkRrcitEQ249TTxBWyE2NUFPO0U= deleted by 'admin' - success
-[2024-01-30 11:57:10] Vault list asked by 'admin' - running
-[2024-01-30 11:57:10] Vault list provided to 'admin' - success
-[2024-01-30 11:57:22] Vault list asked by 'admin' - running
-[2024-01-30 11:57:22] Vault list provided to 'admin' - success
-[2024-01-30 12:03:27] Server mode asked, starting api - info
-[2024-01-30 12:03:27] Register Key RkRrcitEQ29CUT0mcyZuOWg4QTNHQEcyT0deITszLFhQWmtGdElOKTFMKzBmOG4xVVA8XStEVQ== - info
-[2024-01-30 12:03:27] Starting Rest API - running
-[2024-01-30 12:03:27] Re-Generating listeners from db - running
-[2024-01-30 12:03:27] Listener 0.0.0.0:8282 created - success
-[2024-01-30 12:03:27] Re-Generated listeners from db - success
-[2024-01-30 12:03:30] Trying to authenticate 'admin' - running
-[2024-01-30 12:03:30] Authenticated 'admin' - success
-[2024-01-30 12:03:30] Token generated and stored - success
-[2024-01-30 12:03:32] Vault list asked by 'admin' - running
-[2024-01-30 12:03:32] Vault list provided to 'admin' - success
-[2024-01-30 12:03:34] Vault creation asked by 'admin' - running
-[2024-01-30 12:03:34] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-30 12:03:34] Vault encrypted by 'admin' - success
-[2024-01-30 12:03:34] Vault created by 'admin' - success
-[2024-01-30 12:03:36] Vault list asked by 'admin' - running
-[2024-01-30 12:03:36] Vault list provided to 'admin' - success
-[2024-01-30 12:03:45] Vault creation asked by 'admin' - running
-[2024-01-30 12:03:45] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-30 12:03:45] Vault encrypted by 'admin' - success
-[2024-01-30 12:03:45] Vault created by 'admin' - success
-[2024-01-30 12:03:49] Vault list asked by 'admin' - running
-[2024-01-30 12:03:49] Vault list provided to 'admin' - success
-[2024-01-30 12:04:13] 'admin' Adding entry to vault - running
-[2024-01-30 12:04:13] 'admin' Successfully added cred to vault - success
-[2024-01-30 12:04:33] 'admin' Adding entry to vault - running
-[2024-01-30 12:04:33] 'admin' Successfully added cred to vault - success
-[2024-01-30 12:04:35] Vault list asked by 'admin' - running
-[2024-01-30 12:04:35] Vault list provided to 'admin' - success
-[2024-01-30 12:04:40] Vault recuperation asked by 'admin' - running
-[2024-01-30 12:04:40] Vault provided to 'admin' - success
-[2024-01-30 12:04:45] Vault recuperation asked by 'admin' - running
-[2024-01-30 12:04:45] Vault provided to 'admin' - success
-[2024-01-30 12:04:52] Trying to authenticate 'matt2' - running
-[2024-01-30 12:04:52] Authenticated 'matt2' - success
-[2024-01-30 12:04:52] Token generated and stored - success
-[2024-01-30 12:04:54] Vault list asked by 'matt2' - running
-[2024-01-30 12:04:54] Vault list provided to 'matt2' - success
-[2024-01-30 12:05:06] Vault recuperation asked by 'matt2' - running
-[2024-01-30 12:05:16] Trying to authenticate 'admin' - running
-[2024-01-30 12:05:16] Authenticated 'admin' - success
-[2024-01-30 12:05:16] Token generated and stored - success
-[2024-01-30 12:05:18] Vault list asked by 'admin' - running
-[2024-01-30 12:05:18] Vault list provided to 'admin' - success
-[2024-01-30 12:05:24] Vault deletion initialised by 'admin' - running
-[2024-01-30 12:05:24] Vault RkRrcitEQ3AwJkZ1MmZPOklTZVI= deleted by 'admin' - success
-[2024-01-30 12:05:26] Vault list asked by 'admin' - running
-[2024-01-30 12:05:26] Vault list provided to 'admin' - success
-[2024-01-30 12:05:31] Vault deletion initialised by 'admin' - running
-[2024-01-30 12:05:31] Vault RkRrcitEQ21PYzwnaih1RiRYa2E= deleted by 'admin' - success
-[2024-01-30 12:09:31] Server mode asked, starting api - info
-[2024-01-30 12:09:31] Register Key RkRrcitEQ29PLzhtNTFvPlo9NDVFJktYRkd0RCIjN1UuZm8vUGZlSUQuWjEyRCwjKHFGJzo6RDA1NSc/QWxoS0kwYA== - info
-[2024-01-30 12:09:31] Starting Rest API - running
-[2024-01-30 12:09:31] Re-Generating listeners from db - running
-[2024-01-30 12:09:31] Listener 0.0.0.0:8282 created - success
-[2024-01-30 12:09:31] Re-Generated listeners from db - success
-[2024-01-30 12:09:34] Trying to authenticate 'admin' - running
-[2024-01-30 12:09:34] Authenticated 'admin' - success
-[2024-01-30 12:09:34] Token generated and stored - success
-[2024-01-30 12:09:38] Trying to authenticate 'matt2' - running
-[2024-01-30 12:09:38] Authenticated 'matt2' - success
-[2024-01-30 12:09:38] Token generated and stored - success
-[2024-01-30 12:09:41] Vault list asked by 'matt2' - running
-[2024-01-30 12:09:41] Vault list provided to 'matt2' - success
-[2024-01-30 12:09:51] Trying to authenticate 'admin' - running
-[2024-01-30 12:09:51] Authenticated 'admin' - success
-[2024-01-30 12:09:51] Token generated and stored - success
-[2024-01-30 12:09:54] Vault creation asked by 'admin' - running
-[2024-01-30 12:09:54] 'admin' Encrypting vault with XChaCha20 - running
-[2024-01-30 12:09:54] Vault encrypted by 'admin' - success
-[2024-01-30 12:09:54] Vault created by 'admin' - success
-[2024-01-30 12:09:55] Vault list asked by 'admin' - running
-[2024-01-30 12:09:55] Vault list provided to 'admin' - success
-[2024-01-30 12:10:02] Trying to authenticate 'matt2' - running
-[2024-01-30 12:10:02] Authenticated 'matt2' - success
-[2024-01-30 12:10:02] Token generated and stored - success
-[2024-01-30 12:10:04] Vault recuperation asked by 'matt2' - running
-[2024-01-30 12:10:04] 'matt2' Tried to access a vault that is not owning - error
-[2024-01-30 12:10:37] Server mode asked, starting api - info
-[2024-01-30 12:10:37] Register Key RkRrcitEQ29qIUcnPmBCL1BvXEgwZ1RlPDBKR0xTOyt0T3UwZWJwXTwqKShqOmgiTiM= - info
-[2024-01-30 12:10:37] Starting Rest API - running
-[2024-01-30 12:10:37] Re-Generating listeners from db - running
-[2024-01-30 12:10:37] Listener 0.0.0.0:8282 created - success
-[2024-01-30 12:10:37] Re-Generated listeners from db - success
-[2024-01-30 12:10:47] Vault recuperation asked by 'matt2' - running
-[2024-01-30 12:10:47] 'matt2' Tried to access a vault that he's not owning - error
-[2024-01-30 12:11:09] Vault list asked by 'matt2' - running
-[2024-01-30 12:11:09] Vault list provided to 'matt2' - success
-[2024-01-30 12:11:15] Trying to authenticate 'admin' - running
-[2024-01-30 12:11:15] Authenticated 'admin' - success
-[2024-01-30 12:11:15] Token generated and stored - success
-[2024-01-30 12:11:17] Vault list asked by 'admin' - running
-[2024-01-30 12:11:17] Vault list provided to 'admin' - success
-[2024-01-30 12:11:21] Server mode asked, starting api - info
-[2024-01-30 12:11:21] Register Key RkRrcitEQ29FTzlOT01WPSRvcWA8KCZOLjZwaWglQFQsKltHJy5TNz0jYk0oQGY= - info
-[2024-01-30 12:11:21] Starting Rest API - running
-[2024-01-30 12:11:21] Re-Generating listeners from db - running
-[2024-01-30 12:11:21] Listener 0.0.0.0:8282 created - success
-[2024-01-30 12:11:21] Re-Generated listeners from db - success
-[2024-01-30 12:11:25] Vault list asked by 'admin' - running
-[2024-01-30 12:11:25] Vault list provided to 'admin' - success
-[2024-01-30 12:13:04] Trying to authenticate 'admin' - running
-[2024-01-30 12:13:04] Authenticated 'admin' - success
-[2024-01-30 12:13:04] Token generated and stored - success
-[2024-01-30 12:16:31] Trying to authenticate 'admin' - running
-[2024-01-30 12:16:31] Authenticated 'admin' - success
-[2024-01-30 12:16:31] Token generated and stored - success
+[2024-01-30 16:29:20] Trying to authenticate 'admin' - running
+[2024-01-30 16:29:20] Authenticated 'admin' - success
+[2024-01-30 16:29:20] Token generated and stored - success
+[2024-01-30 16:29:33] Server mode asked, starting api - info
+[2024-01-30 16:29:33] Register Key RkRrcitEQ29kSEVfKDRlN1dNak5BM2ohaz5dYUNpSDs3N1I+WkZnKkd0MUEwQzJaW19IPDQnKEIzJWJhPllmOSsvUSQlSQ== - info
+[2024-01-30 16:29:33] Starting Rest API - running
+[2024-01-30 16:29:59] Server mode asked, starting api - info
+[2024-01-30 16:29:59] Register Key RkRrcitEQ3Amc0VfOF9UOmRIYS85MV9dPkMzRkFRO0JcImo+IyYtYCxZOzYyPFs4aEQwNTxwLUViWzEiMDFmNSdBODQi - info
+[2024-01-30 16:29:59] Starting Rest API - running
+[2024-01-30 16:29:59] Re-Generating listeners from db - running
+[2024-01-30 16:29:59] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:29:59] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:29:59] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:29:59] Re-Generated listeners from db - success
+[2024-01-30 16:30:00] Agent checkin - listener
+[2024-01-30 16:30:03] 'admin' asked the agent list - running
+[2024-01-30 16:30:56] Server mode asked, starting api - info
+[2024-01-30 16:30:56] Register Key RkRrcitEQ286LkZcYm5cPlcrSGEzJitQaz0mRSU0OFQ2PUA5MjdjcztiXzQwLFk8Jk8= - info
+[2024-01-30 16:30:56] Starting Rest API - running
+[2024-01-30 16:30:56] Re-Generating listeners from db - running
+[2024-01-30 16:30:56] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:30:56] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:30:56] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:30:56] Re-Generated listeners from db - success
+[2024-01-30 16:30:56] Agent checkin - listener
+[2024-01-30 16:30:58] 'admin' asked the agent list - running
+[2024-01-30 16:31:32] Server mode asked, starting api - info
+[2024-01-30 16:31:32] Register Key RkRrcitEQ246cC9UdDk+QlE2Q1c4N0hFckUpZ3NnSD5RKT9CNi1SMkYqOilQO0guS2w8RD1gKzpLKSRzMUwrbHA9KjQ= - info
+[2024-01-30 16:31:32] Starting Rest API - running
+[2024-01-30 16:31:32] Re-Generating listeners from db - running
+[2024-01-30 16:31:32] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:31:32] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:31:32] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:31:32] Re-Generated listeners from db - success
+[2024-01-30 16:31:33] Agent checkin - listener
+[2024-01-30 16:31:34] 'admin' asked the agent list - running
+[2024-01-30 16:31:34] Agent list provided to 'admin' - success
+[2024-01-30 16:32:32] Server mode asked, starting api - info
+[2024-01-30 16:32:32] Register Key RkRrcitEQ3AvWzsvQXVORV0tNCUyK2dubkZcT01cOk81Nj9Aa3FnZkY/KSQ+ - info
+[2024-01-30 16:32:32] Starting Rest API - running
+[2024-01-30 16:32:32] Re-Generating listeners from db - running
+[2024-01-30 16:32:32] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:32:32] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:32:32] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:32:32] Re-Generated listeners from db - success
+[2024-01-30 16:32:33] Agent checkin - listener
+[2024-01-30 16:32:35] 'admin' asked the agent list - running
+[2024-01-30 16:32:35] Agent list provided to 'admin' - success
+[2024-01-30 16:33:14] Trying to authenticate 'admin' - running
+[2024-01-30 16:33:14] Authenticated 'admin' - success
+[2024-01-30 16:33:14] Token generated and stored - success
+[2024-01-30 16:33:16] 'admin' asked the agent list - running
+[2024-01-30 16:33:16] Agent list provided to 'admin' - success
+[2024-01-30 16:33:37] Server mode asked, starting api - info
+[2024-01-30 16:33:37] Register Key RkRrcitEQ291aTBnU250QzIlTDBEL0VtLDYhJGBeMC9JV0k4UCE5KzpLJmk4QjEiTHA= - info
+[2024-01-30 16:33:37] Starting Rest API - running
+[2024-01-30 16:33:37] Re-Generating listeners from db - running
+[2024-01-30 16:33:37] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:33:37] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:33:37] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:33:37] Re-Generated listeners from db - success
+[2024-01-30 16:33:37] Agent checkin - listener
+[2024-01-30 16:33:40] 'admin' asked for the agent list - running
+[2024-01-30 16:33:40] Agent list provided to 'admin' - success
+[2024-01-30 16:33:57] 'admin' asked for the agent list - running
+[2024-01-30 16:33:57] Agent list provided to 'admin' - success
+[2024-01-30 16:34:02] 'admin' asked for the agent list - running
+[2024-01-30 16:34:02] Agent list provided to 'admin' - success
+[2024-01-30 16:43:09] Server mode asked, starting api - info
+[2024-01-30 16:43:09] Register Key RkRrcitEQ289IjxFKW4zOS8wW0M3IV8xPTg5LmlnMkU+R1pBUm1QT0UoVm0sQ0xdYVU= - info
+[2024-01-30 16:43:09] Starting Rest API - running
+[2024-01-30 16:43:09] Re-Generating listeners from db - running
+[2024-01-30 16:43:09] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:43:09] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:43:09] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:43:09] Re-Generated listeners from db - success
+[2024-01-30 16:43:10] Agent checkin - listener
+[2024-01-30 16:43:12] 'admin' asked for the agent list - running
+[2024-01-30 16:43:12] Agent list provided to 'admin' - success
+[2024-01-30 16:45:37] 'admin' asked for the agent list - running
+[2024-01-30 16:45:37] Agent list provided to 'admin' - success
+[2024-01-30 16:45:56] 'admin' asked for the agent list - running
+[2024-01-30 16:45:56] Agent list provided to 'admin' - success
+[2024-01-30 16:48:06] 'admin' asked for the agent list - running
+[2024-01-30 16:48:06] Agent list provided to 'admin' - success
+[2024-01-30 16:48:51] Agent checkin - listener
+[2024-01-30 16:48:59] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-01-30 16:49:26] Trying to authenticate 'admin' - running
+[2024-01-30 16:49:26] Authenticated 'admin' - success
+[2024-01-30 16:49:26] Token generated and stored - success
+[2024-01-30 16:49:28] 'admin' asked for the agent list - running
+[2024-01-30 16:49:28] Agent list provided to 'admin' - success
+[2024-01-30 16:49:39] 'admin' asked for the agent list - running
+[2024-01-30 16:49:39] Agent list provided to 'admin' - success
+[2024-01-30 16:49:55] Trying to authenticate 'admin' - running
+[2024-01-30 16:49:55] Authenticated 'admin' - success
+[2024-01-30 16:49:55] Token generated and stored - success
+[2024-01-30 16:49:56] 'admin' asked for the agent list - running
+[2024-01-30 16:49:56] Agent list provided to 'admin' - success
+[2024-01-30 16:50:20] Server mode asked, starting api - info
+[2024-01-30 16:50:20] Register Key RkRrcitEQ291YjtfXl5bRUduWmRFJWstQEFPQzkxQHEvQUhDMD5nOUckZHBAL1MvMFg= - info
+[2024-01-30 16:50:20] Starting Rest API - running
+[2024-01-30 16:50:20] Re-Generating listeners from db - running
+[2024-01-30 16:50:20] Listener 0.0.0.0:8181 created - success
+[2024-01-30 16:50:20] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 16:50:20] Started listener 0.0.0.0:8181 - success
+[2024-01-30 16:50:20] Re-Generated listeners from db - success
+[2024-01-30 16:50:20] Agent checkin - listener
+[2024-01-30 16:50:22] 'admin' asked for the agent list - running
+[2024-01-30 16:50:22] Agent list provided to 'admin' - success
+[2024-01-30 16:50:28] Agent checkin - listener
+[2024-01-30 16:50:31] 'admin' asked for the agent list - running
+[2024-01-30 16:50:31] Agent list provided to 'admin' - success
+[2024-01-30 16:59:08] Trying to authenticate 'admin' - running
+[2024-01-30 16:59:08] Authenticated 'admin' - success
+[2024-01-30 16:59:08] Token generated and stored - success
+[2024-01-30 16:59:09] 'admin' asked for the agent list - running
+[2024-01-30 16:59:09] Agent list provided to 'admin' - success
+[2024-01-30 17:07:18] 'admin' asked for the agent list - running
+[2024-01-30 17:07:18] Agent list provided to 'admin' - success
+[2024-01-30 17:07:21] Server mode asked, starting api - info
+[2024-01-30 17:07:21] Register Key RkRrcitEQ286KDBqN2FKR103KTQ4N3VVJ0JQZW8zNjZvOSlGJERIPjNJMnJpQmZKSUczRzJHXUJRLFVuPShQb2cwMThN - info
+[2024-01-30 17:07:21] Starting Rest API - running
+[2024-01-30 17:07:21] Re-Generating listeners from db - running
+[2024-01-30 17:07:21] Listener 0.0.0.0:8181 created - success
+[2024-01-30 17:07:21] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 17:07:21] Started listener 0.0.0.0:8181 - success
+[2024-01-30 17:07:21] Re-Generated listeners from db - success
+[2024-01-30 17:07:22] Agent checkin - listener
+[2024-01-30 17:07:22] Agent checkin - listener
+[2024-01-30 17:07:25] 'admin' asked for the agent list - running
+[2024-01-30 17:07:25] Agent list provided to 'admin' - success
+[2024-01-30 17:07:30] Server mode asked, starting api - info
+[2024-01-30 17:07:30] Register Key RkRrcitEQ21oaUEzV0ZMRiY9KVM6STdpUjBrPk5PP1VkQz4+JzxNMjZVRV9DNnIuQVMyLWBXcDssZWY+ - info
+[2024-01-30 17:07:30] Starting Rest API - running
+[2024-01-30 17:07:30] Re-Generating listeners from db - running
+[2024-01-30 17:07:30] Listener 0.0.0.0:8181 created - success
+[2024-01-30 17:07:30] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 17:07:30] Started listener 0.0.0.0:8181 - success
+[2024-01-30 17:07:30] Re-Generated listeners from db - success
+[2024-01-30 17:07:31] Agent checkin - listener
+[2024-01-30 17:07:31] Agent checkin - listener
+[2024-01-30 17:07:33] 'admin' asked for the agent list - running
+[2024-01-30 17:07:34] Agent list provided to 'admin' - success
+[2024-01-30 17:07:40] Server mode asked, starting api - info
+[2024-01-30 17:07:40] Register Key RkRrcitEQ285Y0ZFcWVJQ2loNzIxZGFsJTpHIzFiRmAoQVM6MVJJJT4kazYhOzA2NUA5NmkqYjwrNQ== - info
+[2024-01-30 17:07:40] Starting Rest API - running
+[2024-01-30 17:07:40] Re-Generating listeners from db - running
+[2024-01-30 17:07:40] Listener 0.0.0.0:8181 created - success
+[2024-01-30 17:07:40] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 17:07:40] Started listener 0.0.0.0:8181 - success
+[2024-01-30 17:07:40] Re-Generated listeners from db - success
+[2024-01-30 17:07:41] Agent checkin - listener
+[2024-01-30 17:07:41] Agent checkin - listener
+[2024-01-30 17:07:42] 'admin' asked for the agent list - running
+[2024-01-30 17:07:42] Agent list provided to 'admin' - success
+[2024-01-30 17:07:48] Server mode asked, starting api - info
+[2024-01-30 17:07:48] Register Key RkRrcitEQ21ZYUVkMVZjRUUjT147J0FERjBLMTdxOjFSRigxaDpHbTIrb1QlMDQvRjM3V19kRjloZmdlRmEz - info
+[2024-01-30 17:07:48] Starting Rest API - running
+[2024-01-30 17:07:48] Re-Generating listeners from db - running
+[2024-01-30 17:07:48] Listener 0.0.0.0:8181 created - success
+[2024-01-30 17:07:48] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 17:07:48] Started listener 0.0.0.0:8181 - success
+[2024-01-30 17:07:48] Re-Generated listeners from db - success
+[2024-01-30 17:07:48] Agent checkin - listener
+[2024-01-30 17:07:48] Agent checkin - listener
+[2024-01-30 17:07:54] 'admin' asked for the agent list - running
+[2024-01-30 17:07:54] Agent list provided to 'admin' - success
+[2024-01-30 17:08:51] 'admin' asked for the agent list - running
+[2024-01-30 17:08:51] Agent list provided to 'admin' - success
+[2024-01-30 17:08:59] Server mode asked, starting api - info
+[2024-01-30 17:08:59] Register Key RkRrcitEQ25GJz0mO2FmOmJjIWQ4NysycDg5QV04PVolP29APGxnL0RlYE5MNyFgSDw= - info
+[2024-01-30 17:08:59] Starting Rest API - running
+[2024-01-30 17:08:59] Re-Generating listeners from db - running
+[2024-01-30 17:08:59] Listener 0.0.0.0:8181 created - success
+[2024-01-30 17:08:59] Starting listener 0.0.0.0:8181 - running
+[2024-01-30 17:08:59] Started listener 0.0.0.0:8181 - success
+[2024-01-30 17:08:59] Re-Generated listeners from db - success
+[2024-01-30 17:09:00] Agent checkin - listener
+[2024-01-30 17:09:00] Agent checkin - listener
+[2024-01-30 17:09:03] 'admin' asked for the agent list - running
+[2024-01-30 17:09:03] Agent list provided to 'admin' - success

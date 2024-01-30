@@ -183,6 +183,24 @@ class CLI_Client:
                             print('\n\033[92m'+"[Success] Vault deleted\n\033[0m")
                         else:
                             print("\033[31m\n[Error] Failed to delete vault, check the logs\n\033[0m")
+
+            elif "agents" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "agents"):
+                if command == "agents":
+                    all_agents = self.craft_and_send_get_request("/agents").content
+                    all_agents = json.loads(all_agents)
+                    ordered_agents = {"\033[31mname\033[0m":[],"\033[31mlistener\033[0m":[],"\033[31muser\033[0m":[],"\033[31msleep\033[0m":[],"\033[31mpid\033[0m":[],"\033[31mlast_seen\033[0m":[]}
+                    for listener in all_agents["result"].keys():
+                        for agent in all_agents["result"][listener].values():
+                            ordered_agents["\033[31mname\033[0m"].append(agent["name"])
+                            ordered_agents["\033[31mlast_seen\033[0m"].append(agent["last_seen"])
+                            ordered_agents["\033[31muser\033[0m"].append(agent["user"])
+                            ordered_agents["\033[31msleep\033[0m"].append(agent["sleep"])
+                            ordered_agents["\033[31mpid\033[0m"].append(agent["pid"])
+                            ordered_agents["\033[31mlistener\033[0m"].append(listener)
+                    print(str(tabulate(ordered_agents, headers="keys", tablefmt="fancy_grid")))
+
+
+
                         
                             
             else:
@@ -227,13 +245,14 @@ class CLI_Client:
         listeners = self.craft_and_send_get_request("/listeners")
         if not "[Error]" in listeners.content.decode():
             all_listeners = listeners.json()['result']
-            all_listeners_ordered = {'\033[31mid\033[0m':[],"\033[31mhost\033[0m":[],"\033[31mport\033[0m":[],"\033[31mssl\033[0m":[],"\033[31mactive\033[0m":[]}
+            all_listeners_ordered = {'\033[31mid\033[0m':[],"\033[31mhost\033[0m":[],"\033[31mport\033[0m":[],"\033[31mssl\033[0m":[],"\033[31mactive\033[0m":[],"\033[31msecret_key\033[0m":[]}
             for listener in all_listeners:
                 all_listeners_ordered["\033[31mid\033[0m"].append('\33[34m'+str(listener["host"])+":"+str(listener["port"])+"\033[0m")
                 all_listeners_ordered["\033[31mhost\033[0m"].append(listener["host"])
                 all_listeners_ordered["\033[31mport\033[0m"].append(listener["port"])
                 all_listeners_ordered["\033[31mssl\033[0m"].append(listener["ssl"])
                 all_listeners_ordered["\033[31mactive\033[0m"].append(listener["active"])
+                all_listeners_ordered["\033[31msecret_key\033[0m"].append(listener["secret_key"])
             return str(tabulate(all_listeners_ordered, headers="keys", tablefmt="fancy_grid"))
                 
         return "\033[91m[Error] No result found !\033[0m"

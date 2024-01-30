@@ -12,7 +12,7 @@ def set_random_color(char):
     CSELECTED = '\33[7m'
 
     colors1 = "\33["+str(random.randint(91,94))+"m"
-    colors2 = "\33["+str(random.randint(31,34))+"m"
+    colors2 = "\33["+str(random.randint(31,35))+"m"
     color = random.choice((colors1,colors2))
     char = color+char+CEND
     return char
