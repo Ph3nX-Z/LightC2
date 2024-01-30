@@ -26,3 +26,9 @@
 
 
 ### Implemented features
+
+- Argon2 for user's password storage
+- Encrypted Vault using XChaCha20
+- Multi-Threaded listeners
+- Simplified interface
+- Native ssl implementation (self signed)
