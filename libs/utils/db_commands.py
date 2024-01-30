@@ -1,6 +1,30 @@
+import datetime
+
 # CREATE TABLE users(username VARCHAR(50),hash VARCHAR(200),token VARCHAR(500),token_datetime VARCHAR(50),nonce VARCHAR(20));
 # create table listeners(host VARCHAR(15),port INTEGER, ssl INTEGER, admin_key VARCHAR(50), secret_key VARCHAR(50),active INTEGER);
 # create table vault(id VARCHAR, username VARCHAR, nonce VARCHAR, data VARCHAR);
+# create table jobs(id INTEGER PRIMARY KEY AUTOINCREMENT, agent_id VARCHAR, method VARCHAR, arguments VARCHAR, output VARCHAR, started_time VARCHAR, status VARCHAR); status can be tasked, running, finished
+
+def add_job_to_db(agent_id:str,method:str,arguments:str)->str:
+    now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    command = f"INSERT INTO jobs(agent_id,method,arguments,output,started_time,status) VALUES ('{agent_id}','{method}','{arguments}','','{now}','tasked');"
+    return command
+
+def add_output_to_task(task_id:int,output:str)->str:
+    command = f"UPDATE jobs SET status='running',output='{output}' WHERE id=={str(task_id)};"
+    return command
+
+def get_tasked_job_for_agent(agent_id:str)->str:
+    command = f"SELECT * FROM jobs WHERE status=='tasked' and agent_id=='{agent_id}';"
+    return command
+
+def set_job_running(job_id:int)->str:
+    command = f"UPDATE jobs SET status='running' WHERE id=={str(job_id)};"
+    return command
+
+def set_job_finished(job_id:int)->str:
+    command = f"UPDATE jobs SET status='finished' WHERE id=={str(job_id)};"
+    return command
 
 def add_user_to_db(username:str,hash:str)->str:
     command = f"INSERT INTO users SELECT '{username}','{hash}','','','' WHERE NOT EXISTS (SELECT 1 FROM users WHERE username == '{username}');"

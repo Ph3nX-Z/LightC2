@@ -73,5 +73,20 @@ def gen_wizard(func):
 """
     return wizard
 
+def gen_shell():
+    shell = """
+
+       /\\
+      {.-}
+     ;_.-'\\
+    {    _.}_
+     \.-' /  `,            \33[35m[LightC2 Shell]\33[0m
+      \  |    /
+       \ |  ,/
+        \|_/
+
+"""
+    return shell
+
 if __name__=='__main__':
     print(set_random_color(gen_header()))

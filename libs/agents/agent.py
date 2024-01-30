@@ -15,8 +15,6 @@ class Agent:
         self.command_queue = []
         self.output_file = []
     
-    def exec_command(self,command):
-        self.command_queue.append(command)
 
     def add_output_to_file(self,output):
         self.output_file.append(output)

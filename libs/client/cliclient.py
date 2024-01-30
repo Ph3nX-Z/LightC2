@@ -6,6 +6,7 @@ from tabulate import tabulate
 import readline
 from libs.headers.gen_header import *
 import re
+import datetime
 
 class CLI_Client:
 
@@ -44,17 +45,15 @@ class CLI_Client:
 ┌Help Panel─────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────┐
 │ \33[31mName\33[0m          │ \33[31mDescription\33[0m                                                                                              │ \33[31mUsage\33[0m                              │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mlistener\33[0m      │ View Listeners                                                                                           │ listeners                          │
+│ \33[34mlisteners\33[0m     │ Manage listeners (help for more informations)                                                            │ listeners                          │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34moperators\33[0m     │ View all operators                                                                                       │ operators                          │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mvault\33[0m         │ Add/display credentials to/from the vault                                                                │ vault                              │
+│ \33[34mvault\33[0m         │ Manage vaults (help for more informations)                                                               │ vault                              │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34mhelp\33[0m          │ Display the help menu for a command or in general                                                        │ help <command:optional>            │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34minteract\33[0m      │ Interact with an agent                                                                                   │ interact <agent_name>              │
-├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34magents\33[0m        │ Show agents                                                                                              │ agents                             │
+│ \33[34magents\33[0m        │ Manage agents (help for more informations)                                                               │ agents                             │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34mmodules\33[0m       │ Show modules                                                                                             │ modules                            │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
@@ -72,27 +71,28 @@ class CLI_Client:
         if module==None:
             return help_str
         else:
-            if module == "listener":
+            if module == "listeners":
                 help_dict = {"\33[31mOption\33[0m":["\33[34mstart\33[0m","\33[34mstop\33[0m","\33[34mrm\33[0m","\33[34mcreate\33[0m"],"\33[31mDescription\33[0m":["Start a listener with a given id","Stop a listener with a given id","Remove completely a listener","Create a listener (spawn a wizard)"],"\33[31mUsage\33[0m":["listener start <listener id>","listener stop <listener id>","listener rm <listener id>","listener create"]}
-                return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
             elif module == "vault":
                 help_dict = {"\33[31mOption\33[0m":["\33[34mcreate\33[0m","\33[34mdelete\33[0m","\33[34mrm\33[0m","\33[34madd\33[0m"],"\33[31mDescription\33[0m":["Create a vault","Delete completely a vault","Remove an entry from the vault with its index","Add an entry to the vault"],"\33[31mUsage\33[0m":["vault create","vault delete <vault id>","vault rm <vault id> <cred index>","vault add <vauld id> <username> <password>"]}
-                return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
+            elif module=="agents":
+                help_dict = {"\33[31mOption\33[0m":["\33[34magents\33[0m","\33[34minteract\33[0m","\33[34mremove_stale\33[0m"],"\33[31mDescription\33[0m":["Get all the agents","Interact with an agent","Remove unresponsive agents"],"\33[31mUsage\33[0m":["agents","agents interact <agent id>","agents remove_stale"]}
             else:
                 return "\033[31m\n[Error] No such argument available\n\033[0m"
+        return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
 
     def cli_main_loop(self):
         while True:
-            if not self.is_api_alive():
-                print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
-                break
-            if not self.check_auth():
-                self.authenticate()
             try:
                 command = input('\033[92m'+"[LightC2]>"+ '\033[0m')
             except KeyboardInterrupt:
                 print('\033[91m'+"\n[CTRL+C] Exiting !"+ '\033[0m')
                 break
+            if not self.is_api_alive():
+                print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
+                break
+            if not self.check_auth():
+                self.authenticate()
             if command == "exit":
                 print('\033[91m'+"\n[Exit] Exiting the cli !"+ '\033[0m')
                 if input('\033[91m'+"\nAre you sure you want to exit ? (y/n) :"+ '\033[0m').lower()=="y":
@@ -187,17 +187,33 @@ class CLI_Client:
             elif "agents" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "agents"):
                 if command == "agents":
                     all_agents = self.craft_and_send_get_request("/agents").content
-                    all_agents = json.loads(all_agents)
-                    ordered_agents = {"\033[31mname\033[0m":[],"\033[31mlistener\033[0m":[],"\033[31muser\033[0m":[],"\033[31msleep\033[0m":[],"\033[31mpid\033[0m":[],"\033[31mlast_seen\033[0m":[]}
-                    for listener in all_agents["result"].keys():
-                        for agent in all_agents["result"][listener].values():
-                            ordered_agents["\033[31mname\033[0m"].append(agent["name"])
-                            ordered_agents["\033[31mlast_seen\033[0m"].append(agent["last_seen"])
-                            ordered_agents["\033[31muser\033[0m"].append(agent["user"])
-                            ordered_agents["\033[31msleep\033[0m"].append(agent["sleep"])
-                            ordered_agents["\033[31mpid\033[0m"].append(agent["pid"])
-                            ordered_agents["\033[31mlistener\033[0m"].append(listener)
-                    print(str(tabulate(ordered_agents, headers="keys", tablefmt="fancy_grid")))
+                    if "[Error]" in all_agents.decode():
+                        print("\033[31m\n[Error] An error occured, please retry\n\033[0m")
+                    else:
+                        all_agents = json.loads(all_agents)
+                        ordered_agents = {"\033[31mname\033[0m":[],"\033[31mlistener\033[0m":[],"\033[31muser\033[0m":[],"\033[31msleep\033[0m":[],"\033[31mpid\033[0m":[],"\033[31mlast_seen\033[0m":[],"\033[31mid\033[0m":[]}
+                        for listener in all_agents["result"].keys():
+                            for agent in all_agents["result"][listener].values():
+                                date_from_agent = datetime.datetime.strptime(agent["last_seen"], "%Y-%m-%d %H:%M:%S")
+                                now = datetime.datetime.now()
+                                delta = now - date_from_agent
+                                if delta.total_seconds() > 120:
+                                    agent["last_seen"] = "\033[31m"+str(agent["last_seen"])+"\033[0m"
+                                else:
+                                    agent["last_seen"] = "\033[92m"+str(agent["last_seen"])+"\033[0m"
+                                ordered_agents["\033[31mid\033[0m"].append(agent["id"])
+                                ordered_agents["\033[31mname\033[0m"].append("\33[34m"+agent["name"]+"\033[0m")
+                                ordered_agents["\033[31mlast_seen\033[0m"].append(agent["last_seen"])
+                                ordered_agents["\033[31muser\033[0m"].append(agent["user"])
+                                ordered_agents["\033[31msleep\033[0m"].append(agent["sleep"])
+                                ordered_agents["\033[31mpid\033[0m"].append(agent["pid"])
+                                ordered_agents["\033[31mlistener\033[0m"].append(listener)
+                        print(str(tabulate(ordered_agents, headers="keys", tablefmt="fancy_grid")))
+                elif len(command.split(" "))>1 and command.split(" ")[1]!="":
+                    if command.split(" ")[1]=="interact" and len(command.split(" "))>2 and command.split(" ")[2]!="":
+                        id_agent = command.split(" ")[2]
+                        print(self.interact_with_agent(id_agent))
+
 
 
 
@@ -240,6 +256,45 @@ class CLI_Client:
         else:
             return "\033[31m[Error] Error adding user, Api is unreachable !\033[0m"
 
+    def interact_with_agent(self,agent_id:str):
+        all_agents = self.craft_and_send_get_request("/agents").content
+        all_agents = json.loads(all_agents)
+        listener_to_keep = None
+        agent_to_keep = None
+        for listener in all_agents["result"].keys():
+            for agent in all_agents["result"][listener].keys():
+                if agent_id == agent:
+                    agent_to_keep = all_agents["result"][listener][agent]
+                    listener_to_keep = listener
+        if not (listener_to_keep and agent_to_keep):
+            return "\n\033[31m[Error] Check your agent id\033[0m\n"
+        print('\n\033[92m'+"[Success] Getting semi-interactive shell\n\033[0m")
+        print(gen_shell())
+        while True:
+            try:
+                command = input(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
+            except KeyboardInterrupt:
+                print('\033[91m'+"\n\n[CTRL+C] Exiting !"+ '\033[0m')
+                break
+            if not self.is_api_alive():
+                print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
+                break
+            if not self.check_auth():
+                self.authenticate()
+            if command=="exit":
+                print("")
+                break
+            if len(command.split(" "))>=2 and command.split()[0]=="psh":
+                print(self.exec_agent(agent_to_keep["id"],"psh"," ".join(command.split()[1:])))
+        return '\033[91m'+"[-] Quitting shell\n"+ '\033[0m'
+            
+
+    def exec_agent(self,agent_id,method,arguments):
+        output = self.craft_and_send_post_request("/agents/exec",{"agent_id":agent_id,"method":method,"arguments":arguments})
+        if not "[Error]" in output.content.decode():
+            return '\n\033[92m'+"[Success] Tasked agent to run command\n\033[0m"
+        else:
+            return '\n\033[91m'+"[Error] Did not tasked the agent, an error occured"+ '\n\033[0m'
 
     def get_all_listeners(self)->str:
         listeners = self.craft_and_send_get_request("/listeners")
