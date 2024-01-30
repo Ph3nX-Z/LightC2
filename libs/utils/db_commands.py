@@ -1,5 +1,6 @@
 # CREATE TABLE users(username VARCHAR(50),hash VARCHAR(200),token VARCHAR(500),token_datetime VARCHAR(50),nonce VARCHAR(20));
 # create table listeners(host VARCHAR(15),port INTEGER, ssl INTEGER, admin_key VARCHAR(50), secret_key VARCHAR(50),active INTEGER);
+# create table vault(id VARCHAR, username VARCHAR, nonce VARCHAR, data VARCHAR);
 
 def add_user_to_db(username:str,hash:str)->str:
     command = f"INSERT INTO users SELECT '{username}','{hash}','','','' WHERE NOT EXISTS (SELECT 1 FROM users WHERE username == '{username}');"
@@ -19,6 +20,10 @@ def get_token_from_username(username:str)->str:
 
 def get_user_from_token(token:str)->str:
     command = f'SELECT username FROM users WHERE token=="{token}";'
+    return command
+
+def get_datetime_from_token(token:str)->str:
+    command = f'SELECT token_datetime FROM users WHERE token=="{token}";'
     return command
 
 def set_token_for_user(timecreated:str,username:str,hash:str,token:str,nonce:str)->str:
@@ -55,4 +60,28 @@ def is_listener_started(port:int)->str:
 
 def rm_listener_from_db(port:int)->str:
     command = f"DELETE FROM listeners WHERE port=={port};"
+    return command
+
+def add_encrypted_vault_to_db(username:str,nonce:str,id:str,data:str)->str:
+    command = f"INSERT INTO vault VALUES ('{id}','{username}','{nonce}','{data}');"
+    return command
+
+def get_all_vault_for_user(username:str)->str:
+    command = f"SELECT id FROM vault WHERE username=='{username}';"
+    return command
+
+def get_vault_for_user_and_id(username:str,vault_id:str)->str:
+    command = f"SELECT nonce,data FROM vault WHERE username=='{username}' and id=='{vault_id}';"
+    return command
+
+def change_vault_blob(vault_id:str,blob:str)->str:
+    command = f"UPDATE vault SET data='{blob}' WHERE id=='{vault_id}';"
+    return command
+
+def get_username_by_vault_id(vault_id:str)->str:
+    command = f"SELECT username FROM vault WHERE id=='{vault_id}';"
+    return command
+
+def del_vault_from_id(vault_id:str)->str:
+    command = f"DELETE FROM vault WHERE id=='{vault_id}';"
     return command

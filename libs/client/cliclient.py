@@ -75,6 +75,11 @@ class CLI_Client:
             if module == "listener":
                 help_dict = {"\33[31mOption\33[0m":["\33[34mstart\33[0m","\33[34mstop\33[0m","\33[34mrm\33[0m","\33[34mcreate\33[0m"],"\33[31mDescription\33[0m":["Start a listener with a given id","Stop a listener with a given id","Remove completely a listener","Create a listener (spawn a wizard)"],"\33[31mUsage\33[0m":["listener start <listener id>","listener stop <listener id>","listener rm <listener id>","listener create"]}
                 return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
+            elif module == "vault":
+                help_dict = {"\33[31mOption\33[0m":["\33[34mcreate\33[0m","\33[34mdelete\33[0m","\33[34mrm\33[0m","\33[34madd\33[0m"],"\33[31mDescription\33[0m":["Create a vault","Delete completely a vault","Remove an entry from the vault with its index","Add an entry to the vault"],"\33[31mUsage\33[0m":["vault create","vault delete <vault id>","vault rm <vault id> <cred index>","vault add <vauld id> <username> <password>"]}
+                return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
+            else:
+                return "\033[31m\n[Error] No such argument available\n\033[0m"
 
     def cli_main_loop(self):
         while True:
@@ -94,12 +99,12 @@ class CLI_Client:
                     break
             elif command == "help":
                 print(self.help(None))
-            elif "help" in command and len(command.split(" "))>1 and command.split(" ")[1]!="":
+            elif "help" in command and len(command.split(" "))>1 and command.split(" ")[0] == "help" and command.split(" ")[1]!="":
                 argument = command.split(" ")[1]
                 print(self.help(argument))
             elif command == "operators":
                 print(self.get_all_operators())
-            elif "listener" in command:
+            elif "listener" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "listener"):
                 if command=="listener":
                     print(self.get_all_listeners())
                 elif len(command.split(" "))>1 and command.split(" ")[1]!="":
@@ -122,7 +127,7 @@ class CLI_Client:
                         else:
                             print(f"\033[31m\n[Error] Listener {id_listener} has not been removed, check your arguments and the logs !\n\033[0m")
                     elif command.split(" ")[1]=="create":
-                        print(gen_wizard())
+                        print(gen_wizard("Listener"))
                         try:
                             host = input("\033[31m[Wizard] Host > \033[0m")
                             port = input("\033[31m[Wizard] Port > \033[0m")
@@ -136,6 +141,52 @@ class CLI_Client:
                         except KeyboardInterrupt:
                             print("\n")
                             pass
+                    else:
+                        print("\033[31m\n[Error] No such argument available\n\033[0m")
+
+            elif "vault" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "vault"):
+                if command == "vault":
+                    print(self.get_all_vaults())
+                elif len(command.split(" "))>1 and command.split(" ")[1]!="":
+                    if command.split(" ")[1]=="get" and len(command.split(" "))>2 and command.split(" ")[2]!="":
+                        id_vault = command.split(" ")[2]
+                        vault_content = self.get_vault_by_id(id_vault)
+                        if vault_content:
+                            print(vault_content)
+                        else:
+                            print("\033[31m\n[Error] Vault broken, cant decrypt it, the password/vault id may be wrong\n\033[0m")
+                    elif len(command.split(" "))>1 and command.split(" ")[1]=="create":
+                        vault_created = self.create_vault()
+                        if vault_created:
+                            print('\n\033[92m'+"[Success] Vault created\n\033[0m")
+                        else:
+                            print("\033[31m\n[Error] Failed to create the vault, check the logs\n\033[0m")
+                    elif len(command.split(" "))>4 and command.split(" ")[1]=="add" and command.split(" ")[2]!="" and command.split(" ")[3]!="":
+                        vault_id = command.split(" ")[2]
+                        username_to_add = command.split(" ")[3]
+                        password_to_add = command.split(" ")[4]
+                        output = self.add_entry_to_vault(vault_id,username_to_add,password_to_add)
+                        if not "[Error]" in output.content.decode():
+                            print('\n\033[92m'+"[Success] Creds added to db\n\033[0m")
+                        else:
+                            print("\033[31m\n[Error] Failed to add creds, check the logs\n\033[0m")
+
+                    elif len(command.split(" "))>3 and command.split(" ")[1]=="rm" and command.split(" ")[2]!="" and command.split(" ")[3]!="":
+                        vault_id = command.split(" ")[2]
+                        cred_id = command.split(" ")[3]
+                        print(self.remove_entry_from_vault(vault_id,cred_id))
+                    
+                    elif command.split(" ")[1]=="delete" and len(command.split(" "))>2 and command.split(" ")[2]!="":
+                        id_vault = command.split(" ")[2]
+                        vault_content = self.delete_vault_by_id(id_vault)
+                        if vault_content:
+                            print('\n\033[92m'+"[Success] Vault deleted\n\033[0m")
+                        else:
+                            print("\033[31m\n[Error] Failed to delete vault, check the logs\n\033[0m")
+                        
+                            
+            else:
+                print("\033[31m\n[Error] Argument not recognized\n\033[0m")
 
     def is_api_alive(self):
         try:
@@ -198,6 +249,49 @@ class CLI_Client:
         if not "[Error]" in output.content.decode() and output.status_code == 200:
             return True
         return False
+    
+    def get_vault_by_id(self,id_vault:str):
+        vault_content = self.craft_and_send_post_request("/vault/id",{"password":self.password,"id":id_vault}).content.decode()
+        try:
+            all_entry = json.loads(vault_content)["vault_content"]
+            vault_ordered = {"\033[31mindex\033[0m":[],"\033[31musername\033[0m":[],"\033[31mpassword\033[0m":[]}
+            for index,entry in enumerate(all_entry):
+                vault_ordered["\033[31musername\033[0m"].append(entry[0])
+                vault_ordered["\033[31mpassword\033[0m"].append(entry[1])
+                vault_ordered["\033[31mindex\033[0m"].append('\33[34m'+str(index)+"\033[0m")
+            return str(tabulate(vault_ordered, headers="keys", tablefmt="fancy_grid"))
+        except json.decoder.JSONDecodeError:
+            return False
+        
+    def delete_vault_by_id(self,vault_id:str):
+        output = self.craft_and_send_post_request("/vault/delete",{"id":vault_id})
+        if "[Error]" in output.content.decode():
+            return False
+        else:
+            return True
+    
+    def create_vault(self):
+        output = self.craft_and_send_post_request("/vault/create",{"password":self.password})
+        return "[Error]" not in output.content.decode()
+    
+    def add_entry_to_vault(self,vault_id:str,username_add:str,password_add:str):
+        output = self.craft_and_send_post_request("/vault/add",{"id":vault_id,"password":self.password,"username_add":username_add,"password_add":password_add})
+        return output
+    
+    def remove_entry_from_vault(self,vault_id:str,cred_index:int):
+        output = self.craft_and_send_post_request("/vault/remove",{"id":vault_id,"cred_index":cred_index,"password":self.password})
+        if not "[Error]" in output.content.decode():
+            return '\n\033[92m'+"[Success] Entry removed from vault\033[0m\n"
+        else:
+            return "\n\033[31m[Error] Entry not removed from db, Check the logs\033[0m\n"
+    
+    def get_all_vaults(self):
+        output = self.craft_and_send_get_request("/vault").json()["result"]
+        ordered_vaults = {"\033[31mindex\033[0m":[],"\033[31mid\033[0m":[]}
+        for index,vault_id in enumerate(output):
+            ordered_vaults["\033[31mindex\033[0m"].append('\33[34m'+str(index)+"\033[0m")
+            ordered_vaults["\033[31mid\033[0m"].append(vault_id)
+        return str(tabulate(ordered_vaults, headers="keys", tablefmt="fancy_grid"))
 
     def remove_listener(self,id):
         output = self.craft_and_send_post_request("/listeners/rm",{"id":id})
