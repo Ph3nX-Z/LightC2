@@ -14,7 +14,7 @@ This platform is destinated to cybersecurity experts for pentest/red team operat
 
 ## Usage
 
-```help
+```py
 usage: LightC2 [-h] [--password PASSWORD] [--user USER] [--register] [--register-key REGISTER_KEY] [--teamserver TEAMSERVER] mode
 
 Minimalist C2 for short offensive missions
