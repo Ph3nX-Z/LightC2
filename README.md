@@ -1,10 +1,14 @@
 <div align="center">
   <img width="500px" src="assets/lightc2.jpg" />
 
-  <p><i>Lightweight Adversary simulation customized command and control platform created by <a href="https://twitter.com/PPh3nX">@PPh3nX</a></i></p>
+  <p><i>Lightweight Adversary simulation command and control platform created by <a href="https://twitter.com/PPh3nX">@PPh3nX</a></i></p>
 </div>
 
 ---------------------------------------------------------------------------------------------------------------------------------
+
+## Overview
+
+LightC2 is an modulable lightweight Adversary simulation command and control platform. It includes modules execution, cli interface, web api, custom agents/shellcodes, custom methods ...
 
 ## Usage
 
