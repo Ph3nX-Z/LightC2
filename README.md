@@ -12,6 +12,15 @@ LightC2 is an modulable lightweight Adversary simulation command and control pla
 
 This platform is destinated to cybersecurity experts for pentest/red team operations purposes.
 
+## Installation
+
+```
+sudo apt install python3 python3-pip
+git clone https://github.com/Ph3nX-Z/LightC2.git
+cd LightC2
+python3 -m pip install argon2-cffi Flask
+``
+
 ## Usage
 
 Global usage:
@@ -46,3 +55,12 @@ Client side example:
 ```sh
 python3 main.py client -u "user" -p "password" --teamserver "https://127.0.0.1:8080"
 ```
+
+## Features
+
+|Feature|Category|Status|
+|---|---|---|
+| Argon2  | Password hashing  | Implemented  |
+|  XChaCha20 | Vault Storage  |  Implemented |
+| Sqlite3  | Global Storage  |  Implemented |
+| Multiprocess  | Global Api  |  Implemented |
