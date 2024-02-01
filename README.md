@@ -12,7 +12,7 @@ LightC2 is an modulable lightweight Adversary simulation command and control pla
 
 This platform is destinated to cybersecurity experts for pentest/red team operations purposes.
 
-[image](https://github.com/Ph3nX-Z/LightC2/assets/66122220/e60ab818-f42f-4fc3-ba34-d358192962e5)
+![image](https://github.com/Ph3nX-Z/LightC2/assets/66122220/e60ab818-f42f-4fc3-ba34-d358192962e5)
 
 
 ## Installation
