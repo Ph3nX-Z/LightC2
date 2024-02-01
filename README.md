@@ -18,12 +18,14 @@ This platform is destinated to cybersecurity experts for pentest/red team operat
 
 ## Installation
 
+The installation process is pretty simple:
 ```
 sudo apt install python3 python3-pip
 git clone https://github.com/Ph3nX-Z/LightC2.git
 cd LightC2
 python3 -m pip install argon2-cffi Flask
 ```
+You can now use LightC2 :)
 
 ## Usage
 
