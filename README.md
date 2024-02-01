@@ -64,3 +64,5 @@ python3 main.py client -u "user" -p "password" --teamserver "https://127.0.0.1:8
 |  XChaCha20 | Vault Storage  |  Implemented |
 | Sqlite3  | Global Storage  |  Implemented |
 | Multiprocess  | Global Api  |  Implemented |
+| HTTP/S  | Listener  |  Implemented |
+| Tasking in db  | Jobs  |  Implemented |
