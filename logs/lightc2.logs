@@ -626,3 +626,174 @@
 [2024-01-31 00:24:43] Agent list provided to 'admin' - success
 [2024-01-31 00:24:50] 'admin' asked for the agent list - running
 [2024-01-31 00:24:50] Agent list provided to 'admin' - success
+[2024-01-31 08:36:48] Server mode asked, starting api - info
+[2024-01-31 08:36:48] Register Key RkRrcitEQ29SQUBvUDxoMTFEbjI7YVg4RjY6PjErOG1IW1k4bTQjSTFlKClCRztWQltHcXIwLDpJUjM0MWVnYkRBTWo= - info
+[2024-01-31 08:36:48] Starting Rest API - running
+[2024-01-31 08:36:48] Re-Generating listeners from db - running
+[2024-01-31 08:36:48] Listener 0.0.0.0:8181 created - success
+[2024-01-31 08:36:48] Starting listener 0.0.0.0:8181 - running
+[2024-01-31 08:36:48] Started listener 0.0.0.0:8181 - success
+[2024-01-31 08:36:48] Re-Generated listeners from db - success
+[2024-01-31 08:36:48] Agent checkin - listener
+[2024-01-31 08:36:57] Trying to authenticate 'admin' - running
+[2024-01-31 08:36:57] Authenticated 'admin' - success
+[2024-01-31 08:36:57] Token generated and stored - success
+[2024-01-31 08:36:57] 'admin' asked for the agent list - running
+[2024-01-31 08:36:57] Agent list provided to 'admin' - success
+[2024-01-31 08:37:08] 'admin' asked for the agent list - running
+[2024-01-31 08:37:08] Agent list provided to 'admin' - success
+[2024-01-31 08:50:51] 'admin' asked for the agent list - running
+[2024-01-31 08:50:51] Agent list provided to 'admin' - success
+[2024-01-31 08:50:57] 'admin' asked for the agent list - running
+[2024-01-31 08:50:57] Agent list provided to 'admin' - success
+[2024-01-31 09:20:33] Trying to authenticate 'admin' - running
+[2024-01-31 09:20:33] Authenticated 'admin' - success
+[2024-01-31 09:20:33] Token generated and stored - success
+[2024-01-31 09:20:33] 'admin' asked for the agent list - running
+[2024-01-31 09:20:33] Agent list provided to 'admin' - success
+[2024-02-01 09:31:51] Server mode asked, starting api - info
+[2024-02-01 09:31:51] Register Key RkRrcitEQ249RjsrISRRNjxBQUIwNkJUOEdbYilkM0khaFUxR2lsRkVDT2VeMTNZWyRELDo= - info
+[2024-02-01 09:31:51] Starting Rest API - running
+[2024-02-01 09:31:51] Re-Generating listeners from db - running
+[2024-02-01 09:31:51] Listener 0.0.0.0:8181 created - success
+[2024-02-01 09:31:51] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 09:31:51] Started listener 0.0.0.0:8181 - success
+[2024-02-01 09:31:51] Re-Generated listeners from db - success
+[2024-02-01 09:32:47] Trying to authenticate 'admin' - running
+[2024-02-01 09:32:47] Authenticated 'admin' - success
+[2024-02-01 09:32:47] Token generated and stored - success
+[2024-02-01 09:32:47] 'admin' asked for the agent list - running
+[2024-02-01 09:32:47] Agent list provided to 'admin' - success
+[2024-02-01 10:41:56] Trying to authenticate 'admin' - running
+[2024-02-01 10:41:56] Authenticated 'admin' - success
+[2024-02-01 10:41:56] Token generated and stored - success
+[2024-02-01 10:42:19] Agent checkin - listener
+[2024-02-01 10:42:23] Trying to authenticate 'admin' - running
+[2024-02-01 10:42:23] Authenticated 'admin' - success
+[2024-02-01 10:42:23] Token generated and stored - success
+[2024-02-01 10:42:23] 'admin' asked for the agent list - running
+[2024-02-01 10:42:23] Agent list provided to 'admin' - success
+[2024-02-01 10:42:31] 'admin' asked for the agent list - running
+[2024-02-01 10:42:31] Agent list provided to 'admin' - success
+[2024-02-01 10:44:15] Trying to authenticate 'admin' - running
+[2024-02-01 10:44:15] Authenticated 'admin' - success
+[2024-02-01 10:44:15] Token generated and stored - success
+[2024-02-01 10:44:20] Trying to authenticate 'admin' - running
+[2024-02-01 10:44:21] Authenticated 'admin' - success
+[2024-02-01 10:44:21] Token generated and stored - success
+[2024-02-01 10:44:21] 'admin' asked for the agent list - running
+[2024-02-01 10:44:21] Agent list provided to 'admin' - success
+[2024-02-01 10:44:35] 'admin' successfully added a listener - success
+[2024-02-01 10:44:43] 'admin' asked for the agent list - running
+[2024-02-01 10:50:40] Server mode asked, starting api - info
+[2024-02-01 10:50:40] Register Key RkRrcitEQ21fNzZvN1xLOS84ZTIxTztTRDwrLzo2OklLR0E7RTZDRUdWcTB0QFJqcnI8RV0= - info
+[2024-02-01 10:50:40] Starting Rest API - running
+[2024-02-01 10:50:40] Re-Generating listeners from db - running
+[2024-02-01 10:50:40] Listener 0.0.0.0:8181 created - success
+[2024-02-01 10:50:40] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 10:50:40] Started listener 0.0.0.0:8181 - success
+[2024-02-01 10:50:40] Listener 0.0.0.0:8485 created - success
+[2024-02-01 10:50:40] Re-Generated listeners from db - success
+[2024-02-01 10:50:40] Agent checkin - listener
+[2024-02-01 10:51:11] Trying to authenticate 'admin' - running
+[2024-02-01 10:51:11] Authenticated 'admin' - success
+[2024-02-01 10:51:11] Token generated and stored - success
+[2024-02-01 10:51:11] Providing list of listeners to 'admin' - running
+[2024-02-01 10:51:11] Provided list of listeners to 'admin' - success
+[2024-02-01 10:51:16] 'admin' asked for the agent list - running
+[2024-02-01 10:51:16] Agent list provided to 'admin' - success
+[2024-02-01 10:51:44] Agent checkin - listener
+[2024-02-01 10:51:52] Trying to authenticate 'admin' - running
+[2024-02-01 10:51:52] Authenticated 'admin' - success
+[2024-02-01 10:51:52] Token generated and stored - success
+[2024-02-01 10:51:52] 'admin' asked for the agent list - running
+[2024-02-01 10:51:52] Agent list provided to 'admin' - success
+[2024-02-01 10:52:33] Server mode asked, starting api - info
+[2024-02-01 10:52:33] Register Key RkRrcitEQ29XbURlX0woSCRGM2sxM1A/PDFpdTAlRz5yS3E2InRJSzosUGElODhfQ0tEX2JgcDtgLUAi - info
+[2024-02-01 10:52:33] Starting Rest API - running
+[2024-02-01 10:52:33] Re-Generating listeners from db - running
+[2024-02-01 10:52:33] Listener 0.0.0.0:8181 created - success
+[2024-02-01 10:52:33] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 10:52:33] Started listener 0.0.0.0:8181 - success
+[2024-02-01 10:52:33] Listener 0.0.0.0:8485 created - success
+[2024-02-01 10:52:33] Re-Generated listeners from db - success
+[2024-02-01 10:52:34] Agent checkin - listener
+[2024-02-01 10:52:39] 'admin' asked for the agent list - running
+[2024-02-01 10:52:39] Agent list provided to 'admin' - success
+[2024-02-01 10:54:57] Server mode asked, starting api - info
+[2024-02-01 10:54:57] Register Key RkRrcitEQ29FWTFGLSU+MyRDLlIwL1BQMURhQG9MMTA/OFI7SmZULEZdV2N1O0hRQFhHIV4uXkNNdG5DPCwsQlAxL2U= - info
+[2024-02-01 10:54:57] Starting Rest API - running
+[2024-02-01 10:54:57] Re-Generating listeners from db - running
+[2024-02-01 10:54:57] Listener 0.0.0.0:8181 created - success
+[2024-02-01 10:54:57] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 10:54:57] Started listener 0.0.0.0:8181 - success
+[2024-02-01 10:54:57] Listener 0.0.0.0:8485 created - success
+[2024-02-01 10:54:57] Re-Generated listeners from db - success
+[2024-02-01 10:54:58] Agent checkin - listener
+[2024-02-01 10:55:01] Trying to authenticate 'admin' - running
+[2024-02-01 10:55:01] Authenticated 'admin' - success
+[2024-02-01 10:55:01] Token generated and stored - success
+[2024-02-01 10:55:01] 'admin' asked for the agent list - running
+[2024-02-01 10:56:02] Trying to authenticate 'admin' - running
+[2024-02-01 10:56:02] Authenticated 'admin' - success
+[2024-02-01 10:56:02] Token generated and stored - success
+[2024-02-01 10:56:02] 'admin' asked for the agent list - running
+[2024-02-01 10:57:05] Server mode asked, starting api - info
+[2024-02-01 10:57:05] Register Key RkRrcitEQ249STxjXmlBRWEzPDM3bE8rWEYmIl0uQy82VF02b0k+KUNoUmc2OixsaXNHbA== - info
+[2024-02-01 10:57:05] Starting Rest API - running
+[2024-02-01 10:57:05] Re-Generating listeners from db - running
+[2024-02-01 10:57:05] Listener 0.0.0.0:8181 created - success
+[2024-02-01 10:57:05] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 10:57:05] Started listener 0.0.0.0:8181 - success
+[2024-02-01 10:57:05] Listener 0.0.0.0:8485 created - success
+[2024-02-01 10:57:05] Re-Generated listeners from db - success
+[2024-02-01 10:57:05] Agent checkin - listener
+[2024-02-01 10:57:09] Trying to authenticate 'admin' - running
+[2024-02-01 10:57:09] Authenticated 'admin' - success
+[2024-02-01 10:57:09] Token generated and stored - success
+[2024-02-01 10:57:09] 'admin' asked for the agent list - running
+[2024-02-01 10:57:09] Agent list provided to 'admin' - success
+[2024-02-01 10:57:39] Server mode asked, starting api - info
+[2024-02-01 10:57:39] Register Key RkRrcitEQ25lKTwmWltOOU49Jj5GKXUjLEFuczs2NzkhJm48YzFdJkc9Yjg1Mkg8biFCNltyWkNkX0RxK2BfQDI= - info
+[2024-02-01 10:57:39] Starting Rest API - running
+[2024-02-01 10:57:39] Re-Generating listeners from db - running
+[2024-02-01 10:57:39] Listener 0.0.0.0:8181 created - success
+[2024-02-01 10:57:39] Starting listener 0.0.0.0:8181 - running
+[2024-02-01 10:57:39] Started listener 0.0.0.0:8181 - success
+[2024-02-01 10:57:39] Listener 0.0.0.0:8485 created - success
+[2024-02-01 10:57:39] Re-Generated listeners from db - success
+[2024-02-01 10:57:39] Agent checkin - listener
+[2024-02-01 10:57:43] Trying to authenticate 'admin' - running
+[2024-02-01 10:57:43] Authenticated 'admin' - success
+[2024-02-01 10:57:43] Token generated and stored - success
+[2024-02-01 10:57:43] 'admin' asked for the agent list - running
+[2024-02-01 10:57:43] Agent list provided to 'admin' - success
+[2024-02-01 10:58:01] 'admin' successfully added a listener - success
+[2024-02-01 10:58:04] 'admin' asked for the agent list - running
+[2024-02-01 10:58:04] Agent list provided to 'admin' - success
+[2024-02-01 10:58:56] Providing list of listeners to 'admin' - running
+[2024-02-01 10:58:56] Provided list of listeners to 'admin' - success
+[2024-02-01 10:59:03] 'admin' Starting listener 0.0.0.0:8587 - running
+[2024-02-01 10:59:04] Started listener 0.0.0.0:8587 for admin - success
+[2024-02-01 10:59:07] 'admin' asked for the agent list - running
+[2024-02-01 10:59:07] Agent list provided to 'admin' - success
+[2024-02-01 10:59:09] 'admin' asked for the agent list - running
+[2024-02-01 10:59:09] Agent list provided to 'admin' - success
+[2024-02-01 10:59:30] 'admin' asked for the agent list - running
+[2024-02-01 10:59:30] Agent list provided to 'admin' - success
+[2024-02-01 10:59:36] 'admin' asked for the agent list - running
+[2024-02-01 10:59:36] Agent list provided to 'admin' - success
+[2024-02-01 10:59:55] 'admin' asked for the agent list - running
+[2024-02-01 10:59:55] Agent list provided to 'admin' - success
+[2024-02-01 11:00:31] Agent checkin - listener
+[2024-02-01 11:00:33] 'admin' asked for the agent list - running
+[2024-02-01 11:00:33] Agent list provided to 'admin' - success
+[2024-02-01 11:00:49] Trying to authenticate 'admin' - running
+[2024-02-01 11:00:49] Authenticated 'admin' - success
+[2024-02-01 11:00:49] Token generated and stored - success
+[2024-02-01 11:00:49] Providing list of listeners to 'admin' - running
+[2024-02-01 11:00:49] Provided list of listeners to 'admin' - success
+[2024-02-01 11:00:59] 'admin' asked for the agent list - running
+[2024-02-01 11:00:59] Agent list provided to 'admin' - success
+[2024-02-01 11:01:07] 'admin' asked for the agent list - running
+[2024-02-01 11:01:07] Agent list provided to 'admin' - success

@@ -286,6 +286,8 @@ class CLI_Client:
                 break
             if len(command.split(" "))>=2 and command.split()[0]=="psh":
                 print(self.exec_agent(agent_to_keep["id"],"psh"," ".join(command.split()[1:])))
+            elif len(command.split(" "))>=2 and command.split()[0]=="psm":
+                print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
         return '\033[91m'+"[-] Quitting shell\n"+ '\033[0m'
             
 

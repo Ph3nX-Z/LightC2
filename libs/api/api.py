@@ -460,15 +460,17 @@ class C2_Rest_API:
                 username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
             log_info(f"'{username}' asked for the agent list","running")
             all_agents = {}
-            for listener in self.all_listeners.values():
-                admin_key = listener.admin_key
-                port = listener.port
-                host = listener.host
-                ssl = listener.ssl
-                url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
-                headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
-                all_listener_agents = requests.get(url,headers=headers,verify=False).json()
-                all_agents[f"{listener.host}:{listener.port}"]=all_listener_agents
+            for listener_id in self.all_listeners.keys():
+                listener = self.all_listeners[listener_id]
+                if listener_id in self.all_processes.keys():
+                    admin_key = listener.admin_key
+                    port = listener.port
+                    host = listener.host
+                    ssl = listener.ssl
+                    url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
+                    headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
+                    all_listener_agents = requests.get(url,headers=headers,verify=False).json()
+                    all_agents[f"{listener.host}:{listener.port}"]=all_listener_agents
             log_info(f"Agent list provided to '{username}'","success")
             return json.dumps({"result":all_agents})
         
