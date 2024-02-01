@@ -60,6 +60,11 @@ Client side example:
 python3 main.py client -u "user" -p "password" --teamserver "https://127.0.0.1:8080"
 ```
 
+tool usage:
+
+![image](https://github.com/Ph3nX-Z/LightC2/assets/66122220/be3b26a5-177c-46d2-ab4f-e277be5ff5b0)
+
+
 ## Features
 
 |Feature|Category|Status|
