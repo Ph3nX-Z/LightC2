@@ -109,3 +109,19 @@ def get_username_by_vault_id(vault_id:str)->str:
 def del_vault_from_id(vault_id:str)->str:
     command = f"DELETE FROM vault WHERE id=='{vault_id}';"
     return command
+
+def get_jobs_running()->str:
+    command = "SELECT * FROM jobs WHERE status=='running';"
+    return command
+
+def get_jobs_all()->str:
+    command = "SELECT * FROM jobs LIMIT 100;"
+    return command
+
+def get_jobs_tasked()->str:
+    command = "SELECT * FROM jobs WHERE status=='tasked';"
+    return command
+
+def get_job_by_jobid(job_id)->str:
+    command = f"SELECT * FROM jobs WHERE id=={str(job_id)};"
+    return command

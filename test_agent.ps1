@@ -1,6 +1,6 @@
-$secret_key = "RkRrcitEQ25oLDJjPWBqPShqTyc6S1U3bEVDNGI5MmFxQ1k7TDNJZENmYl0="
+$secret_key = "RkRrcitEQ3AkSEIvYW0kQVUmQkE3N151dTdUPVJkQW9OJk07RnUw"
 $identifier = Get-Random -Max 100000000000000000
-$base_url = "https://127.0.0.1:8587/"
+$base_url = "https://127.0.0.1:8181/"
 $sleep_time = 1
 
 

@@ -492,6 +492,122 @@ class C2_Rest_API:
             arguments = base64.b64encode(arguments.encode()).decode()
             db_exec(add_job_to_db(agent_id,method,arguments),self.db_path)
             return "[Success] Job added to db"
+        
+        @api.route("/jobs",methods=["GET"])
+        def get_jobs():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            log_info(f"Giving all running jobs to {username}","running")
+            all_jobs = db_exec(get_jobs_running(),self.db_path)
+            jobs_dict = {}
+            all_agents = {}
+            for listener_id in self.all_listeners.keys():
+                listener = self.all_listeners[listener_id]
+                if listener_id in self.all_processes.keys():
+                    admin_key = listener.admin_key
+                    port = listener.port
+                    host = listener.host
+                    ssl = listener.ssl
+                    url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
+                    headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
+                    all_listener_agents = requests.get(url,headers=headers,verify=False).json()
+                    for agent in all_listener_agents.keys():
+                        all_agents[agent]=all_listener_agents[agent]["name"]
+            for job in all_jobs:
+                if job[1] in all_agents.keys():
+                    agent_name = all_agents[job[1]]
+                else:
+                    agent_name = "Unknown"
+                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+            log_info(f"All running jobs given to {username}","success")
+            return jobs_dict
+        
+        @api.route("/jobs/all",methods=["GET"])
+        def get_jobs_all_api():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            log_info(f"Giving all the jobs to {username}","running")
+            all_jobs = db_exec(get_jobs_all(),self.db_path)
+            jobs_dict = {}
+            all_agents = {}
+            for listener_id in self.all_listeners.keys():
+                listener = self.all_listeners[listener_id]
+                if listener_id in self.all_processes.keys():
+                    admin_key = listener.admin_key
+                    port = listener.port
+                    host = listener.host
+                    ssl = listener.ssl
+                    url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
+                    headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
+                    all_listener_agents = requests.get(url,headers=headers,verify=False).json()
+                    for agent in all_listener_agents.keys():
+                        all_agents[agent]=all_listener_agents[agent]["name"]
+            for job in all_jobs:
+                if job[1] in all_agents.keys():
+                    agent_name = all_agents[job[1]]
+                else:
+                    agent_name = "Unknown"
+                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+            log_info(f"All jobs given to {username}","success")
+            return jobs_dict
+        
+        @api.route("/jobs/tasked",methods=["GET"])
+        def get_jobs_tasked_api():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            log_info(f"Giving all the jobs to {username}","running")
+            all_jobs = db_exec(get_jobs_tasked(),self.db_path)
+            jobs_dict = {}
+            all_agents = {}
+            for listener_id in self.all_listeners.keys():
+                listener = self.all_listeners[listener_id]
+                if listener_id in self.all_processes.keys():
+                    admin_key = listener.admin_key
+                    port = listener.port
+                    host = listener.host
+                    ssl = listener.ssl
+                    url = f'http{["s" if ssl else ""][0]}://{host}:{port}/get_agents'
+                    headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
+                    all_listener_agents = requests.get(url,headers=headers,verify=False).json()
+                    for agent in all_listener_agents.keys():
+                        all_agents[agent]=all_listener_agents[agent]["name"]
+            for job in all_jobs:
+                if job[1] in all_agents.keys():
+                    agent_name = all_agents[job[1]]
+                else:
+                    agent_name = "Unknown"
+                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+            log_info(f"All jobs given to {username}","success")
+            return jobs_dict
+        
+        @api.route("/jobs/id",methods=["POST"])
+        def get_jobs_byid_api():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            data = request.json
+            if not "job_id" in data.keys():
+                return "[Error] Please provide all the required fields"
+            job = db_exec(get_job_by_jobid(data["job_id"]),self.db_path)
+            if len(job)==0:
+                return "[Error] No such job"
+            job = job[0]
+            job_dict = {"job_id":job[0],"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+            return json.dumps(job_dict)
+            
+            
+
 
         self.api = api
         

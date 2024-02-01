@@ -7,6 +7,7 @@ import readline
 from libs.headers.gen_header import *
 import re
 import datetime
+import base64
 
 class CLI_Client:
 
@@ -213,6 +214,26 @@ class CLI_Client:
                     if command.split(" ")[1]=="interact" and len(command.split(" "))>2 and command.split(" ")[2]!="":
                         id_agent = command.split(" ")[2]
                         print(self.interact_with_agent(id_agent))
+            
+            elif "jobs" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "jobs"):
+                if command == "jobs":
+                    all_jobs = self.get_all_jobs("all")
+                    print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
+                elif len(command.split(" "))>1 and command.split(" ")[1]!="":
+                    if command.split(" ")[1]=="all":
+                        all_jobs = self.get_all_jobs("all")
+                        print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
+                    elif command.split(" ")[1]=="running":
+                        all_jobs = self.get_all_jobs("running")
+                        print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
+                    elif command.split(" ")[1]=="tasked":
+                        all_jobs = self.get_all_jobs("tasked")
+                        print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
+                    if command.split(" ")[1]=="get" and len(command.split(" "))>2 and command.split(" ")[2]!="":
+                        job_id = command.split(" ")[2]
+                        one_job = self.get_job_by_id(job_id)
+                        print(one_job)
+
 
 
 
@@ -221,6 +242,67 @@ class CLI_Client:
                             
             else:
                 print("\033[31m\n[Error] Argument not recognized\n\033[0m")
+
+    def get_all_jobs(self,type):
+        if type=="running":
+            all_jobs = self.craft_and_send_get_request("/jobs").content
+        elif type=="all":
+            all_jobs = self.craft_and_send_get_request("/jobs/all").content
+        elif type=="tasked":
+            all_jobs = self.craft_and_send_get_request("/jobs/tasked").content
+            
+        if "[Error]" in all_jobs.decode():
+            return "[Error] Error while fetching data"
+        all_jobs = json.loads(all_jobs)
+        ordered_jobs = {"\033[31mjob_id\033[0m":[],"\033[31magent_name\033[0m":[],"\033[31mmodule\033[0m":[],"\033[31margument\033[0m":[],"\033[31mdate_started\033[0m":[],"\033[31mstatus\033[0m":[]}
+        for job_id in all_jobs.keys():
+            job = all_jobs[job_id]
+
+            
+            date_from_job = datetime.datetime.strptime(job["date_started"], "%Y-%m-%d %H:%M:%S")
+            now = datetime.datetime.now()
+            delta = now - date_from_job
+            if delta.total_seconds() > 360:
+                ordered_jobs["\033[31mdate_started\033[0m"].append("\033[31m"+str(job["date_started"])+"\033[0m")
+            else:
+                ordered_jobs["\033[31mdate_started\033[0m"].append("\033[92m"+str(job["date_started"])+"\033[0m")
+
+            ordered_jobs["\033[31mjob_id\033[0m"].append("\33[34m"+str(job_id)+"\033[0m")
+            ordered_jobs["\033[31magent_name\033[0m"].append(job["agent"]+f" ({job['agent_id']})")
+            ordered_jobs["\033[31mmodule\033[0m"].append(job["module"])
+            ordered_jobs["\033[31margument\033[0m"].append(base64.b64decode(job["argument"]))
+
+            if job["status"]=="running":
+                ordered_jobs["\033[31mstatus\033[0m"].append('\033[93m'+job["status"]+"\033[0m")
+            elif job["status"]=="finished":
+                ordered_jobs["\033[31mstatus\033[0m"].append('\033[92m'+job["status"]+"\033[0m")
+            else:
+                ordered_jobs["\033[31mstatus\033[0m"].append("\033[31m"+job["status"]+"\033[0m")
+
+        return ordered_jobs
+    
+    def get_job_by_id(self,job_id):
+        all_jobs = self.craft_and_send_post_request("/jobs/id",{"job_id":job_id}).content
+        if "[Error]" in all_jobs.decode():
+            return "\033[31m\n[Error] An error occured, the id may be invalid !\n\033[0m"
+        else:
+            all_jobs = json.loads(all_jobs)
+        all_jobs_colors = {}
+        for key in all_jobs.keys():
+            if key=="output" or key=="argument":
+                if key=="output":
+                    value = "\33[35m"+"\n"+base64.b64decode(all_jobs[key]).decode()+"\033[0m"
+                else:
+                    value = base64.b64decode(all_jobs[key]).decode()
+                all_jobs_colors["\033[34m"+key+"\033[0m"] = value
+            else:
+                all_jobs_colors["\033[34m"+key+"\033[0m"] = all_jobs[key]
+        output = ""
+        for key in all_jobs_colors:
+            output += f"{str(key)}: {all_jobs_colors[key]}\n"
+
+        return "\n"+str(tabulate({f"\033[31mJob {str(job_id)}\033[0m":[output]}, headers="keys", tablefmt="fancy_grid"))+"\n"
+
 
     def is_api_alive(self):
         try:
