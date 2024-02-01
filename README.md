@@ -14,6 +14,8 @@ This platform is destinated to cybersecurity experts for pentest/red team operat
 
 ## Usage
 
+Global usage:
+
 ```py
 usage: LightC2 [-h] [--password PASSWORD] [--user USER] [--register] [--register-key REGISTER_KEY] [--teamserver TEAMSERVER] mode
 
@@ -32,5 +34,15 @@ options:
                         Specify the key to register to team server in client mode
   --teamserver TEAMSERVER, -t TEAMSERVER
                         Specify the host (https://host:port) to connect to the team server in client mode
-``
+```
+Server side example:
 
+```
+python3 main.py server
+```
+
+Client side example:
+
+```
+python3 main.py client -u user -p password --teamserver https://127.0.0.1:8080
+```
