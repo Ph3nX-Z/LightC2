@@ -10,6 +10,8 @@
 
 LightC2 is an modulable lightweight Adversary simulation command and control platform. It includes modules execution, cli interface, web api, custom agents/shellcodes, custom methods ...
 
+This platform is destinated to cybersecurity experts for pentest/red team operations purposes.
+
 ## Usage
 
 ```help
