@@ -78,6 +78,8 @@ class CLI_Client:
                 help_dict = {"\33[31mOption\33[0m":["\33[34mvault\33[0m","\33[34mget\33[0m","\33[34mcreate\33[0m","\33[34mdelete\33[0m","\33[34mrm\33[0m","\33[34madd\33[0m"],"\33[31mDescription\33[0m":["Enumerate vaults for your user","Get the content of a vault","Create a vault","Delete completely a vault","Remove an entry from the vault with its index","Add an entry to the vault"],"\33[31mUsage\33[0m":["vault","vault get <vault id>","vault create","vault delete <vault id>","vault rm <vault id> <cred index>","vault add <vauld id> <username> <password>"]}
             elif module=="agents":
                 help_dict = {"\33[31mOption\33[0m":["\33[34magents\33[0m","\33[34minteract\33[0m","\33[34mremove_stale\33[0m"],"\33[31mDescription\33[0m":["Get all the agents","Interact with an agent","Remove unresponsive agents"],"\33[31mUsage\33[0m":["agents","agents interact <agent id>","agents remove_stale"]}
+            elif module == "jobs":
+                help_dict = {"\33[31mOption\33[0m":["\33[34mjobs\33[0m","\33[34mall\33[0m","\33[34mrunning\33[0m","\33[34mtasked\33[0m","\33[34mget\33[0m"],"\33[31mDescription\33[0m":["Get all the running jobs only","Get all jobs","Get only running jobs","Get only tasked jobs","Get a job by id"],"\33[31mUsage\33[0m":["jobs","jobs all","jobs running","jobs tasked","jobs get <job id>"]}
             else:
                 return "\033[31m\n[Error] No such argument available\n\033[0m"
         return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
