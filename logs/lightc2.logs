@@ -797,3 +797,56 @@
 [2024-02-01 11:00:59] Agent list provided to 'admin' - success
 [2024-02-01 11:01:07] 'admin' asked for the agent list - running
 [2024-02-01 11:01:07] Agent list provided to 'admin' - success
+[2024-02-01 11:11:21] 'admin' asked for the agent list - running
+[2024-02-01 11:11:21] Agent list provided to 'admin' - success
+[2024-02-01 11:11:23] Providing list of listeners to 'admin' - running
+[2024-02-01 11:11:23] Provided list of listeners to 'admin' - success
+[2024-02-01 11:11:36] 'admin' Stopping listener 0.0.0.0:8587 - running
+[2024-02-01 11:11:36] Stopped listener 0.0.0.0:8587 for admin - success
+[2024-02-01 11:11:36] 'admin' Removing listener 0.0.0.0:8587 - running
+[2024-02-01 11:11:36] Removed listener 0.0.0.0:8587 for admin - success
+[2024-02-01 11:11:48] 'admin' Removing listener 0.0.0.0:8485 - running
+[2024-02-01 11:11:48] Removed listener 0.0.0.0:8485 for admin - success
+[2024-02-01 11:11:50] Providing list of listeners to 'admin' - running
+[2024-02-01 11:11:50] Provided list of listeners to 'admin' - success
+[2024-02-01 11:11:53] 'admin' asked for the agent list - running
+[2024-02-01 11:11:53] Agent list provided to 'admin' - success
+[2024-02-01 11:12:09] Vault list asked by 'admin' - running
+[2024-02-01 11:12:09] Vault list provided to 'admin' - success
+[2024-02-01 11:12:20] Providing a list of all operators to: 'admin' - success
+[2024-02-01 11:12:30] Providing list of listeners to 'admin' - running
+[2024-02-01 11:12:30] Provided list of listeners to 'admin' - success
+[2024-02-01 11:13:01] Trying to authenticate 'admin' - running
+[2024-02-01 11:13:01] Authenticated 'admin' - success
+[2024-02-01 11:13:01] Token generated and stored - success
+[2024-02-01 11:13:04] Providing list of listeners to 'admin' - running
+[2024-02-01 11:13:04] Provided list of listeners to 'admin' - success
+[2024-02-01 11:13:20] Trying to authenticate 'admin' - running
+[2024-02-01 11:13:20] Authenticated 'admin' - success
+[2024-02-01 11:13:20] Token generated and stored - success
+[2024-02-01 11:14:40] Vault creation asked by 'admin' - running
+[2024-02-01 11:14:40] 'admin' Encrypting vault with XChaCha20 - running
+[2024-02-01 11:14:40] Vault encrypted by 'admin' - success
+[2024-02-01 11:14:40] Vault created by 'admin' - success
+[2024-02-01 11:15:01] Vault list asked by 'admin' - running
+[2024-02-01 11:15:01] Vault list provided to 'admin' - success
+[2024-02-01 11:15:15] 'admin' Adding entry to vault - running
+[2024-02-01 11:15:15] 'admin' Successfully added cred to vault - success
+[2024-02-01 11:15:18] Vault list asked by 'admin' - running
+[2024-02-01 11:15:18] Vault list provided to 'admin' - success
+[2024-02-01 11:15:55] Vault recuperation asked by 'admin' - running
+[2024-02-01 11:15:55] Vault provided to 'admin' - success
+[2024-02-01 11:16:15] 'admin' Adding entry to vault - running
+[2024-02-01 11:16:15] 'admin' Successfully added cred to vault - success
+[2024-02-01 11:16:17] Vault recuperation asked by 'admin' - running
+[2024-02-01 11:16:17] Vault provided to 'admin' - success
+[2024-02-01 11:16:43] Vault deletion initialised by 'admin' - running
+[2024-02-01 11:16:43] Vault RkRrcitEQ21lNzhsL3UyQ04zS2o= deleted by 'admin' - success
+[2024-02-01 11:16:50] Vault list asked by 'admin' - running
+[2024-02-01 11:16:50] Vault list provided to 'admin' - success
+[2024-02-01 11:17:44] Trying to authenticate 'admin' - running
+[2024-02-01 11:17:44] Authenticated 'admin' - success
+[2024-02-01 11:17:44] Token generated and stored - success
+[2024-02-01 11:19:14] Trying to authenticate 'admin' - running
+[2024-02-01 11:19:14] Authenticated 'admin' - success
+[2024-02-01 11:19:14] Token generated and stored - success

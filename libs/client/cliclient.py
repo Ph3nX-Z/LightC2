@@ -45,7 +45,7 @@ class CLI_Client:
 ┌Help Panel─────┬──────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────────────────────────────────┐
 │ \33[31mName\33[0m          │ \33[31mDescription\33[0m                                                                                              │ \33[31mUsage\33[0m                              │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mlisteners\33[0m     │ Manage listeners (help for more informations)                                                            │ listeners                          │
+│ \33[34mlistener\33[0m      │ Manage listeners (help for more informations)                                                            │ listeners                          │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34moperators\33[0m     │ View all operators                                                                                       │ operators                          │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
@@ -71,10 +71,10 @@ class CLI_Client:
         if module==None:
             return help_str
         else:
-            if module == "listeners":
-                help_dict = {"\33[31mOption\33[0m":["\33[34mstart\33[0m","\33[34mstop\33[0m","\33[34mrm\33[0m","\33[34mcreate\33[0m"],"\33[31mDescription\33[0m":["Start a listener with a given id","Stop a listener with a given id","Remove completely a listener","Create a listener (spawn a wizard)"],"\33[31mUsage\33[0m":["listener start <listener id>","listener stop <listener id>","listener rm <listener id>","listener create"]}
+            if module == "listener":
+                help_dict = {"\33[31mOption\33[0m":["\33[34mlistener\33[0m","\33[34mstart\33[0m","\33[34mstop\33[0m","\33[34mrm\33[0m","\33[34mcreate\33[0m"],"\33[31mDescription\33[0m":["Enumerate listeners","Start a listener with a given id","Stop a listener with a given id","Remove completely a listener","Create a listener (spawn a wizard)"],"\33[31mUsage\33[0m":["listener","listener start <listener id>","listener stop <listener id>","listener rm <listener id>","listener create"]}
             elif module == "vault":
-                help_dict = {"\33[31mOption\33[0m":["\33[34mcreate\33[0m","\33[34mdelete\33[0m","\33[34mrm\33[0m","\33[34madd\33[0m"],"\33[31mDescription\33[0m":["Create a vault","Delete completely a vault","Remove an entry from the vault with its index","Add an entry to the vault"],"\33[31mUsage\33[0m":["vault create","vault delete <vault id>","vault rm <vault id> <cred index>","vault add <vauld id> <username> <password>"]}
+                help_dict = {"\33[31mOption\33[0m":["\33[34mvault\33[0m","\33[34mget\33[0m","\33[34mcreate\33[0m","\33[34mdelete\33[0m","\33[34mrm\33[0m","\33[34madd\33[0m"],"\33[31mDescription\33[0m":["Enumerate vaults for your user","Get the content of a vault","Create a vault","Delete completely a vault","Remove an entry from the vault with its index","Add an entry to the vault"],"\33[31mUsage\33[0m":["vault","vault get <vault id>","vault create","vault delete <vault id>","vault rm <vault id> <cred index>","vault add <vauld id> <username> <password>"]}
             elif module=="agents":
                 help_dict = {"\33[31mOption\33[0m":["\33[34magents\33[0m","\33[34minteract\33[0m","\33[34mremove_stale\33[0m"],"\33[31mDescription\33[0m":["Get all the agents","Interact with an agent","Remove unresponsive agents"],"\33[31mUsage\33[0m":["agents","agents interact <agent id>","agents remove_stale"]}
             else:
