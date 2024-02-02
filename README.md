@@ -26,7 +26,7 @@ git clone https://github.com/Ph3nX-Z/LightC2.git
 cd LightC2
 python3 -m pip install argon2-cffi Flask readchar
 ```
-You can now use LightC2 :)
+You can now use LightC2 😁
 
 ## Usage
 
