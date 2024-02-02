@@ -5,9 +5,11 @@ import sys
 from tabulate import tabulate
 import readline
 from libs.headers.gen_header import *
+from libs.utils.threadsafe import *
 import re
 import datetime
 import base64
+import time
 
 class CLI_Client:
 
@@ -87,20 +89,23 @@ class CLI_Client:
         return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
 
     def cli_main_loop(self):
+        self.threadsafe = ThreadSafe()
+        self.threadsafe.thread_inputsafe(self.notify_new_agents)
         while True:
             try:
-                command = input('\033[92m'+"[LightC2]>"+ '\033[0m')
+                command = self.threadsafe.safeinput('\033[92m'+"[LightC2]>"+ '\033[0m')
             except KeyboardInterrupt:
                 print('\033[91m'+"\n[CTRL+C] Exiting !"+ '\033[0m')
                 break
             if not self.is_api_alive():
-                print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
+                print('\033[91m'+"\n[Error] Disconnected from teamserver"+ '\033[0m')
                 break
             if not self.check_auth():
                 self.authenticate()
             if command == "exit":
                 print('\033[91m'+"\n[Exit] Exiting the cli !"+ '\033[0m')
                 if input('\033[91m'+"\nAre you sure you want to exit ? (y/n) :"+ '\033[0m').lower()=="y":
+                    self.threadsafe.stop_thread = True
                     break
             elif command == "help":
                 print(self.help(None))
@@ -134,9 +139,9 @@ class CLI_Client:
                     elif command.split(" ")[1]=="create":
                         print(gen_wizard("Listener"))
                         try:
-                            host = input("\033[31m[Wizard] Host > \033[0m")
-                            port = input("\033[31m[Wizard] Port > \033[0m")
-                            ssl = input("\033[31m[Wizard] SSL (y/n) > \033[0m").lower()
+                            host = self.threadsafe.safeinput("\033[31m[Wizard] Host > \033[0m")
+                            port = self.threadsafe.safeinput("\033[31m[Wizard] Port > \033[0m")
+                            ssl = self.threadsafe.safeinput("\033[31m[Wizard] SSL (y/n) > \033[0m").lower()
                             if ssl in ["y","n"] and re.match(r"^[0-9]+$",str(port)) and re.match(r"^[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}$",host):
                                 ssl_bin = [0 if ssl=="n" else 1][0]
                                 if self.add_listener(host,port,ssl_bin):
@@ -246,6 +251,36 @@ class CLI_Client:
                             
             else:
                 print("\033[31m\n[Error] Argument not recognized\n\033[0m")
+
+    def notify_new_agents(self,lock,object):
+        if not self.check_auth():
+            self.authenticate()
+        last_agents_req = self.craft_and_send_get_request("/agents").content.decode()
+        num_agents_last = 0
+        if not '[Error]' in last_agents_req:
+            last_agents_json = json.loads(last_agents_req)["result"]
+            for listener in last_agents_json.keys():
+                num_agents_last += len(last_agents_json[listener].keys())
+
+
+        while not object.stop_thread:
+            time.sleep(3)
+
+            current_agents_req = self.craft_and_send_get_request("/agents").content.decode()
+            num_agents_current = 0
+            if not '[Error]' in current_agents_req:
+                current_agents_json = json.loads(current_agents_req)["result"]
+                for listener in current_agents_json.keys():
+                    num_agents_current += len(current_agents_json[listener].keys())
+            
+            if num_agents_current>num_agents_last:
+                num_agents_last = num_agents_current
+                object.altprint("\33[35m\n[+] Agent just checked in !\n\33[0m")
+            if num_agents_current<num_agents_last:
+                num_agents_last = num_agents_current
+
+
+        
 
     def get_all_jobs(self,type):
         if type=="running":
@@ -358,7 +393,7 @@ class CLI_Client:
         print(gen_shell())
         while True:
             try:
-                command = input(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
+                command = self.threadsafe.safeinput(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
             except KeyboardInterrupt:
                 print('\033[91m'+"\n\n[CTRL+C] Exiting !"+ '\033[0m')
                 break
