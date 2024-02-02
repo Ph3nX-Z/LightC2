@@ -3,11 +3,11 @@ import datetime
 # CREATE TABLE users(username VARCHAR(50),hash VARCHAR(200),token VARCHAR(500),token_datetime VARCHAR(50),nonce VARCHAR(20));
 # create table listeners(host VARCHAR(15),port INTEGER, ssl INTEGER, admin_key VARCHAR(50), secret_key VARCHAR(50),active INTEGER);
 # create table vault(id VARCHAR, username VARCHAR, nonce VARCHAR, data VARCHAR);
-# create table jobs(id INTEGER PRIMARY KEY AUTOINCREMENT, agent_id VARCHAR, method VARCHAR, arguments VARCHAR, output VARCHAR, started_time VARCHAR, status VARCHAR); status can be tasked, running, finished
+# create table jobs(id INTEGER PRIMARY KEY AUTOINCREMENT, agent_id VARCHAR, method VARCHAR, arguments VARCHAR, output VARCHAR, started_time VARCHAR, status VARCHAR, displayed INTEGER);
 
 def add_job_to_db(agent_id:str,method:str,arguments:str)->str:
     now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    command = f"INSERT INTO jobs(agent_id,method,arguments,output,started_time,status) VALUES ('{agent_id}','{method}','{arguments}','','{now}','tasked');"
+    command = f"INSERT INTO jobs(agent_id,method,arguments,output,started_time,status,displayed) VALUES ('{agent_id}','{method}','{arguments}','','{now}','tasked',0);"
     return command
 
 def add_output_to_task(task_id:int,output:str)->str:
@@ -124,4 +124,8 @@ def get_jobs_tasked()->str:
 
 def get_job_by_jobid(job_id)->str:
     command = f"SELECT * FROM jobs WHERE id=={str(job_id)};"
+    return command
+
+def set_job_reviewed(job_id)->str:
+    command = f"UPDATE jobs SET displayed=1 WHERE id=='{job_id}';"
     return command

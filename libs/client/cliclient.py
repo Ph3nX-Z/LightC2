@@ -105,6 +105,7 @@ class CLI_Client:
             if command == "exit":
                 print('\033[91m'+"\n[Exit] Exiting the cli !"+ '\033[0m')
                 if input('\033[91m'+"\nAre you sure you want to exit ? (y/n) :"+ '\033[0m').lower()=="y":
+                    print("\033[93m\n[-] Waiting for the thread to end\033[0m")
                     self.threadsafe.stop_thread = True
                     break
             elif command == "help":
@@ -222,6 +223,7 @@ class CLI_Client:
                 elif len(command.split(" "))>1 and command.split(" ")[1]!="":
                     if command.split(" ")[1]=="interact" and len(command.split(" "))>2 and command.split(" ")[2]!="":
                         id_agent = command.split(" ")[2]
+                        self.threadsafe.thread_inputsafe_arg(self.get_call_for_one_agents,id_agent)
                         print(self.interact_with_agent(id_agent))
             
             elif "jobs" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "jobs"):
@@ -275,7 +277,8 @@ class CLI_Client:
             
             if num_agents_current>num_agents_last:
                 num_agents_last = num_agents_current
-                object.altprint("\33[35m\n[+] Agent just checked in !\n\33[0m")
+                with lock:
+                    object.altprint("\33[35m\n[+] Agent just checked in !\n\33[0m")
             if num_agents_current<num_agents_last:
                 num_agents_last = num_agents_current
 
@@ -388,6 +391,7 @@ class CLI_Client:
                     agent_to_keep = all_agents["result"][listener][agent]
                     listener_to_keep = listener
         if not (listener_to_keep and agent_to_keep):
+            self.threadsafe.stop_interact = True
             return "\n\033[31m[Error] Check your agent id\033[0m\n"
         print('\n\033[92m'+"[Success] Getting semi-interactive shell\n\033[0m")
         print(gen_shell())
@@ -395,22 +399,46 @@ class CLI_Client:
             try:
                 command = self.threadsafe.safeinput(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
             except KeyboardInterrupt:
+                self.threadsafe.stop_interact = True
                 print('\033[91m'+"\n\n[CTRL+C] Exiting !"+ '\033[0m')
                 break
             if not self.is_api_alive():
+                self.threadsafe.stop_interact = True
                 print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
                 break
             if not self.check_auth():
                 self.authenticate()
             if command=="exit":
+                self.threadsafe.stop_interact = True
                 print("")
                 break
             if len(command.split(" "))>=2 and command.split()[0]=="psh":
                 print(self.exec_agent(agent_to_keep["id"],"psh"," ".join(command.split()[1:])))
             elif len(command.split(" "))>=2 and command.split()[0]=="psm":
                 print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
-        return '\033[91m'+"[-] Quitting shell\n"+ '\033[0m'
-            
+            elif command == "history":
+                print("\nOutputing last 10 commands/output for this agent\n")
+        return '\033[91m'+"[-] Quitting shell, killing threads\n"+ '\033[0m'
+
+    def get_call_for_one_agents(self,lock,object,agent_id):
+        while not object.stop_interact:
+            time.sleep(2.5)
+            all_jobs = self.craft_and_send_get_request("/jobs/all").content
+            if not "[Error]" in all_jobs.decode():
+                all_jobs = json.loads(all_jobs)
+                for job_id in all_jobs.keys():
+                    if all_jobs[job_id]["displayed"]==0 and all_jobs[job_id]["status"]=="finished" and agent_id==all_jobs[job_id]["agent_id"]:
+                        try:
+                            output_content = base64.b64decode(all_jobs[job_id]["output"]).decode()
+                        except:
+                            output_content = "Error decoding base64"
+                        with lock:
+                            object.altprint(f"\33[35m\n[+] Output from job {job_id} :\n\n{output_content}\n\n\033[0m")
+                        self.craft_and_send_post_request("/jobs/review",{"id":job_id})
+                        time.sleep(.2)
+    
+    def get_history_for_one_agent(self):
+        pass
 
     def exec_agent(self,agent_id,method,arguments):
         output = self.craft_and_send_post_request("/agents/exec",{"agent_id":agent_id,"method":method,"arguments":arguments})

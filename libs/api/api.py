@@ -521,7 +521,7 @@ class C2_Rest_API:
                     agent_name = all_agents[job[1]]
                 else:
                     agent_name = "Unknown"
-                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6],"displayed":job[7]}
             log_info(f"All running jobs given to {username}","success")
             return jobs_dict
         
@@ -553,7 +553,7 @@ class C2_Rest_API:
                     agent_name = all_agents[job[1]]
                 else:
                     agent_name = "Unknown"
-                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
+                jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6],"displayed":job[7]}
             log_info(f"All jobs given to {username}","success")
             return jobs_dict
         
@@ -588,6 +588,19 @@ class C2_Rest_API:
                 jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
             log_info(f"All jobs given to {username}","success")
             return jobs_dict
+        
+        @api.route("/jobs/review",methods=["POST"])
+        def review_job():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            data = request.json
+            if not "id" in data.keys():
+                return "[Error] Please provide all the required fields"
+            db_exec(set_job_reviewed(data["id"]),self.db_path)
+            return ""
         
         @api.route("/jobs/id",methods=["POST"])
         def get_jobs_byid_api():

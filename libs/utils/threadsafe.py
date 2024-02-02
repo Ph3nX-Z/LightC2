@@ -11,10 +11,16 @@ class ThreadSafe:
         self.lock = threading.Lock()
         self.prompt = prompt
         self.stop_thread = False
+        self.stop_interact = False
 
 
     def thread_inputsafe(self,func):
         thread1 = Thread(target=func,args=[self.lock,self])
+        thread1.start()
+        return 
+    
+    def thread_inputsafe_arg(self,func,arg):
+        thread1 = Thread(target=func,args=[self.lock,self,arg])
         thread1.start()
         return 
         
