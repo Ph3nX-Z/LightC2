@@ -24,7 +24,7 @@ The installation process is pretty simple:
 sudo apt install python3 python3-pip
 git clone https://github.com/Ph3nX-Z/LightC2.git
 cd LightC2
-python3 -m pip install argon2-cffi Flask
+python3 -m pip install argon2-cffi Flask readchar
 ```
 You can now use LightC2 :)
 
