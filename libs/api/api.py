@@ -666,11 +666,25 @@ class C2_Rest_API:
         return None
 
     def gen_token(self,username:str)->tuple:
-        now=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        nonce = base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN!?-_/\\$") for _ in range(random.randint(30,50))]).encode())).decode()
-        token = base64.b85encode(str(username + "<>" + nonce).encode()).decode()
-        db_exec(set_token_for_user(now,username,hash,token,nonce),self.db_path)
-        return now,nonce,token
+        previous_token = db_exec(get_token_from_username_full(username),self.db_path)
+        if len(previous_token)!=0:
+            date_generated_last = previous_token[0][3]
+            nonce_previous = previous_token[0][4]
+            token_previous = previous_token[0][2]
+            now = datetime.datetime.now()
+            nonce = base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN!?-_/\\$") for _ in range(random.randint(30,50))]).encode())).decode()
+            token = base64.b85encode(str(username + "<>" + nonce).encode()).decode()
+            if  now - datetime.datetime.strptime(date_generated_last, "%Y-%m-%d %H:%M:%S") > datetime.timedelta(minutes=20):
+                db_exec(set_token_for_user(now.strftime("%Y-%m-%d %H:%M:%S"),username,"",token,nonce),self.db_path)
+                return now.strftime("%Y-%m-%d %H:%M:%S"),nonce,token
+            else:
+                return date_generated_last,nonce_previous,token_previous
+        else:
+            now = datetime.datetime.now()
+            nonce = base64.b64encode(base64.a85encode(b"token-"+"".join([random.choice("azertyuiopmlkjhgfdsqwxcvbn1234567890AZERTYUIOPMLKJHGFDSQWXCVBN!?-_/\\$") for _ in range(random.randint(30,50))]).encode())).decode()
+            token = base64.b85encode(str(username + "<>" + nonce).encode()).decode()
+            db_exec(set_token_for_user(now.strftime("%Y-%m-%d %H:%M:%S"),username,"",token,nonce),self.db_path)
+            return now.strftime("%Y-%m-%d %H:%M:%S"),nonce,token
     
     def verify_token(self,token:str)->bool:
         if token!="":
@@ -679,7 +693,7 @@ class C2_Rest_API:
             date_object = datetime.datetime.strptime(creation_time, "%Y-%m-%d %H:%M:%S")
             current_time = datetime.datetime.now()
             time_difference = current_time - date_object
-            fifteen_minutes = datetime.timedelta(minutes=15)
+            fifteen_minutes = datetime.timedelta(minutes=20)
             if time_difference > fifteen_minutes:
                 return False
             return len(username)!=0 and base64.b85decode(token).decode().split("<>")[0]==username[0][0] and db_exec(get_token_from_username(username[0][0]),self.db_path)[0][0]==token

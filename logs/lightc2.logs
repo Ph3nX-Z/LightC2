@@ -1130,3 +1130,1815 @@
 [2024-02-02 18:01:12] Agent list provided to 'admin' - success
 [2024-02-02 18:01:15] 'admin' asked for the agent list - running
 [2024-02-02 18:01:15] Agent list provided to 'admin' - success
+[2024-02-02 18:03:42] Server mode asked, starting api - info
+[2024-02-02 18:03:42] Register Key RkRrcitEQ28hRjFHRWBnMGdUYycwa2JdU0RmQjkhNlpZSUtDSjdmPUYkc0pcNnIkLWVCNWhycT1dSTIiMS5GZQ== - info
+[2024-02-02 18:03:42] Starting Rest API - running
+[2024-02-02 18:03:42] Re-Generating listeners from db - running
+[2024-02-02 18:03:42] Listener 0.0.0.0:8183 created - success
+[2024-02-02 18:03:42] Listener 0.0.0.0:8181 created - success
+[2024-02-02 18:03:42] Starting listener 0.0.0.0:8181 - running
+[2024-02-02 18:03:42] Started listener 0.0.0.0:8181 - success
+[2024-02-02 18:03:42] Re-Generated listeners from db - success
+[2024-02-02 18:03:43] Agent checkin - listener
+[2024-02-02 18:03:46] Trying to authenticate 'admin' - running
+[2024-02-02 18:03:46] Authenticated 'admin' - success
+[2024-02-02 18:03:46] Token generated and stored - success
+[2024-02-02 18:03:46] 'admin' asked for the agent list - running
+[2024-02-02 18:03:46] Agent list provided to 'admin' - success
+[2024-02-02 18:03:48] Providing list of listeners to 'admin' - running
+[2024-02-02 18:03:48] Provided list of listeners to 'admin' - success
+[2024-02-02 18:03:49] 'admin' asked for the agent list - running
+[2024-02-02 18:03:49] Agent list provided to 'admin' - success
+[2024-02-02 18:03:51] 'admin' asked for the agent list - running
+[2024-02-02 18:03:51] Agent list provided to 'admin' - success
+[2024-02-02 18:03:52] 'admin' asked for the agent list - running
+[2024-02-02 18:03:52] Agent list provided to 'admin' - success
+[2024-02-02 18:03:55] 'admin' asked for the agent list - running
+[2024-02-02 18:03:55] Agent list provided to 'admin' - success
+[2024-02-02 18:03:58] 'admin' asked for the agent list - running
+[2024-02-02 18:03:58] Agent list provided to 'admin' - success
+[2024-02-02 18:03:59] 'admin' asked for the agent list - running
+[2024-02-02 18:03:59] Agent list provided to 'admin' - success
+[2024-02-02 18:04:01] 'admin' asked for the agent list - running
+[2024-02-02 18:04:01] Agent list provided to 'admin' - success
+[2024-02-02 18:04:02] Giving all the jobs to admin - running
+[2024-02-02 18:04:02] All jobs given to admin - success
+[2024-02-02 18:04:04] Giving all the jobs to admin - running
+[2024-02-02 18:04:04] All jobs given to admin - success
+[2024-02-02 18:04:04] 'admin' asked for the agent list - running
+[2024-02-02 18:04:04] Agent list provided to 'admin' - success
+[2024-02-02 18:04:07] Giving all the jobs to admin - running
+[2024-02-02 18:04:07] All jobs given to admin - success
+[2024-02-02 18:04:08] 'admin' asked for the agent list - running
+[2024-02-02 18:04:08] Agent list provided to 'admin' - success
+[2024-02-02 18:04:10] Giving all the jobs to admin - running
+[2024-02-02 18:04:10] All jobs given to admin - success
+[2024-02-02 18:04:11] 'admin' asked for the agent list - running
+[2024-02-02 18:04:11] Agent list provided to 'admin' - success
+[2024-02-02 18:04:12] Giving all the jobs to admin - running
+[2024-02-02 18:04:12] All jobs given to admin - success
+[2024-02-02 18:04:14] 'admin' asked for the agent list - running
+[2024-02-02 18:04:14] Agent list provided to 'admin' - success
+[2024-02-02 18:04:15] Giving all the jobs to admin - running
+[2024-02-02 18:04:15] All jobs given to admin - success
+[2024-02-02 18:04:17] 'admin' asked for the agent list - running
+[2024-02-02 18:04:17] Agent list provided to 'admin' - success
+[2024-02-02 18:04:17] Giving all the jobs to admin - running
+[2024-02-02 18:04:18] All jobs given to admin - success
+[2024-02-02 18:04:20] 'admin' asked for the agent list - running
+[2024-02-02 18:04:20] Agent list provided to 'admin' - success
+[2024-02-02 18:04:20] Giving all the jobs to admin - running
+[2024-02-02 18:04:20] All jobs given to admin - success
+[2024-02-02 18:04:23] Giving all the jobs to admin - running
+[2024-02-02 18:04:23] All jobs given to admin - success
+[2024-02-02 18:04:23] 'admin' asked for the agent list - running
+[2024-02-02 18:04:23] Agent list provided to 'admin' - success
+[2024-02-02 18:04:25] Giving all the jobs to admin - running
+[2024-02-02 18:04:25] All jobs given to admin - success
+[2024-02-02 18:04:26] 'admin' asked for the agent list - running
+[2024-02-02 18:04:26] Agent list provided to 'admin' - success
+[2024-02-02 18:04:28] Giving all the jobs to admin - running
+[2024-02-02 18:04:28] All jobs given to admin - success
+[2024-02-02 18:04:29] 'admin' asked for the agent list - running
+[2024-02-02 18:04:29] Agent list provided to 'admin' - success
+[2024-02-02 18:04:30] Giving all the jobs to admin - running
+[2024-02-02 18:04:30] All jobs given to admin - success
+[2024-02-02 18:04:32] 'admin' asked for the agent list - running
+[2024-02-02 18:04:32] Agent list provided to 'admin' - success
+[2024-02-02 18:04:33] Giving all the jobs to admin - running
+[2024-02-02 18:04:33] All jobs given to admin - success
+[2024-02-02 18:04:35] 'admin' asked for the agent list - running
+[2024-02-02 18:04:35] Agent list provided to 'admin' - success
+[2024-02-02 18:04:35] Giving all the jobs to admin - running
+[2024-02-02 18:04:35] All jobs given to admin - success
+[2024-02-02 18:04:38] Giving all the jobs to admin - running
+[2024-02-02 18:04:38] All jobs given to admin - success
+[2024-02-02 18:04:38] 'admin' asked for the agent list - running
+[2024-02-02 18:04:38] Agent list provided to 'admin' - success
+[2024-02-02 18:04:41] Giving all the jobs to admin - running
+[2024-02-02 18:04:41] All jobs given to admin - success
+[2024-02-02 18:04:41] 'admin' asked for the agent list - running
+[2024-02-02 18:04:41] Agent list provided to 'admin' - success
+[2024-02-02 18:04:43] Giving all the jobs to admin - running
+[2024-02-02 18:04:43] All jobs given to admin - success
+[2024-02-02 18:04:44] 'admin' asked for the agent list - running
+[2024-02-02 18:04:44] Agent list provided to 'admin' - success
+[2024-02-02 18:04:46] Giving all the jobs to admin - running
+[2024-02-02 18:04:46] All jobs given to admin - success
+[2024-02-02 18:04:47] 'admin' asked for the agent list - running
+[2024-02-02 18:04:47] Agent list provided to 'admin' - success
+[2024-02-02 18:04:48] Giving all the jobs to admin - running
+[2024-02-02 18:04:48] All jobs given to admin - success
+[2024-02-02 18:04:50] 'admin' asked for the agent list - running
+[2024-02-02 18:04:51] Agent list provided to 'admin' - success
+[2024-02-02 18:04:51] Giving all the jobs to admin - running
+[2024-02-02 18:04:51] All jobs given to admin - success
+[2024-02-02 18:04:53] Giving all the jobs to admin - running
+[2024-02-02 18:04:53] All jobs given to admin - success
+[2024-02-02 18:04:54] 'admin' asked for the agent list - running
+[2024-02-02 18:04:54] Agent list provided to 'admin' - success
+[2024-02-02 18:04:56] Giving all the jobs to admin - running
+[2024-02-02 18:04:56] All jobs given to admin - success
+[2024-02-02 18:04:57] 'admin' asked for the agent list - running
+[2024-02-02 18:04:57] Agent list provided to 'admin' - success
+[2024-02-02 18:04:59] Giving all the jobs to admin - running
+[2024-02-02 18:04:59] All jobs given to admin - success
+[2024-02-02 18:05:00] 'admin' asked for the agent list - running
+[2024-02-02 18:05:00] Agent list provided to 'admin' - success
+[2024-02-02 18:05:01] Giving all the jobs to admin - running
+[2024-02-02 18:05:01] All jobs given to admin - success
+[2024-02-02 18:05:03] 'admin' asked for the agent list - running
+[2024-02-02 18:05:03] Agent list provided to 'admin' - success
+[2024-02-02 18:05:04] Giving all the jobs to admin - running
+[2024-02-02 18:05:04] All jobs given to admin - success
+[2024-02-02 18:05:06] 'admin' asked for the agent list - running
+[2024-02-02 18:05:06] Agent list provided to 'admin' - success
+[2024-02-02 18:05:06] Giving all the jobs to admin - running
+[2024-02-02 18:05:06] All jobs given to admin - success
+[2024-02-02 18:05:09] Giving all the jobs to admin - running
+[2024-02-02 18:05:09] All jobs given to admin - success
+[2024-02-02 18:05:09] 'admin' asked for the agent list - running
+[2024-02-02 18:05:09] Agent list provided to 'admin' - success
+[2024-02-02 18:05:11] Giving all the jobs to admin - running
+[2024-02-02 18:05:11] All jobs given to admin - success
+[2024-02-02 18:05:12] 'admin' asked for the agent list - running
+[2024-02-02 18:05:12] Agent list provided to 'admin' - success
+[2024-02-02 18:05:14] Giving all the jobs to admin - running
+[2024-02-02 18:05:14] All jobs given to admin - success
+[2024-02-02 18:05:15] 'admin' asked for the agent list - running
+[2024-02-02 18:05:15] Agent list provided to 'admin' - success
+[2024-02-02 18:05:17] Giving all the jobs to admin - running
+[2024-02-02 18:05:17] All jobs given to admin - success
+[2024-02-02 18:05:18] 'admin' asked for the agent list - running
+[2024-02-02 18:05:18] Agent list provided to 'admin' - success
+[2024-02-02 18:05:19] Giving all the jobs to admin - running
+[2024-02-02 18:05:19] All jobs given to admin - success
+[2024-02-02 18:05:21] 'admin' asked for the agent list - running
+[2024-02-02 18:05:21] Agent list provided to 'admin' - success
+[2024-02-02 18:05:22] Giving all the jobs to admin - running
+[2024-02-02 18:05:22] All jobs given to admin - success
+[2024-02-02 18:05:24] Giving all the jobs to admin - running
+[2024-02-02 18:05:24] 'admin' asked for the agent list - running
+[2024-02-02 18:05:24] All jobs given to admin - success
+[2024-02-02 18:05:24] Agent list provided to 'admin' - success
+[2024-02-02 18:05:27] Giving all the jobs to admin - running
+[2024-02-02 18:05:27] All jobs given to admin - success
+[2024-02-02 18:05:27] 'admin' asked for the agent list - running
+[2024-02-02 18:05:27] Agent list provided to 'admin' - success
+[2024-02-02 18:05:29] Giving all the jobs to admin - running
+[2024-02-02 18:05:29] All jobs given to admin - success
+[2024-02-02 18:05:30] 'admin' asked for the agent list - running
+[2024-02-02 18:05:30] Agent list provided to 'admin' - success
+[2024-02-02 18:05:32] Giving all the jobs to admin - running
+[2024-02-02 18:05:32] All jobs given to admin - success
+[2024-02-02 18:05:33] 'admin' asked for the agent list - running
+[2024-02-02 18:05:34] Agent list provided to 'admin' - success
+[2024-02-02 18:05:35] Giving all the jobs to admin - running
+[2024-02-02 18:05:35] All jobs given to admin - success
+[2024-02-02 18:05:37] 'admin' asked for the agent list - running
+[2024-02-02 18:05:37] Agent list provided to 'admin' - success
+[2024-02-03 16:24:35] Server mode asked, starting api - info
+[2024-02-03 16:24:35] Register Key RkRrcitEQ29kITdTZC9ZPSh0XVA3VzxRWzFMRWowNj8+KSY7YFNXJzlsT1QuRl8o - info
+[2024-02-03 16:24:35] Starting Rest API - running
+[2024-02-03 16:24:35] Re-Generating listeners from db - running
+[2024-02-03 16:24:35] Listener 0.0.0.0:8183 created - success
+[2024-02-03 16:24:35] Listener 0.0.0.0:8181 created - success
+[2024-02-03 16:24:35] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 16:24:35] Started listener 0.0.0.0:8181 - success
+[2024-02-03 16:24:35] Re-Generated listeners from db - success
+[2024-02-03 16:24:36] Agent checkin - listener
+[2024-02-03 16:25:16] Trying to authenticate 'admin' - running
+[2024-02-03 16:25:17] Authenticated 'admin' - success
+[2024-02-03 16:25:17] Token generated and stored - success
+[2024-02-03 16:25:17] 'admin' asked for the agent list - running
+[2024-02-03 16:25:17] Agent list provided to 'admin' - success
+[2024-02-03 16:25:20] 'admin' asked for the agent list - running
+[2024-02-03 16:25:20] Agent list provided to 'admin' - success
+[2024-02-03 16:25:23] 'admin' asked for the agent list - running
+[2024-02-03 16:25:23] Agent list provided to 'admin' - success
+[2024-02-03 16:25:25] Trying to authenticate 'admin' - running
+[2024-02-03 16:25:25] Authenticated 'admin' - success
+[2024-02-03 16:25:25] Token generated and stored - success
+[2024-02-03 16:25:25] 'admin' asked for the agent list - running
+[2024-02-03 16:25:25] Agent list provided to 'admin' - success
+[2024-02-03 16:25:28] 'admin' asked for the agent list - running
+[2024-02-03 16:25:28] Agent list provided to 'admin' - success
+[2024-02-03 16:25:31] 'admin' asked for the agent list - running
+[2024-02-03 16:25:31] Agent list provided to 'admin' - success
+[2024-02-03 16:25:57] Trying to authenticate 'admin' - running
+[2024-02-03 16:25:57] Authenticated 'admin' - success
+[2024-02-03 16:25:57] Token generated and stored - success
+[2024-02-03 16:27:19] Trying to authenticate 'admin' - running
+[2024-02-03 16:27:20] Authenticated 'admin' - success
+[2024-02-03 16:27:20] Token generated and stored - success
+[2024-02-03 16:27:20] 'admin' asked for the agent list - running
+[2024-02-03 16:27:20] Agent list provided to 'admin' - success
+[2024-02-03 16:27:23] 'admin' asked for the agent list - running
+[2024-02-03 16:27:23] Agent list provided to 'admin' - success
+[2024-02-03 16:27:25] Giving all the jobs to admin - running
+[2024-02-03 16:27:25] All jobs given to admin - success
+[2024-02-03 16:27:26] 'admin' asked for the agent list - running
+[2024-02-03 16:27:26] Agent list provided to 'admin' - success
+[2024-02-03 16:27:27] 'admin' asked for the agent list - running
+[2024-02-03 16:27:27] Agent list provided to 'admin' - success
+[2024-02-03 16:27:29] 'admin' asked for the agent list - running
+[2024-02-03 16:27:29] Agent list provided to 'admin' - success
+[2024-02-03 16:27:32] 'admin' asked for the agent list - running
+[2024-02-03 16:27:32] Agent list provided to 'admin' - success
+[2024-02-03 16:27:35] 'admin' asked for the agent list - running
+[2024-02-03 16:27:35] Agent list provided to 'admin' - success
+[2024-02-03 16:27:38] 'admin' asked for the agent list - running
+[2024-02-03 16:27:38] Agent list provided to 'admin' - success
+[2024-02-03 16:27:41] 'admin' asked for the agent list - running
+[2024-02-03 16:27:41] Agent list provided to 'admin' - success
+[2024-02-03 16:27:44] Trying to authenticate 'erwan' - running
+[2024-02-03 16:27:44] Failed to authenticate 'erwan' - error
+[2024-02-03 16:27:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:44] 'admin' asked for the agent list - running
+[2024-02-03 16:27:44] Agent list provided to 'admin' - success
+[2024-02-03 16:27:47] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:47] 'admin' asked for the agent list - running
+[2024-02-03 16:27:47] Agent list provided to 'admin' - success
+[2024-02-03 16:27:48] Trying to authenticate 'erwan' - running
+[2024-02-03 16:27:48] Failed to authenticate 'erwan' - error
+[2024-02-03 16:27:48] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:50] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:50] 'admin' asked for the agent list - running
+[2024-02-03 16:27:51] Agent list provided to 'admin' - success
+[2024-02-03 16:27:52] Trying to authenticate 'erwan' - running
+[2024-02-03 16:27:52] Failed to authenticate 'erwan' - error
+[2024-02-03 16:27:52] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:54] 'admin' asked for the agent list - running
+[2024-02-03 16:27:54] Agent list provided to 'admin' - success
+[2024-02-03 16:27:56] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:27:57] 'admin' asked for the agent list - running
+[2024-02-03 16:27:57] Agent list provided to 'admin' - success
+[2024-02-03 16:27:59] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:00] 'admin' asked for the agent list - running
+[2024-02-03 16:28:00] Agent list provided to 'admin' - success
+[2024-02-03 16:28:02] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:03] 'admin' asked for the agent list - running
+[2024-02-03 16:28:03] Agent list provided to 'admin' - success
+[2024-02-03 16:28:05] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:06] 'admin' asked for the agent list - running
+[2024-02-03 16:28:06] Agent list provided to 'admin' - success
+[2024-02-03 16:28:08] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:09] 'admin' asked for the agent list - running
+[2024-02-03 16:28:09] Agent list provided to 'admin' - success
+[2024-02-03 16:28:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:12] 'admin' asked for the agent list - running
+[2024-02-03 16:28:12] Agent list provided to 'admin' - success
+[2024-02-03 16:28:14] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:15] 'admin' asked for the agent list - running
+[2024-02-03 16:28:15] Agent list provided to 'admin' - success
+[2024-02-03 16:28:18] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:18] 'admin' asked for the agent list - running
+[2024-02-03 16:28:18] Agent list provided to 'admin' - success
+[2024-02-03 16:28:21] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:21] 'admin' asked for the agent list - running
+[2024-02-03 16:28:21] Agent list provided to 'admin' - success
+[2024-02-03 16:28:24] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:24] 'admin' asked for the agent list - running
+[2024-02-03 16:28:25] Agent list provided to 'admin' - success
+[2024-02-03 16:28:27] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:28] 'admin' asked for the agent list - running
+[2024-02-03 16:28:28] Agent list provided to 'admin' - success
+[2024-02-03 16:28:30] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:31] 'admin' asked for the agent list - running
+[2024-02-03 16:28:31] Agent list provided to 'admin' - success
+[2024-02-03 16:28:33] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:34] 'admin' asked for the agent list - running
+[2024-02-03 16:28:34] Agent list provided to 'admin' - success
+[2024-02-03 16:28:36] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:37] 'admin' asked for the agent list - running
+[2024-02-03 16:28:37] Agent list provided to 'admin' - success
+[2024-02-03 16:28:39] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:40] 'admin' asked for the agent list - running
+[2024-02-03 16:28:40] Agent list provided to 'admin' - success
+[2024-02-03 16:28:42] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:43] 'admin' asked for the agent list - running
+[2024-02-03 16:28:43] Agent list provided to 'admin' - success
+[2024-02-03 16:28:45] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:46] 'admin' asked for the agent list - running
+[2024-02-03 16:28:46] Agent list provided to 'admin' - success
+[2024-02-03 16:28:48] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:49] 'admin' asked for the agent list - running
+[2024-02-03 16:28:49] Agent list provided to 'admin' - success
+[2024-02-03 16:28:51] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:52] 'admin' asked for the agent list - running
+[2024-02-03 16:28:53] Agent list provided to 'admin' - success
+[2024-02-03 16:28:54] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:56] 'admin' asked for the agent list - running
+[2024-02-03 16:28:56] Agent list provided to 'admin' - success
+[2024-02-03 16:28:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:28:59] 'admin' asked for the agent list - running
+[2024-02-03 16:28:59] Agent list provided to 'admin' - success
+[2024-02-03 16:29:00] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:02] 'admin' asked for the agent list - running
+[2024-02-03 16:29:02] Agent list provided to 'admin' - success
+[2024-02-03 16:29:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:05] 'admin' asked for the agent list - running
+[2024-02-03 16:29:05] Agent list provided to 'admin' - success
+[2024-02-03 16:29:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:08] 'admin' asked for the agent list - running
+[2024-02-03 16:29:08] Agent list provided to 'admin' - success
+[2024-02-03 16:29:10] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:11] 'admin' asked for the agent list - running
+[2024-02-03 16:29:11] Agent list provided to 'admin' - success
+[2024-02-03 16:29:13] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:14] 'admin' asked for the agent list - running
+[2024-02-03 16:29:14] Agent list provided to 'admin' - success
+[2024-02-03 16:29:16] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:17] 'admin' asked for the agent list - running
+[2024-02-03 16:29:17] Agent list provided to 'admin' - success
+[2024-02-03 16:29:19] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:20] 'admin' asked for the agent list - running
+[2024-02-03 16:29:20] Agent list provided to 'admin' - success
+[2024-02-03 16:29:22] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:23] 'admin' asked for the agent list - running
+[2024-02-03 16:29:24] Agent list provided to 'admin' - success
+[2024-02-03 16:29:25] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:27] 'admin' asked for the agent list - running
+[2024-02-03 16:29:27] Agent list provided to 'admin' - success
+[2024-02-03 16:29:28] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:30] 'admin' asked for the agent list - running
+[2024-02-03 16:29:30] Agent list provided to 'admin' - success
+[2024-02-03 16:29:31] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:33] 'admin' asked for the agent list - running
+[2024-02-03 16:29:33] Agent list provided to 'admin' - success
+[2024-02-03 16:29:34] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:36] 'admin' asked for the agent list - running
+[2024-02-03 16:29:36] Agent list provided to 'admin' - success
+[2024-02-03 16:29:37] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:39] 'admin' asked for the agent list - running
+[2024-02-03 16:29:39] Agent list provided to 'admin' - success
+[2024-02-03 16:29:40] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:42] 'admin' asked for the agent list - running
+[2024-02-03 16:29:42] Agent list provided to 'admin' - success
+[2024-02-03 16:29:43] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:45] 'admin' asked for the agent list - running
+[2024-02-03 16:29:45] Agent list provided to 'admin' - success
+[2024-02-03 16:29:46] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:47] Trying to authenticate 'erwan' - running
+[2024-02-03 16:29:48] Failed to authenticate 'erwan' - error
+[2024-02-03 16:29:48] 'admin' asked for the agent list - running
+[2024-02-03 16:29:48] Agent list provided to 'admin' - success
+[2024-02-03 16:29:49] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:51] Trying to authenticate 'erwan' - running
+[2024-02-03 16:29:51] Failed to authenticate 'erwan' - error
+[2024-02-03 16:29:51] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:51] 'admin' asked for the agent list - running
+[2024-02-03 16:29:51] Agent list provided to 'admin' - success
+[2024-02-03 16:29:53] Trying to authenticate 'erwan' - running
+[2024-02-03 16:29:53] Failed to authenticate 'erwan' - error
+[2024-02-03 16:29:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:54] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:54] 'admin' asked for the agent list - running
+[2024-02-03 16:29:54] Agent list provided to 'admin' - success
+[2024-02-03 16:29:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:29:57] 'admin' asked for the agent list - running
+[2024-02-03 16:29:58] Agent list provided to 'admin' - success
+[2024-02-03 16:30:00] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:01] 'admin' asked for the agent list - running
+[2024-02-03 16:30:01] Agent list provided to 'admin' - success
+[2024-02-03 16:30:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:04] 'admin' asked for the agent list - running
+[2024-02-03 16:30:04] Agent list provided to 'admin' - success
+[2024-02-03 16:30:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:07] 'admin' asked for the agent list - running
+[2024-02-03 16:30:07] Agent list provided to 'admin' - success
+[2024-02-03 16:30:09] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:10] 'admin' asked for the agent list - running
+[2024-02-03 16:30:10] Agent list provided to 'admin' - success
+[2024-02-03 16:30:12] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:13] 'admin' asked for the agent list - running
+[2024-02-03 16:30:13] Agent list provided to 'admin' - success
+[2024-02-03 16:30:15] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:15] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:15] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:16] 'admin' asked for the agent list - running
+[2024-02-03 16:30:16] Agent list provided to 'admin' - success
+[2024-02-03 16:30:17] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:17] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:17] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:18] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:18] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:18] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:19] 'admin' asked for the agent list - running
+[2024-02-03 16:30:19] Agent list provided to 'admin' - success
+[2024-02-03 16:30:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:22] 'admin' asked for the agent list - running
+[2024-02-03 16:30:22] Agent list provided to 'admin' - success
+[2024-02-03 16:30:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:25] 'admin' asked for the agent list - running
+[2024-02-03 16:30:25] Agent list provided to 'admin' - success
+[2024-02-03 16:30:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:28] 'admin' asked for the agent list - running
+[2024-02-03 16:30:29] Agent list provided to 'admin' - success
+[2024-02-03 16:30:29] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:32] 'admin' asked for the agent list - running
+[2024-02-03 16:30:32] Agent list provided to 'admin' - success
+[2024-02-03 16:30:32] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:33] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:34] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:35] 'admin' asked for the agent list - running
+[2024-02-03 16:30:35] Agent list provided to 'admin' - success
+[2024-02-03 16:30:35] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:35] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:35] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:38] 'admin' asked for the agent list - running
+[2024-02-03 16:30:38] Agent list provided to 'admin' - success
+[2024-02-03 16:30:38] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:40] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:40] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:40] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:41] 'admin' asked for the agent list - running
+[2024-02-03 16:30:41] Agent list provided to 'admin' - success
+[2024-02-03 16:30:43] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:44] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:44] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:44] 'admin' asked for the agent list - running
+[2024-02-03 16:30:44] Agent list provided to 'admin' - success
+[2024-02-03 16:30:47] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:47] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:47] 'admin' asked for the agent list - running
+[2024-02-03 16:30:47] Agent list provided to 'admin' - success
+[2024-02-03 16:30:47] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:47] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:50] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:50] 'admin' asked for the agent list - running
+[2024-02-03 16:30:50] Agent list provided to 'admin' - success
+[2024-02-03 16:30:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:53] Trying to authenticate 'erwan' - running
+[2024-02-03 16:30:53] Failed to authenticate 'erwan' - error
+[2024-02-03 16:30:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:53] 'admin' asked for the agent list - running
+[2024-02-03 16:30:53] Agent list provided to 'admin' - success
+[2024-02-03 16:30:56] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:56] 'admin' asked for the agent list - running
+[2024-02-03 16:30:56] Agent list provided to 'admin' - success
+[2024-02-03 16:30:59] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:30:59] 'admin' asked for the agent list - running
+[2024-02-03 16:31:00] Agent list provided to 'admin' - success
+[2024-02-03 16:31:02] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:03] 'admin' asked for the agent list - running
+[2024-02-03 16:31:03] Agent list provided to 'admin' - success
+[2024-02-03 16:31:05] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:06] 'admin' asked for the agent list - running
+[2024-02-03 16:31:06] Agent list provided to 'admin' - success
+[2024-02-03 16:31:08] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:09] 'admin' asked for the agent list - running
+[2024-02-03 16:31:09] Agent list provided to 'admin' - success
+[2024-02-03 16:31:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:12] 'admin' asked for the agent list - running
+[2024-02-03 16:31:12] Agent list provided to 'admin' - success
+[2024-02-03 16:31:14] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:15] 'admin' asked for the agent list - running
+[2024-02-03 16:31:15] Agent list provided to 'admin' - success
+[2024-02-03 16:31:17] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:18] 'admin' asked for the agent list - running
+[2024-02-03 16:31:18] Agent list provided to 'admin' - success
+[2024-02-03 16:31:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:21] 'admin' asked for the agent list - running
+[2024-02-03 16:31:21] Agent list provided to 'admin' - success
+[2024-02-03 16:31:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:24] 'admin' asked for the agent list - running
+[2024-02-03 16:31:24] Agent list provided to 'admin' - success
+[2024-02-03 16:31:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:27] 'admin' asked for the agent list - running
+[2024-02-03 16:31:27] Agent list provided to 'admin' - success
+[2024-02-03 16:31:29] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:30] 'admin' asked for the agent list - running
+[2024-02-03 16:31:31] Agent list provided to 'admin' - success
+[2024-02-03 16:31:32] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:34] 'admin' asked for the agent list - running
+[2024-02-03 16:31:34] Agent list provided to 'admin' - success
+[2024-02-03 16:31:35] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:37] 'admin' asked for the agent list - running
+[2024-02-03 16:31:37] Agent list provided to 'admin' - success
+[2024-02-03 16:31:38] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:40] 'admin' asked for the agent list - running
+[2024-02-03 16:31:40] Agent list provided to 'admin' - success
+[2024-02-03 16:31:42] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:43] 'admin' asked for the agent list - running
+[2024-02-03 16:31:43] Agent list provided to 'admin' - success
+[2024-02-03 16:31:45] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:46] 'admin' asked for the agent list - running
+[2024-02-03 16:31:46] Agent list provided to 'admin' - success
+[2024-02-03 16:31:48] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:49] 'admin' asked for the agent list - running
+[2024-02-03 16:31:49] Agent list provided to 'admin' - success
+[2024-02-03 16:31:51] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:52] 'admin' asked for the agent list - running
+[2024-02-03 16:31:52] Agent list provided to 'admin' - success
+[2024-02-03 16:31:54] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:55] 'admin' asked for the agent list - running
+[2024-02-03 16:31:55] Agent list provided to 'admin' - success
+[2024-02-03 16:31:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:31:58] 'admin' asked for the agent list - running
+[2024-02-03 16:31:58] Agent list provided to 'admin' - success
+[2024-02-03 16:32:00] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:01] 'admin' asked for the agent list - running
+[2024-02-03 16:32:01] Agent list provided to 'admin' - success
+[2024-02-03 16:32:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:05] 'admin' asked for the agent list - running
+[2024-02-03 16:32:05] Agent list provided to 'admin' - success
+[2024-02-03 16:32:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:08] 'admin' asked for the agent list - running
+[2024-02-03 16:32:08] Agent list provided to 'admin' - success
+[2024-02-03 16:32:09] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:11] 'admin' asked for the agent list - running
+[2024-02-03 16:32:11] Agent list provided to 'admin' - success
+[2024-02-03 16:32:12] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:14] 'admin' asked for the agent list - running
+[2024-02-03 16:32:14] Agent list provided to 'admin' - success
+[2024-02-03 16:32:15] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:17] 'admin' asked for the agent list - running
+[2024-02-03 16:32:17] Agent list provided to 'admin' - success
+[2024-02-03 16:32:18] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:20] 'admin' asked for the agent list - running
+[2024-02-03 16:32:20] Agent list provided to 'admin' - success
+[2024-02-03 16:32:21] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:23] 'admin' asked for the agent list - running
+[2024-02-03 16:32:23] Agent list provided to 'admin' - success
+[2024-02-03 16:32:24] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:26] 'admin' asked for the agent list - running
+[2024-02-03 16:32:26] Agent list provided to 'admin' - success
+[2024-02-03 16:32:27] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:29] 'admin' asked for the agent list - running
+[2024-02-03 16:32:29] Agent list provided to 'admin' - success
+[2024-02-03 16:32:30] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:32] 'admin' asked for the agent list - running
+[2024-02-03 16:32:32] Agent list provided to 'admin' - success
+[2024-02-03 16:32:33] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:36] 'admin' asked for the agent list - running
+[2024-02-03 16:32:36] Agent list provided to 'admin' - success
+[2024-02-03 16:32:36] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:39] 'admin' asked for the agent list - running
+[2024-02-03 16:32:39] Agent list provided to 'admin' - success
+[2024-02-03 16:32:40] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:42] 'admin' asked for the agent list - running
+[2024-02-03 16:32:42] Agent list provided to 'admin' - success
+[2024-02-03 16:32:43] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:45] 'admin' asked for the agent list - running
+[2024-02-03 16:32:45] Agent list provided to 'admin' - success
+[2024-02-03 16:32:46] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:48] 'admin' asked for the agent list - running
+[2024-02-03 16:32:48] Agent list provided to 'admin' - success
+[2024-02-03 16:32:49] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:51] 'admin' asked for the agent list - running
+[2024-02-03 16:32:51] Agent list provided to 'admin' - success
+[2024-02-03 16:32:52] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:54] 'admin' asked for the agent list - running
+[2024-02-03 16:32:54] Agent list provided to 'admin' - success
+[2024-02-03 16:32:55] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:32:57] 'admin' asked for the agent list - running
+[2024-02-03 16:32:57] Agent list provided to 'admin' - success
+[2024-02-03 16:32:58] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:00] 'admin' asked for the agent list - running
+[2024-02-03 16:33:00] Agent list provided to 'admin' - success
+[2024-02-03 16:33:01] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:04] 'admin' asked for the agent list - running
+[2024-02-03 16:33:04] Agent list provided to 'admin' - success
+[2024-02-03 16:33:04] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:07] 'admin' asked for the agent list - running
+[2024-02-03 16:33:07] Agent list provided to 'admin' - success
+[2024-02-03 16:33:07] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:08] Trying to authenticate 'erwan' - running
+[2024-02-03 16:33:09] Failed to authenticate 'erwan' - error
+[2024-02-03 16:33:10] 'admin' asked for the agent list - running
+[2024-02-03 16:33:10] Agent list provided to 'admin' - success
+[2024-02-03 16:33:10] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:13] Trying to authenticate 'erwan' - running
+[2024-02-03 16:33:13] Failed to authenticate 'erwan' - error
+[2024-02-03 16:33:13] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:13] 'admin' asked for the agent list - running
+[2024-02-03 16:33:13] Agent list provided to 'admin' - success
+[2024-02-03 16:33:14] Trying to authenticate 'erwan' - running
+[2024-02-03 16:33:15] Failed to authenticate 'erwan' - error
+[2024-02-03 16:33:16] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:16] 'admin' asked for the agent list - running
+[2024-02-03 16:33:16] Agent list provided to 'admin' - success
+[2024-02-03 16:33:19] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:19] 'admin' asked for the agent list - running
+[2024-02-03 16:33:19] Agent list provided to 'admin' - success
+[2024-02-03 16:33:22] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:22] 'admin' asked for the agent list - running
+[2024-02-03 16:33:22] Agent list provided to 'admin' - success
+[2024-02-03 16:33:25] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:25] 'admin' asked for the agent list - running
+[2024-02-03 16:33:25] Agent list provided to 'admin' - success
+[2024-02-03 16:33:28] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:28] 'admin' asked for the agent list - running
+[2024-02-03 16:33:28] Agent list provided to 'admin' - success
+[2024-02-03 16:33:31] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:31] 'admin' asked for the agent list - running
+[2024-02-03 16:33:31] Agent list provided to 'admin' - success
+[2024-02-03 16:33:34] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:35] 'admin' asked for the agent list - running
+[2024-02-03 16:33:35] Agent list provided to 'admin' - success
+[2024-02-03 16:33:37] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:38] 'admin' asked for the agent list - running
+[2024-02-03 16:33:38] Agent list provided to 'admin' - success
+[2024-02-03 16:33:40] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:41] 'admin' asked for the agent list - running
+[2024-02-03 16:33:41] Agent list provided to 'admin' - success
+[2024-02-03 16:33:43] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:44] 'admin' asked for the agent list - running
+[2024-02-03 16:33:44] Agent list provided to 'admin' - success
+[2024-02-03 16:33:46] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:47] 'admin' asked for the agent list - running
+[2024-02-03 16:33:47] Agent list provided to 'admin' - success
+[2024-02-03 16:33:49] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:50] 'admin' asked for the agent list - running
+[2024-02-03 16:33:50] Agent list provided to 'admin' - success
+[2024-02-03 16:33:52] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:53] 'admin' asked for the agent list - running
+[2024-02-03 16:33:53] Agent list provided to 'admin' - success
+[2024-02-03 16:33:55] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:56] 'admin' asked for the agent list - running
+[2024-02-03 16:33:56] Agent list provided to 'admin' - success
+[2024-02-03 16:33:58] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:33:59] 'admin' asked for the agent list - running
+[2024-02-03 16:33:59] Agent list provided to 'admin' - success
+[2024-02-03 16:34:02] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:02] 'admin' asked for the agent list - running
+[2024-02-03 16:34:02] Agent list provided to 'admin' - success
+[2024-02-03 16:34:05] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:06] 'admin' asked for the agent list - running
+[2024-02-03 16:34:06] Agent list provided to 'admin' - success
+[2024-02-03 16:34:08] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:09] 'admin' asked for the agent list - running
+[2024-02-03 16:34:09] Agent list provided to 'admin' - success
+[2024-02-03 16:34:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:12] 'admin' asked for the agent list - running
+[2024-02-03 16:34:12] Agent list provided to 'admin' - success
+[2024-02-03 16:34:14] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:15] 'admin' asked for the agent list - running
+[2024-02-03 16:34:15] Agent list provided to 'admin' - success
+[2024-02-03 16:34:17] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:18] 'admin' asked for the agent list - running
+[2024-02-03 16:34:18] Agent list provided to 'admin' - success
+[2024-02-03 16:34:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:21] 'admin' asked for the agent list - running
+[2024-02-03 16:34:21] Agent list provided to 'admin' - success
+[2024-02-03 16:34:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:24] 'admin' asked for the agent list - running
+[2024-02-03 16:34:24] Agent list provided to 'admin' - success
+[2024-02-03 16:34:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:27] 'admin' asked for the agent list - running
+[2024-02-03 16:34:27] Agent list provided to 'admin' - success
+[2024-02-03 16:34:29] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:30] 'admin' asked for the agent list - running
+[2024-02-03 16:34:30] Agent list provided to 'admin' - success
+[2024-02-03 16:34:32] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:33] 'admin' asked for the agent list - running
+[2024-02-03 16:34:34] Agent list provided to 'admin' - success
+[2024-02-03 16:34:35] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:37] 'admin' asked for the agent list - running
+[2024-02-03 16:34:37] Agent list provided to 'admin' - success
+[2024-02-03 16:34:38] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:40] 'admin' asked for the agent list - running
+[2024-02-03 16:34:40] Agent list provided to 'admin' - success
+[2024-02-03 16:34:41] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:43] 'admin' asked for the agent list - running
+[2024-02-03 16:34:43] Agent list provided to 'admin' - success
+[2024-02-03 16:34:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:46] 'admin' asked for the agent list - running
+[2024-02-03 16:34:46] Agent list provided to 'admin' - success
+[2024-02-03 16:34:47] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:49] 'admin' asked for the agent list - running
+[2024-02-03 16:34:49] Agent list provided to 'admin' - success
+[2024-02-03 16:34:50] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:52] 'admin' asked for the agent list - running
+[2024-02-03 16:34:52] Agent list provided to 'admin' - success
+[2024-02-03 16:34:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:55] 'admin' asked for the agent list - running
+[2024-02-03 16:34:55] Agent list provided to 'admin' - success
+[2024-02-03 16:34:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:34:58] 'admin' asked for the agent list - running
+[2024-02-03 16:34:58] Agent list provided to 'admin' - success
+[2024-02-03 16:35:01] 'admin' asked for the agent list - running
+[2024-02-03 16:35:01] Agent list provided to 'admin' - success
+[2024-02-03 16:35:03] Trying to authenticate 'erwan' - running
+[2024-02-03 16:35:03] Failed to authenticate 'erwan' - error
+[2024-02-03 16:35:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:35:04] Trying to authenticate 'erwan' - running
+[2024-02-03 16:35:04] Failed to authenticate 'erwan' - error
+[2024-02-03 16:35:04] 'admin' asked for the agent list - running
+[2024-02-03 16:35:05] Agent list provided to 'admin' - success
+[2024-02-03 16:35:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:35:08] 'admin' asked for the agent list - running
+[2024-02-03 16:35:08] Agent list provided to 'admin' - success
+[2024-02-03 16:35:11] 'admin' asked for the agent list - running
+[2024-02-03 16:35:11] Agent list provided to 'admin' - success
+[2024-02-03 16:35:14] 'admin' asked for the agent list - running
+[2024-02-03 16:35:14] Agent list provided to 'admin' - success
+[2024-02-03 16:35:17] 'admin' asked for the agent list - running
+[2024-02-03 16:35:17] Agent list provided to 'admin' - success
+[2024-02-03 16:35:18] Trying to authenticate 'erwan' - running
+[2024-02-03 16:35:18] Failed to authenticate 'erwan' - error
+[2024-02-03 16:35:18] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:35:19] Trying to authenticate 'erwan' - running
+[2024-02-03 16:35:19] Failed to authenticate 'erwan' - error
+[2024-02-03 16:35:20] 'admin' asked for the agent list - running
+[2024-02-03 16:35:20] Agent list provided to 'admin' - success
+[2024-02-03 16:35:21] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 16:35:23] 'admin' asked for the agent list - running
+[2024-02-03 16:35:23] Agent list provided to 'admin' - success
+[2024-02-03 16:35:26] 'admin' asked for the agent list - running
+[2024-02-03 16:35:26] Agent list provided to 'admin' - success
+[2024-02-03 16:35:29] 'admin' asked for the agent list - running
+[2024-02-03 16:35:29] Agent list provided to 'admin' - success
+[2024-02-03 16:35:30] Trying to authenticate 'erwan' - running
+[2024-02-03 16:35:31] Authenticated 'erwan' - success
+[2024-02-03 16:35:31] Token generated and stored - success
+[2024-02-03 16:35:31] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:31] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:32] 'admin' asked for the agent list - running
+[2024-02-03 16:35:32] Agent list provided to 'admin' - success
+[2024-02-03 16:35:34] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:34] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:35] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:35] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:35] 'admin' asked for the agent list - running
+[2024-02-03 16:35:36] Agent list provided to 'admin' - success
+[2024-02-03 16:35:37] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:37] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:39] 'admin' asked for the agent list - running
+[2024-02-03 16:35:39] Agent list provided to 'admin' - success
+[2024-02-03 16:35:40] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:40] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:40] Giving all the jobs to admin - running
+[2024-02-03 16:35:40] All jobs given to admin - success
+[2024-02-03 16:35:42] 'admin' asked for the agent list - running
+[2024-02-03 16:35:42] Agent list provided to 'admin' - success
+[2024-02-03 16:35:43] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:43] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:45] 'admin' asked for the agent list - running
+[2024-02-03 16:35:45] Agent list provided to 'admin' - success
+[2024-02-03 16:35:46] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:46] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:48] 'admin' asked for the agent list - running
+[2024-02-03 16:35:48] Agent list provided to 'admin' - success
+[2024-02-03 16:35:49] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:49] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:51] 'admin' asked for the agent list - running
+[2024-02-03 16:35:51] Agent list provided to 'admin' - success
+[2024-02-03 16:35:52] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:52] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:54] 'admin' asked for the agent list - running
+[2024-02-03 16:35:54] Agent list provided to 'admin' - success
+[2024-02-03 16:35:55] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:55] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:57] 'admin' asked for the agent list - running
+[2024-02-03 16:35:57] Agent list provided to 'admin' - success
+[2024-02-03 16:35:58] 'erwan' asked for the agent list - running
+[2024-02-03 16:35:59] 'admin' asked for the agent list - running
+[2024-02-03 16:35:59] Agent list provided to 'erwan' - success
+[2024-02-03 16:35:59] Agent list provided to 'admin' - success
+[2024-02-03 16:36:00] 'admin' asked for the agent list - running
+[2024-02-03 16:36:00] Agent list provided to 'admin' - success
+[2024-02-03 16:36:01] Giving all the jobs to admin - running
+[2024-02-03 16:36:01] All jobs given to admin - success
+[2024-02-03 16:36:02] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:02] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:03] 'admin' asked for the agent list - running
+[2024-02-03 16:36:03] Agent list provided to 'admin' - success
+[2024-02-03 16:36:04] Giving all the jobs to admin - running
+[2024-02-03 16:36:04] All jobs given to admin - success
+[2024-02-03 16:36:05] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:05] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:06] Giving all the jobs to admin - running
+[2024-02-03 16:36:06] All jobs given to admin - success
+[2024-02-03 16:36:06] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:06] 'admin' asked for the agent list - running
+[2024-02-03 16:36:06] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:06] Agent list provided to 'admin' - success
+[2024-02-03 16:36:08] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:08] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:09] Giving all the jobs to admin - running
+[2024-02-03 16:36:09] Giving all the jobs to erwan - running
+[2024-02-03 16:36:09] All jobs given to admin - success
+[2024-02-03 16:36:09] All jobs given to erwan - success
+[2024-02-03 16:36:09] 'admin' asked for the agent list - running
+[2024-02-03 16:36:10] Agent list provided to 'admin' - success
+[2024-02-03 16:36:11] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:11] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:11] Giving all the jobs to admin - running
+[2024-02-03 16:36:11] Giving all the jobs to erwan - running
+[2024-02-03 16:36:11] All jobs given to admin - success
+[2024-02-03 16:36:12] All jobs given to erwan - success
+[2024-02-03 16:36:13] 'admin' asked for the agent list - running
+[2024-02-03 16:36:13] Agent list provided to 'admin' - success
+[2024-02-03 16:36:14] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:14] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:14] Giving all the jobs to admin - running
+[2024-02-03 16:36:14] Giving all the jobs to erwan - running
+[2024-02-03 16:36:14] All jobs given to admin - success
+[2024-02-03 16:36:14] All jobs given to erwan - success
+[2024-02-03 16:36:16] 'admin' asked for the agent list - running
+[2024-02-03 16:36:16] Agent list provided to 'admin' - success
+[2024-02-03 16:36:17] Giving all the jobs to admin - running
+[2024-02-03 16:36:17] Giving all the jobs to erwan - running
+[2024-02-03 16:36:17] All jobs given to admin - success
+[2024-02-03 16:36:17] All jobs given to erwan - success
+[2024-02-03 16:36:17] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:17] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:19] 'admin' asked for the agent list - running
+[2024-02-03 16:36:19] Agent list provided to 'admin' - success
+[2024-02-03 16:36:19] Giving all the jobs to admin - running
+[2024-02-03 16:36:20] Giving all the jobs to erwan - running
+[2024-02-03 16:36:20] All jobs given to admin - success
+[2024-02-03 16:36:20] All jobs given to erwan - success
+[2024-02-03 16:36:20] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:20] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:22] 'admin' asked for the agent list - running
+[2024-02-03 16:36:22] Agent list provided to 'admin' - success
+[2024-02-03 16:36:22] Giving all the jobs to admin - running
+[2024-02-03 16:36:22] All jobs given to admin - success
+[2024-02-03 16:36:23] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:23] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:25] Giving all the jobs to admin - running
+[2024-02-03 16:36:25] All jobs given to admin - success
+[2024-02-03 16:36:25] 'admin' asked for the agent list - running
+[2024-02-03 16:36:25] Agent list provided to 'admin' - success
+[2024-02-03 16:36:26] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:26] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:28] Giving all the jobs to admin - running
+[2024-02-03 16:36:28] All jobs given to admin - success
+[2024-02-03 16:36:28] 'admin' asked for the agent list - running
+[2024-02-03 16:36:28] Agent list provided to 'admin' - success
+[2024-02-03 16:36:29] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:29] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:30] Giving all the jobs to erwan - running
+[2024-02-03 16:36:30] All jobs given to erwan - success
+[2024-02-03 16:36:30] Giving all the jobs to admin - running
+[2024-02-03 16:36:30] All jobs given to admin - success
+[2024-02-03 16:36:31] 'admin' asked for the agent list - running
+[2024-02-03 16:36:31] Agent list provided to 'admin' - success
+[2024-02-03 16:36:32] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:32] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:33] Giving all the jobs to admin - running
+[2024-02-03 16:36:33] All jobs given to admin - success
+[2024-02-03 16:36:34] 'admin' asked for the agent list - running
+[2024-02-03 16:36:34] Agent list provided to 'admin' - success
+[2024-02-03 16:36:35] Giving all the jobs to admin - running
+[2024-02-03 16:36:35] All jobs given to admin - success
+[2024-02-03 16:36:36] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:36] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:37] 'admin' asked for the agent list - running
+[2024-02-03 16:36:37] Agent list provided to 'admin' - success
+[2024-02-03 16:36:38] Giving all the jobs to admin - running
+[2024-02-03 16:36:38] All jobs given to admin - success
+[2024-02-03 16:36:39] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:39] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:40] 'admin' asked for the agent list - running
+[2024-02-03 16:36:40] Agent list provided to 'admin' - success
+[2024-02-03 16:36:41] Giving all the jobs to admin - running
+[2024-02-03 16:36:41] All jobs given to admin - success
+[2024-02-03 16:36:42] 'erwan' asked for the agent list - running
+[2024-02-03 16:36:42] Agent list provided to 'erwan' - success
+[2024-02-03 16:36:43] Giving all the jobs to admin - running
+[2024-02-03 16:36:43] All jobs given to admin - success
+[2024-02-03 16:36:43] 'admin' asked for the agent list - running
+[2024-02-03 16:36:44] Agent list provided to 'admin' - success
+[2024-02-03 16:36:46] Giving all the jobs to admin - running
+[2024-02-03 16:36:46] All jobs given to admin - success
+[2024-02-03 16:36:47] 'admin' asked for the agent list - running
+[2024-02-03 16:36:47] Agent list provided to 'admin' - success
+[2024-02-03 16:36:57] Trying to authenticate 'admin' - running
+[2024-02-03 16:36:57] Authenticated 'admin' - success
+[2024-02-03 16:36:57] Token generated and stored - success
+[2024-02-03 16:36:57] 'admin' asked for the agent list - running
+[2024-02-03 16:36:57] Agent list provided to 'admin' - success
+[2024-02-03 16:37:01] 'admin' asked for the agent list - running
+[2024-02-03 16:37:01] Agent list provided to 'admin' - success
+[2024-02-03 16:37:04] 'admin' asked for the agent list - running
+[2024-02-03 16:37:04] Agent list provided to 'admin' - success
+[2024-02-03 16:37:07] 'admin' asked for the agent list - running
+[2024-02-03 16:37:07] Agent list provided to 'admin' - success
+[2024-02-03 16:37:09] Trying to authenticate 'admin' - running
+[2024-02-03 16:37:09] Authenticated 'admin' - success
+[2024-02-03 16:37:09] Token generated and stored - success
+[2024-02-03 16:37:09] 'admin' asked for the agent list - running
+[2024-02-03 16:37:09] Agent list provided to 'admin' - success
+[2024-02-03 16:37:12] 'admin' asked for the agent list - running
+[2024-02-03 16:37:12] Agent list provided to 'admin' - success
+[2024-02-03 16:37:15] 'admin' asked for the agent list - running
+[2024-02-03 16:37:15] Agent list provided to 'admin' - success
+[2024-02-03 16:37:18] 'admin' asked for the agent list - running
+[2024-02-03 16:37:18] Agent list provided to 'admin' - success
+[2024-02-03 16:37:21] 'admin' asked for the agent list - running
+[2024-02-03 16:37:21] Agent list provided to 'admin' - success
+[2024-02-03 16:37:24] 'admin' asked for the agent list - running
+[2024-02-03 16:37:24] Agent list provided to 'admin' - success
+[2024-02-03 16:37:27] 'admin' asked for the agent list - running
+[2024-02-03 16:37:27] Agent list provided to 'admin' - success
+[2024-02-03 16:37:30] 'admin' asked for the agent list - running
+[2024-02-03 16:37:30] Agent list provided to 'admin' - success
+[2024-02-03 16:37:34] 'admin' asked for the agent list - running
+[2024-02-03 16:37:34] Agent list provided to 'admin' - success
+[2024-02-03 16:37:37] 'admin' asked for the agent list - running
+[2024-02-03 16:37:37] Agent list provided to 'admin' - success
+[2024-02-03 16:37:40] 'admin' asked for the agent list - running
+[2024-02-03 16:37:40] Agent list provided to 'admin' - success
+[2024-02-03 16:37:43] 'admin' asked for the agent list - running
+[2024-02-03 16:37:43] Agent list provided to 'admin' - success
+[2024-02-03 16:37:46] 'admin' asked for the agent list - running
+[2024-02-03 16:37:46] Agent list provided to 'admin' - success
+[2024-02-03 16:37:49] 'admin' asked for the agent list - running
+[2024-02-03 16:37:49] Agent list provided to 'admin' - success
+[2024-02-03 16:37:52] 'admin' asked for the agent list - running
+[2024-02-03 16:37:52] Agent list provided to 'admin' - success
+[2024-02-03 16:37:55] 'admin' asked for the agent list - running
+[2024-02-03 16:37:55] Agent list provided to 'admin' - success
+[2024-02-03 16:37:58] 'admin' asked for the agent list - running
+[2024-02-03 16:37:58] Agent list provided to 'admin' - success
+[2024-02-03 16:38:01] 'admin' asked for the agent list - running
+[2024-02-03 16:38:01] Agent list provided to 'admin' - success
+[2024-02-03 16:38:04] 'admin' asked for the agent list - running
+[2024-02-03 16:38:04] Agent list provided to 'admin' - success
+[2024-02-03 16:38:08] 'admin' asked for the agent list - running
+[2024-02-03 16:38:08] Agent list provided to 'admin' - success
+[2024-02-03 16:38:11] 'admin' asked for the agent list - running
+[2024-02-03 16:38:11] Agent list provided to 'admin' - success
+[2024-02-03 16:38:14] 'admin' asked for the agent list - running
+[2024-02-03 16:38:14] Agent list provided to 'admin' - success
+[2024-02-03 16:38:17] 'admin' asked for the agent list - running
+[2024-02-03 16:38:17] Agent list provided to 'admin' - success
+[2024-02-03 16:38:20] 'admin' asked for the agent list - running
+[2024-02-03 16:38:20] Agent list provided to 'admin' - success
+[2024-02-03 16:38:23] 'admin' asked for the agent list - running
+[2024-02-03 16:38:23] Agent list provided to 'admin' - success
+[2024-02-03 16:38:26] 'admin' asked for the agent list - running
+[2024-02-03 16:38:26] Agent list provided to 'admin' - success
+[2024-02-03 16:38:29] 'admin' asked for the agent list - running
+[2024-02-03 16:38:29] Agent list provided to 'admin' - success
+[2024-02-03 16:38:32] 'admin' asked for the agent list - running
+[2024-02-03 16:38:32] Agent list provided to 'admin' - success
+[2024-02-03 16:38:36] 'admin' asked for the agent list - running
+[2024-02-03 16:38:36] Agent list provided to 'admin' - success
+[2024-02-03 16:38:38] Trying to authenticate 'admin' - running
+[2024-02-03 16:38:38] Authenticated 'admin' - success
+[2024-02-03 16:38:38] Token generated and stored - success
+[2024-02-03 16:38:42] Trying to authenticate 'admin' - running
+[2024-02-03 16:38:42] Authenticated 'admin' - success
+[2024-02-03 16:38:42] Token generated and stored - success
+[2024-02-03 16:38:47] Trying to authenticate 'admin' - running
+[2024-02-03 16:38:47] Authenticated 'admin' - success
+[2024-02-03 16:38:47] Token generated and stored - success
+[2024-02-03 16:38:47] 'admin' asked for the agent list - running
+[2024-02-03 16:38:47] Agent list provided to 'admin' - success
+[2024-02-03 16:38:49] Trying to authenticate 'admin' - running
+[2024-02-03 16:38:49] Authenticated 'admin' - success
+[2024-02-03 16:38:49] Token generated and stored - success
+[2024-02-03 16:38:49] 'admin' asked for the agent list - running
+[2024-02-03 16:38:49] Agent list provided to 'admin' - success
+[2024-02-03 16:38:53] 'admin' asked for the agent list - running
+[2024-02-03 16:38:53] Agent list provided to 'admin' - success
+[2024-02-03 16:38:56] 'admin' asked for the agent list - running
+[2024-02-03 16:38:56] Agent list provided to 'admin' - success
+[2024-02-03 16:38:56] Trying to authenticate 'admin' - running
+[2024-02-03 16:38:56] Authenticated 'admin' - success
+[2024-02-03 16:38:56] Token generated and stored - success
+[2024-02-03 16:38:56] 'admin' asked for the agent list - running
+[2024-02-03 16:38:56] Agent list provided to 'admin' - success
+[2024-02-03 16:38:57] 'admin' asked for the agent list - running
+[2024-02-03 16:38:57] Agent list provided to 'admin' - success
+[2024-02-03 16:39:00] 'admin' asked for the agent list - running
+[2024-02-03 16:39:00] Agent list provided to 'admin' - success
+[2024-02-03 16:39:00] Trying to authenticate 'admin' - running
+[2024-02-03 16:39:01] Authenticated 'admin' - success
+[2024-02-03 16:39:01] Token generated and stored - success
+[2024-02-03 16:39:01] 'admin' asked for the agent list - running
+[2024-02-03 16:39:01] Agent list provided to 'admin' - success
+[2024-02-03 16:39:02] 'admin' asked for the agent list - running
+[2024-02-03 16:39:02] Agent list provided to 'admin' - success
+[2024-02-03 16:39:05] 'admin' asked for the agent list - running
+[2024-02-03 16:39:05] Agent list provided to 'admin' - success
+[2024-02-03 16:39:07] Trying to authenticate 'admin' - running
+[2024-02-03 16:39:07] Authenticated 'admin' - success
+[2024-02-03 16:39:07] Token generated and stored - success
+[2024-02-03 16:39:07] 'admin' asked for the agent list - running
+[2024-02-03 16:39:07] Agent list provided to 'admin' - success
+[2024-02-03 16:39:09] 'admin' asked for the agent list - running
+[2024-02-03 16:39:09] Agent list provided to 'admin' - success
+[2024-02-03 16:39:12] Trying to authenticate 'admin' - running
+[2024-02-03 16:39:12] Authenticated 'admin' - success
+[2024-02-03 16:39:12] Token generated and stored - success
+[2024-02-03 16:39:12] 'admin' asked for the agent list - running
+[2024-02-03 16:39:12] Agent list provided to 'admin' - success
+[2024-02-03 16:39:14] 'admin' asked for the agent list - running
+[2024-02-03 16:39:14] Agent list provided to 'admin' - success
+[2024-02-03 16:39:17] 'admin' asked for the agent list - running
+[2024-02-03 16:39:17] Agent list provided to 'admin' - success
+[2024-02-03 16:39:20] 'admin' asked for the agent list - running
+[2024-02-03 16:39:20] Agent list provided to 'admin' - success
+[2024-02-03 16:39:23] 'admin' asked for the agent list - running
+[2024-02-03 16:39:23] Agent list provided to 'admin' - success
+[2024-02-03 16:39:26] 'admin' asked for the agent list - running
+[2024-02-03 16:39:27] Agent list provided to 'admin' - success
+[2024-02-03 16:39:30] 'admin' asked for the agent list - running
+[2024-02-03 16:39:30] Agent list provided to 'admin' - success
+[2024-02-03 16:39:33] 'admin' asked for the agent list - running
+[2024-02-03 16:39:33] Agent list provided to 'admin' - success
+[2024-02-03 16:39:36] 'admin' asked for the agent list - running
+[2024-02-03 16:39:36] Agent list provided to 'admin' - success
+[2024-02-03 16:39:39] 'admin' asked for the agent list - running
+[2024-02-03 16:39:39] Agent list provided to 'admin' - success
+[2024-02-03 16:39:42] 'admin' asked for the agent list - running
+[2024-02-03 16:39:42] Agent list provided to 'admin' - success
+[2024-02-03 16:39:45] 'admin' asked for the agent list - running
+[2024-02-03 16:39:45] Agent list provided to 'admin' - success
+[2024-02-03 16:39:48] 'admin' asked for the agent list - running
+[2024-02-03 16:39:48] Agent list provided to 'admin' - success
+[2024-02-03 16:39:51] 'admin' asked for the agent list - running
+[2024-02-03 16:39:51] Agent list provided to 'admin' - success
+[2024-02-03 16:39:54] 'admin' asked for the agent list - running
+[2024-02-03 16:39:54] Agent list provided to 'admin' - success
+[2024-02-03 16:39:57] 'admin' asked for the agent list - running
+[2024-02-03 16:39:57] Agent list provided to 'admin' - success
+[2024-02-03 16:40:00] 'admin' asked for the agent list - running
+[2024-02-03 16:40:01] Agent list provided to 'admin' - success
+[2024-02-03 16:40:04] 'admin' asked for the agent list - running
+[2024-02-03 16:40:04] Agent list provided to 'admin' - success
+[2024-02-03 16:40:07] 'admin' asked for the agent list - running
+[2024-02-03 16:40:07] Agent list provided to 'admin' - success
+[2024-02-03 16:40:10] 'admin' asked for the agent list - running
+[2024-02-03 16:40:10] Agent list provided to 'admin' - success
+[2024-02-03 16:40:13] 'admin' asked for the agent list - running
+[2024-02-03 16:40:13] Agent list provided to 'admin' - success
+[2024-02-03 16:40:16] 'admin' asked for the agent list - running
+[2024-02-03 16:40:16] Agent list provided to 'admin' - success
+[2024-02-03 16:40:19] 'admin' asked for the agent list - running
+[2024-02-03 16:40:19] Agent list provided to 'admin' - success
+[2024-02-03 16:40:22] 'admin' asked for the agent list - running
+[2024-02-03 16:40:22] Agent list provided to 'admin' - success
+[2024-02-03 16:40:25] 'admin' asked for the agent list - running
+[2024-02-03 16:40:25] Agent list provided to 'admin' - success
+[2024-02-03 16:40:28] 'admin' asked for the agent list - running
+[2024-02-03 16:40:28] Agent list provided to 'admin' - success
+[2024-02-03 16:40:31] 'admin' asked for the agent list - running
+[2024-02-03 16:40:32] Agent list provided to 'admin' - success
+[2024-02-03 16:40:35] 'admin' asked for the agent list - running
+[2024-02-03 16:40:35] Agent list provided to 'admin' - success
+[2024-02-03 16:40:38] 'admin' asked for the agent list - running
+[2024-02-03 16:40:38] Agent list provided to 'admin' - success
+[2024-02-03 16:40:41] 'admin' asked for the agent list - running
+[2024-02-03 16:40:41] Agent list provided to 'admin' - success
+[2024-02-03 16:40:44] 'admin' asked for the agent list - running
+[2024-02-03 16:40:44] Agent list provided to 'admin' - success
+[2024-02-03 16:40:47] 'admin' asked for the agent list - running
+[2024-02-03 16:40:47] Agent list provided to 'admin' - success
+[2024-02-03 16:40:50] 'admin' asked for the agent list - running
+[2024-02-03 16:40:50] Agent list provided to 'admin' - success
+[2024-02-03 16:40:53] 'admin' asked for the agent list - running
+[2024-02-03 16:40:53] Agent list provided to 'admin' - success
+[2024-02-03 16:40:56] 'admin' asked for the agent list - running
+[2024-02-03 16:40:56] Agent list provided to 'admin' - success
+[2024-02-03 16:40:59] Trying to authenticate 'admin' - running
+[2024-02-03 16:40:59] Authenticated 'admin' - success
+[2024-02-03 16:40:59] Token generated and stored - success
+[2024-02-03 16:41:02] 'admin' asked for the agent list - running
+[2024-02-03 16:41:02] Agent list provided to 'admin' - success
+[2024-02-03 16:41:04] Trying to authenticate 'admin' - running
+[2024-02-03 16:41:04] Authenticated 'admin' - success
+[2024-02-03 16:41:04] Token generated and stored - success
+[2024-02-03 16:41:04] 'admin' asked for the agent list - running
+[2024-02-03 16:41:04] Agent list provided to 'admin' - success
+[2024-02-03 16:41:05] Giving all the jobs to admin - running
+[2024-02-03 16:41:05] All jobs given to admin - success
+[2024-02-03 16:41:07] 'admin' asked for the agent list - running
+[2024-02-03 16:41:07] Agent list provided to 'admin' - success
+[2024-02-03 16:41:08] Trying to authenticate 'admin' - running
+[2024-02-03 16:41:08] Authenticated 'admin' - success
+[2024-02-03 16:41:08] Token generated and stored - success
+[2024-02-03 16:41:08] 'admin' asked for the agent list - running
+[2024-02-03 16:41:08] Agent list provided to 'admin' - success
+[2024-02-03 16:41:11] Trying to authenticate 'admin' - running
+[2024-02-03 16:41:11] Authenticated 'admin' - success
+[2024-02-03 16:41:11] Token generated and stored - success
+[2024-02-03 16:41:11] 'admin' asked for the agent list - running
+[2024-02-03 16:41:11] Agent list provided to 'admin' - success
+[2024-02-03 16:41:13] 'admin' asked for the agent list - running
+[2024-02-03 16:41:13] Agent list provided to 'admin' - success
+[2024-02-03 16:41:15] Trying to authenticate 'admin' - running
+[2024-02-03 16:41:15] Authenticated 'admin' - success
+[2024-02-03 16:41:15] Token generated and stored - success
+[2024-02-03 16:41:15] 'admin' asked for the agent list - running
+[2024-02-03 16:41:15] Agent list provided to 'admin' - success
+[2024-02-03 16:41:17] 'admin' asked for the agent list - running
+[2024-02-03 16:41:17] Agent list provided to 'admin' - success
+[2024-02-03 16:41:20] 'admin' asked for the agent list - running
+[2024-02-03 16:41:20] Agent list provided to 'admin' - success
+[2024-02-03 16:41:24] 'admin' asked for the agent list - running
+[2024-02-03 16:41:24] Agent list provided to 'admin' - success
+[2024-02-03 16:41:27] 'admin' asked for the agent list - running
+[2024-02-03 16:41:27] Agent list provided to 'admin' - success
+[2024-02-03 16:41:30] 'admin' asked for the agent list - running
+[2024-02-03 16:41:30] Agent list provided to 'admin' - success
+[2024-02-03 16:41:33] 'admin' asked for the agent list - running
+[2024-02-03 16:41:33] Agent list provided to 'admin' - success
+[2024-02-03 16:41:36] 'admin' asked for the agent list - running
+[2024-02-03 16:41:36] Agent list provided to 'admin' - success
+[2024-02-03 16:41:39] 'admin' asked for the agent list - running
+[2024-02-03 16:41:39] Agent list provided to 'admin' - success
+[2024-02-03 16:41:42] 'admin' asked for the agent list - running
+[2024-02-03 16:41:42] Agent list provided to 'admin' - success
+[2024-02-03 16:41:45] 'admin' asked for the agent list - running
+[2024-02-03 16:41:45] Agent list provided to 'admin' - success
+[2024-02-03 16:41:48] 'admin' asked for the agent list - running
+[2024-02-03 16:41:48] Agent list provided to 'admin' - success
+[2024-02-03 16:41:51] 'admin' asked for the agent list - running
+[2024-02-03 16:41:51] Agent list provided to 'admin' - success
+[2024-02-03 16:41:55] Agent checkin - listener
+[2024-02-03 16:41:55] 'admin' asked for the agent list - running
+[2024-02-03 16:41:55] Agent list provided to 'admin' - success
+[2024-02-03 16:41:58] 'admin' asked for the agent list - running
+[2024-02-03 16:41:58] Agent list provided to 'admin' - success
+[2024-02-03 16:42:01] 'admin' asked for the agent list - running
+[2024-02-03 16:42:01] Agent list provided to 'admin' - success
+[2024-02-03 16:42:01] Trying to authenticate 'admin' - running
+[2024-02-03 16:42:01] Authenticated 'admin' - success
+[2024-02-03 16:42:01] Token generated and stored - success
+[2024-02-03 16:42:01] 'admin' asked for the agent list - running
+[2024-02-03 16:42:01] Agent list provided to 'admin' - success
+[2024-02-03 16:42:02] 'admin' asked for the agent list - running
+[2024-02-03 16:42:02] Agent list provided to 'admin' - success
+[2024-02-03 16:42:05] 'admin' asked for the agent list - running
+[2024-02-03 16:42:05] Agent list provided to 'admin' - success
+[2024-02-03 16:42:08] 'admin' asked for the agent list - running
+[2024-02-03 16:42:08] Agent list provided to 'admin' - success
+[2024-02-03 16:42:10] Trying to authenticate 'admin' - running
+[2024-02-03 16:42:10] Authenticated 'admin' - success
+[2024-02-03 16:42:11] Token generated and stored - success
+[2024-02-03 16:42:11] 'admin' asked for the agent list - running
+[2024-02-03 16:42:11] Agent list provided to 'admin' - success
+[2024-02-03 16:42:13] 'admin' asked for the agent list - running
+[2024-02-03 16:42:13] Agent list provided to 'admin' - success
+[2024-02-03 16:42:14] Trying to authenticate 'admin' - running
+[2024-02-03 16:42:15] Authenticated 'admin' - success
+[2024-02-03 16:42:15] Token generated and stored - success
+[2024-02-03 16:42:15] 'admin' asked for the agent list - running
+[2024-02-03 16:42:15] Agent list provided to 'admin' - success
+[2024-02-03 16:42:17] 'admin' asked for the agent list - running
+[2024-02-03 16:42:17] Agent list provided to 'admin' - success
+[2024-02-03 16:42:21] 'admin' asked for the agent list - running
+[2024-02-03 16:42:21] Agent list provided to 'admin' - success
+[2024-02-03 16:42:24] 'admin' asked for the agent list - running
+[2024-02-03 16:42:24] Agent list provided to 'admin' - success
+[2024-02-03 16:42:27] 'admin' asked for the agent list - running
+[2024-02-03 16:42:27] Agent list provided to 'admin' - success
+[2024-02-03 16:42:30] 'admin' asked for the agent list - running
+[2024-02-03 16:42:30] Agent list provided to 'admin' - success
+[2024-02-03 16:42:33] 'admin' asked for the agent list - running
+[2024-02-03 16:42:33] Agent list provided to 'admin' - success
+[2024-02-03 16:42:36] 'admin' asked for the agent list - running
+[2024-02-03 16:42:36] Agent list provided to 'admin' - success
+[2024-02-03 16:42:39] 'admin' asked for the agent list - running
+[2024-02-03 16:42:39] Agent list provided to 'admin' - success
+[2024-02-03 16:42:42] 'admin' asked for the agent list - running
+[2024-02-03 16:42:42] Agent list provided to 'admin' - success
+[2024-02-03 16:42:44] 'admin' asked for the agent list - running
+[2024-02-03 16:42:44] Agent list provided to 'admin' - success
+[2024-02-03 16:42:45] 'admin' asked for the agent list - running
+[2024-02-03 16:42:45] Agent list provided to 'admin' - success
+[2024-02-03 16:42:46] Giving all the jobs to admin - running
+[2024-02-03 16:42:46] All jobs given to admin - success
+[2024-02-03 16:42:48] 'admin' asked for the agent list - running
+[2024-02-03 16:42:48] Agent list provided to 'admin' - success
+[2024-02-03 16:42:49] Giving all the jobs to admin - running
+[2024-02-03 16:42:49] All jobs given to admin - success
+[2024-02-03 16:42:51] Giving all the jobs to admin - running
+[2024-02-03 16:42:51] 'admin' asked for the agent list - running
+[2024-02-03 16:42:51] All jobs given to admin - success
+[2024-02-03 16:42:51] Agent list provided to 'admin' - success
+[2024-02-03 16:42:54] Giving all the jobs to admin - running
+[2024-02-03 16:42:54] All jobs given to admin - success
+[2024-02-03 16:42:55] 'admin' asked for the agent list - running
+[2024-02-03 16:42:55] Agent list provided to 'admin' - success
+[2024-02-03 16:42:57] Giving all the jobs to admin - running
+[2024-02-03 16:42:57] All jobs given to admin - success
+[2024-02-03 16:42:58] 'admin' asked for the agent list - running
+[2024-02-03 16:42:58] Agent list provided to 'admin' - success
+[2024-02-03 16:42:59] Giving all the jobs to admin - running
+[2024-02-03 16:42:59] All jobs given to admin - success
+[2024-02-03 16:43:01] 'admin' asked for the agent list - running
+[2024-02-03 16:43:01] Agent list provided to 'admin' - success
+[2024-02-03 16:43:02] Giving all the jobs to admin - running
+[2024-02-03 16:43:02] All jobs given to admin - success
+[2024-02-03 16:43:02] Trying to authenticate 'admin' - running
+[2024-02-03 16:43:02] Authenticated 'admin' - success
+[2024-02-03 16:43:02] Token generated and stored - success
+[2024-02-03 16:43:02] 'admin' asked for the agent list - running
+[2024-02-03 16:43:02] Agent list provided to 'admin' - success
+[2024-02-03 16:43:05] Giving all the jobs to admin - running
+[2024-02-03 16:43:05] All jobs given to admin - success
+[2024-02-03 16:43:05] 'admin' asked for the agent list - running
+[2024-02-03 16:43:05] Agent list provided to 'admin' - success
+[2024-02-03 16:43:07] Giving all the jobs to admin - running
+[2024-02-03 16:43:07] All jobs given to admin - success
+[2024-02-03 16:43:08] 'admin' asked for the agent list - running
+[2024-02-03 16:43:08] Agent list provided to 'admin' - success
+[2024-02-03 16:43:10] Giving all the jobs to admin - running
+[2024-02-03 16:43:10] All jobs given to admin - success
+[2024-02-03 16:43:11] 'admin' asked for the agent list - running
+[2024-02-03 16:43:11] Agent list provided to 'admin' - success
+[2024-02-03 16:43:13] Giving all the jobs to admin - running
+[2024-02-03 16:43:13] All jobs given to admin - success
+[2024-02-03 16:43:14] 'admin' asked for the agent list - running
+[2024-02-03 16:43:14] Agent list provided to 'admin' - success
+[2024-02-03 16:43:15] Giving all the jobs to admin - running
+[2024-02-03 16:43:15] All jobs given to admin - success
+[2024-02-03 16:43:17] 'admin' asked for the agent list - running
+[2024-02-03 16:43:17] Agent list provided to 'admin' - success
+[2024-02-03 16:43:18] Giving all the jobs to admin - running
+[2024-02-03 16:43:18] All jobs given to admin - success
+[2024-02-03 16:43:20] Giving all the jobs to admin - running
+[2024-02-03 16:43:20] 'admin' asked for the agent list - running
+[2024-02-03 16:43:20] All jobs given to admin - success
+[2024-02-03 16:43:21] Agent list provided to 'admin' - success
+[2024-02-03 16:43:23] Giving all the jobs to admin - running
+[2024-02-03 16:43:23] All jobs given to admin - success
+[2024-02-03 16:43:24] 'admin' asked for the agent list - running
+[2024-02-03 16:43:24] Agent list provided to 'admin' - success
+[2024-02-03 16:43:26] Giving all the jobs to admin - running
+[2024-02-03 16:43:26] All jobs given to admin - success
+[2024-02-03 16:43:27] 'admin' asked for the agent list - running
+[2024-02-03 16:43:27] Agent list provided to 'admin' - success
+[2024-02-03 16:43:28] Giving all the jobs to admin - running
+[2024-02-03 16:43:28] All jobs given to admin - success
+[2024-02-03 16:43:28] Trying to authenticate 'admin' - running
+[2024-02-03 16:43:28] Authenticated 'admin' - success
+[2024-02-03 16:43:28] Token generated and stored - success
+[2024-02-03 16:43:31] 'admin' asked for the agent list - running
+[2024-02-03 16:43:31] Agent list provided to 'admin' - success
+[2024-02-03 16:43:34] 'admin' asked for the agent list - running
+[2024-02-03 16:43:34] Agent list provided to 'admin' - success
+[2024-02-03 16:43:37] 'admin' asked for the agent list - running
+[2024-02-03 16:43:37] Agent list provided to 'admin' - success
+[2024-02-03 16:43:41] 'admin' asked for the agent list - running
+[2024-02-03 16:43:41] Agent list provided to 'admin' - success
+[2024-02-03 16:43:44] 'admin' asked for the agent list - running
+[2024-02-03 16:43:44] Agent list provided to 'admin' - success
+[2024-02-03 16:43:46] Trying to authenticate 'admin' - running
+[2024-02-03 16:43:46] Authenticated 'admin' - success
+[2024-02-03 16:43:46] Token generated and stored - success
+[2024-02-03 16:43:48] 'admin' asked for the agent list - running
+[2024-02-03 16:43:48] Agent list provided to 'admin' - success
+[2024-02-03 16:44:48] Trying to authenticate 'admin' - running
+[2024-02-03 16:44:48] Authenticated 'admin' - success
+[2024-02-03 16:44:48] Token generated and stored - success
+[2024-02-03 16:44:48] 'admin' asked for the agent list - running
+[2024-02-03 16:44:48] Agent list provided to 'admin' - success
+[2024-02-03 16:44:50] Trying to authenticate 'admin' - running
+[2024-02-03 16:44:50] Authenticated 'admin' - success
+[2024-02-03 16:44:50] Token generated and stored - success
+[2024-02-03 16:44:50] 'admin' asked for the agent list - running
+[2024-02-03 16:44:50] Agent list provided to 'admin' - success
+[2024-02-03 16:44:53] 'admin' asked for the agent list - running
+[2024-02-03 16:44:53] Agent list provided to 'admin' - success
+[2024-02-03 16:44:56] 'admin' asked for the agent list - running
+[2024-02-03 16:44:56] Agent list provided to 'admin' - success
+[2024-02-03 16:44:59] 'admin' asked for the agent list - running
+[2024-02-03 16:44:59] Agent list provided to 'admin' - success
+[2024-02-03 16:45:02] 'admin' asked for the agent list - running
+[2024-02-03 16:45:02] Agent list provided to 'admin' - success
+[2024-02-03 16:45:05] 'admin' asked for the agent list - running
+[2024-02-03 16:45:05] Agent list provided to 'admin' - success
+[2024-02-03 16:45:09] 'admin' asked for the agent list - running
+[2024-02-03 16:45:09] Agent list provided to 'admin' - success
+[2024-02-03 16:45:12] 'admin' asked for the agent list - running
+[2024-02-03 16:45:12] Agent list provided to 'admin' - success
+[2024-02-03 16:45:15] 'admin' asked for the agent list - running
+[2024-02-03 16:45:15] Agent list provided to 'admin' - success
+[2024-02-03 16:45:18] 'admin' asked for the agent list - running
+[2024-02-03 16:45:18] Agent list provided to 'admin' - success
+[2024-02-03 16:45:21] 'admin' asked for the agent list - running
+[2024-02-03 16:45:21] Agent list provided to 'admin' - success
+[2024-02-03 16:45:24] 'admin' asked for the agent list - running
+[2024-02-03 16:45:24] Agent list provided to 'admin' - success
+[2024-02-03 16:45:27] 'admin' asked for the agent list - running
+[2024-02-03 16:45:27] Agent list provided to 'admin' - success
+[2024-02-03 16:45:30] 'admin' asked for the agent list - running
+[2024-02-03 16:45:30] Agent list provided to 'admin' - success
+[2024-02-03 16:45:33] 'admin' asked for the agent list - running
+[2024-02-03 16:45:33] Agent list provided to 'admin' - success
+[2024-02-03 16:45:36] 'admin' asked for the agent list - running
+[2024-02-03 16:45:36] Agent list provided to 'admin' - success
+[2024-02-03 16:45:40] 'admin' asked for the agent list - running
+[2024-02-03 16:45:40] Agent list provided to 'admin' - success
+[2024-02-03 16:45:43] 'admin' asked for the agent list - running
+[2024-02-03 16:45:43] Agent list provided to 'admin' - success
+[2024-02-03 16:45:46] 'admin' asked for the agent list - running
+[2024-02-03 16:45:46] Agent list provided to 'admin' - success
+[2024-02-03 16:45:49] 'admin' asked for the agent list - running
+[2024-02-03 16:45:49] Agent list provided to 'admin' - success
+[2024-02-03 16:45:52] 'admin' asked for the agent list - running
+[2024-02-03 16:45:52] Agent list provided to 'admin' - success
+[2024-02-03 16:45:55] 'admin' asked for the agent list - running
+[2024-02-03 16:45:55] Agent list provided to 'admin' - success
+[2024-02-03 16:45:58] 'admin' asked for the agent list - running
+[2024-02-03 16:45:58] Agent list provided to 'admin' - success
+[2024-02-03 16:46:01] 'admin' asked for the agent list - running
+[2024-02-03 16:46:01] Agent list provided to 'admin' - success
+[2024-02-03 16:46:01] 'admin' asked for the agent list - running
+[2024-02-03 16:46:01] Agent list provided to 'admin' - success
+[2024-02-03 16:46:04] 'admin' asked for the agent list - running
+[2024-02-03 16:46:05] Agent list provided to 'admin' - success
+[2024-02-03 16:46:08] 'admin' asked for the agent list - running
+[2024-02-03 16:46:08] Agent list provided to 'admin' - success
+[2024-02-03 16:46:11] 'admin' asked for the agent list - running
+[2024-02-03 16:46:11] Agent list provided to 'admin' - success
+[2024-02-03 16:46:12] 'admin' asked for the agent list - running
+[2024-02-03 16:46:12] Agent list provided to 'admin' - success
+[2024-02-03 16:46:14] 'admin' asked for the agent list - running
+[2024-02-03 16:46:14] Agent list provided to 'admin' - success
+[2024-02-03 16:46:15] Giving all the jobs to admin - running
+[2024-02-03 16:46:15] All jobs given to admin - success
+[2024-02-03 16:46:16] Trying to authenticate 'admin' - running
+[2024-02-03 16:46:16] Authenticated 'admin' - success
+[2024-02-03 16:46:16] Token generated and stored - success
+[2024-02-03 16:46:17] 'admin' asked for the agent list - running
+[2024-02-03 16:46:17] Agent list provided to 'admin' - success
+[2024-02-03 16:46:17] 'admin' asked for the agent list - running
+[2024-02-03 16:46:17] Agent list provided to 'admin' - success
+[2024-02-03 16:46:20] 'admin' asked for the agent list - running
+[2024-02-03 16:46:20] Agent list provided to 'admin' - success
+[2024-02-03 16:46:22] 'admin' asked for the agent list - running
+[2024-02-03 16:46:22] Agent list provided to 'admin' - success
+[2024-02-03 16:46:23] 'admin' asked for the agent list - running
+[2024-02-03 16:46:23] Agent list provided to 'admin' - success
+[2024-02-03 16:46:25] Giving all the jobs to admin - running
+[2024-02-03 16:46:25] All jobs given to admin - success
+[2024-02-03 16:46:26] 'admin' asked for the agent list - running
+[2024-02-03 16:46:26] Agent list provided to 'admin' - success
+[2024-02-03 16:46:27] Giving all the jobs to admin - running
+[2024-02-03 16:46:28] All jobs given to admin - success
+[2024-02-03 16:46:29] 'admin' asked for the agent list - running
+[2024-02-03 16:46:29] Agent list provided to 'admin' - success
+[2024-02-03 16:46:30] Giving all the jobs to admin - running
+[2024-02-03 16:46:30] All jobs given to admin - success
+[2024-02-03 16:46:32] 'admin' asked for the agent list - running
+[2024-02-03 16:46:32] Agent list provided to 'admin' - success
+[2024-02-03 16:46:33] Giving all the jobs to admin - running
+[2024-02-03 16:46:33] All jobs given to admin - success
+[2024-02-03 16:46:35] 'admin' asked for the agent list - running
+[2024-02-03 16:46:35] Agent list provided to 'admin' - success
+[2024-02-03 16:46:36] Giving all the jobs to admin - running
+[2024-02-03 16:46:36] All jobs given to admin - success
+[2024-02-03 16:46:38] Giving all the jobs to admin - running
+[2024-02-03 16:46:38] All jobs given to admin - success
+[2024-02-03 16:46:38] 'admin' asked for the agent list - running
+[2024-02-03 16:46:38] Agent list provided to 'admin' - success
+[2024-02-03 16:46:39] Trying to authenticate 'admin' - running
+[2024-02-03 16:46:39] Authenticated 'admin' - success
+[2024-02-03 16:46:39] Token generated and stored - success
+[2024-02-03 16:46:41] Giving all the jobs to admin - running
+[2024-02-03 16:46:41] All jobs given to admin - success
+[2024-02-03 16:46:41] 'admin' asked for the agent list - running
+[2024-02-03 16:46:41] Agent list provided to 'admin' - success
+[2024-02-03 16:46:43] Giving all the jobs to admin - running
+[2024-02-03 16:46:44] All jobs given to admin - success
+[2024-02-03 16:46:45] 'admin' asked for the agent list - running
+[2024-02-03 16:46:45] Agent list provided to 'admin' - success
+[2024-02-03 16:46:46] Giving all the jobs to admin - running
+[2024-02-03 16:46:46] All jobs given to admin - success
+[2024-02-03 16:46:48] 'admin' asked for the agent list - running
+[2024-02-03 16:46:48] Agent list provided to 'admin' - success
+[2024-02-03 16:46:49] Giving all the jobs to admin - running
+[2024-02-03 16:46:49] All jobs given to admin - success
+[2024-02-03 16:46:51] 'admin' asked for the agent list - running
+[2024-02-03 16:46:51] Agent list provided to 'admin' - success
+[2024-02-03 16:46:51] Giving all the jobs to admin - running
+[2024-02-03 16:46:51] All jobs given to admin - success
+[2024-02-03 16:46:54] 'admin' asked for the agent list - running
+[2024-02-03 16:46:54] Giving all the jobs to admin - running
+[2024-02-03 16:46:54] Agent list provided to 'admin' - success
+[2024-02-03 16:46:54] All jobs given to admin - success
+[2024-02-03 16:46:57] Giving all the jobs to admin - running
+[2024-02-03 16:46:57] All jobs given to admin - success
+[2024-02-03 16:46:57] 'admin' asked for the agent list - running
+[2024-02-03 16:46:57] Agent list provided to 'admin' - success
+[2024-02-03 16:46:59] Giving all the jobs to admin - running
+[2024-02-03 16:46:59] All jobs given to admin - success
+[2024-02-03 16:47:00] 'admin' asked for the agent list - running
+[2024-02-03 16:47:00] Agent list provided to 'admin' - success
+[2024-02-03 16:47:02] Giving all the jobs to admin - running
+[2024-02-03 16:47:02] All jobs given to admin - success
+[2024-02-03 16:47:03] 'admin' asked for the agent list - running
+[2024-02-03 16:47:03] Agent list provided to 'admin' - success
+[2024-02-03 16:47:04] Giving all the jobs to admin - running
+[2024-02-03 16:47:04] All jobs given to admin - success
+[2024-02-03 16:50:06] 'admin' asked for the agent list - running
+[2024-02-03 16:50:06] Giving all the jobs to admin - running
+[2024-02-03 16:50:06] Agent list provided to 'admin' - success
+[2024-02-03 16:50:06] All jobs given to admin - success
+[2024-02-03 16:50:09] Giving all the jobs to admin - running
+[2024-02-03 16:50:09] All jobs given to admin - success
+[2024-02-03 16:50:09] 'admin' asked for the agent list - running
+[2024-02-03 16:50:09] Agent list provided to 'admin' - success
+[2024-02-03 16:50:11] Giving all the jobs to admin - running
+[2024-02-03 16:50:11] All jobs given to admin - success
+[2024-02-03 16:50:12] 'admin' asked for the agent list - running
+[2024-02-03 16:50:12] Agent list provided to 'admin' - success
+[2024-02-03 16:50:14] Giving all the jobs to admin - running
+[2024-02-03 16:50:14] All jobs given to admin - success
+[2024-02-03 16:50:15] 'admin' asked for the agent list - running
+[2024-02-03 16:50:15] Agent list provided to 'admin' - success
+[2024-02-03 16:50:16] Giving all the jobs to admin - running
+[2024-02-03 16:50:16] All jobs given to admin - success
+[2024-02-03 16:50:18] 'admin' asked for the agent list - running
+[2024-02-03 16:50:18] Agent list provided to 'admin' - success
+[2024-02-03 16:50:19] Giving all the jobs to admin - running
+[2024-02-03 16:50:19] All jobs given to admin - success
+[2024-02-03 16:50:21] 'admin' asked for the agent list - running
+[2024-02-03 16:50:22] Agent list provided to 'admin' - success
+[2024-02-03 16:50:22] Giving all the jobs to admin - running
+[2024-02-03 16:50:22] All jobs given to admin - success
+[2024-02-03 16:50:24] Giving all the jobs to admin - running
+[2024-02-03 16:50:24] All jobs given to admin - success
+[2024-02-03 16:50:25] 'admin' asked for the agent list - running
+[2024-02-03 16:50:25] Agent list provided to 'admin' - success
+[2024-02-03 16:50:27] Giving all the jobs to admin - running
+[2024-02-03 16:50:27] All jobs given to admin - success
+[2024-02-03 16:50:28] 'admin' asked for the agent list - running
+[2024-02-03 16:50:28] Agent list provided to 'admin' - success
+[2024-02-03 16:50:29] Giving all the jobs to admin - running
+[2024-02-03 16:50:29] All jobs given to admin - success
+[2024-02-03 16:50:31] 'admin' asked for the agent list - running
+[2024-02-03 16:50:31] Agent list provided to 'admin' - success
+[2024-02-03 16:50:32] Giving all the jobs to admin - running
+[2024-02-03 16:50:32] All jobs given to admin - success
+[2024-02-03 16:50:34] 'admin' asked for the agent list - running
+[2024-02-03 16:50:34] Agent list provided to 'admin' - success
+[2024-02-03 16:50:35] Giving all the jobs to admin - running
+[2024-02-03 16:50:35] All jobs given to admin - success
+[2024-02-03 16:50:37] 'admin' asked for the agent list - running
+[2024-02-03 16:50:37] Agent list provided to 'admin' - success
+[2024-02-03 16:50:37] Giving all the jobs to admin - running
+[2024-02-03 16:50:37] All jobs given to admin - success
+[2024-02-03 16:50:40] Giving all the jobs to admin - running
+[2024-02-03 16:50:40] All jobs given to admin - success
+[2024-02-03 16:50:40] 'admin' asked for the agent list - running
+[2024-02-03 16:50:40] Agent list provided to 'admin' - success
+[2024-02-03 16:50:42] Giving all the jobs to admin - running
+[2024-02-03 16:50:43] All jobs given to admin - success
+[2024-02-03 16:50:43] 'admin' asked for the agent list - running
+[2024-02-03 16:50:43] Agent list provided to 'admin' - success
+[2024-02-03 16:50:45] Giving all the jobs to admin - running
+[2024-02-03 16:50:45] All jobs given to admin - success
+[2024-02-03 16:50:46] 'admin' asked for the agent list - running
+[2024-02-03 16:50:46] Agent list provided to 'admin' - success
+[2024-02-03 16:50:48] Giving all the jobs to admin - running
+[2024-02-03 16:50:48] All jobs given to admin - success
+[2024-02-03 16:50:49] 'admin' asked for the agent list - running
+[2024-02-03 16:50:50] Agent list provided to 'admin' - success
+[2024-02-03 16:50:50] Trying to authenticate 'admin' - running
+[2024-02-03 16:50:50] Authenticated 'admin' - success
+[2024-02-03 16:50:50] Token generated and stored - success
+[2024-02-03 16:50:52] Giving all the jobs to admin - running
+[2024-02-03 16:50:52] All jobs given to admin - success
+[2024-02-03 16:50:52] 'admin' asked for the agent list - running
+[2024-02-03 16:50:52] Agent list provided to 'admin' - success
+[2024-02-03 16:50:57] Trying to authenticate 'admin' - running
+[2024-02-03 16:50:57] Authenticated 'admin' - success
+[2024-02-03 16:50:57] Token generated and stored - success
+[2024-02-03 16:50:58] Giving all the jobs to admin - running
+[2024-02-03 16:50:58] All jobs given to admin - success
+[2024-02-03 16:50:59] 'admin' asked for the agent list - running
+[2024-02-03 16:50:59] Agent list provided to 'admin' - success
+[2024-02-03 17:08:47] Server mode asked, starting api - info
+[2024-02-03 17:08:47] Register Key RkRrcitEQ29AJTBlSD9gRUFMJSUwSmtYRz9WRkVYP1YiIj4zQjkjbEMzPGwsOGxLcw== - info
+[2024-02-03 17:08:47] Starting Rest API - running
+[2024-02-03 17:08:47] Re-Generating listeners from db - running
+[2024-02-03 17:08:47] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:08:47] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:08:47] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:08:47] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:08:47] Re-Generated listeners from db - success
+[2024-02-03 17:08:48] Agent checkin - listener
+[2024-02-03 17:08:48] Agent checkin - listener
+[2024-02-03 17:08:55] Trying to authenticate 'admin' - running
+[2024-02-03 17:08:55] Authenticated 'admin' - success
+[2024-02-03 17:08:55] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:08:58] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:01] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:04] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:07] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:14] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:17] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:29] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:32] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:35] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:38] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:41] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:47] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:50] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:53] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:56] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:09:59] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:02] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:05] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:08] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:14] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:17] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:29] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:32] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:35] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:38] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:41] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:48] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:51] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:54] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:10:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:00] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:09] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:12] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:15] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:18] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:20] Trying to authenticate 'admin' - running
+[2024-02-03 17:11:20] Authenticated 'admin' - success
+[2024-02-03 17:11:20] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:21] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:23] Trying to authenticate 'admin' - running
+[2024-02-03 17:11:23] Authenticated 'admin' - success
+[2024-02-03 17:11:23] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:24] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:11:26] Trying to authenticate 'admin' - running
+[2024-02-03 17:11:26] Authenticated 'admin' - success
+[2024-02-03 17:11:26] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:13:03] Trying to authenticate 'admin' - running
+[2024-02-03 17:13:03] Authenticated 'admin' - success
+[2024-02-03 17:13:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:13:04] Trying to authenticate 'admin' - running
+[2024-02-03 17:13:04] Authenticated 'admin' - success
+[2024-02-03 17:13:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:13:57] Trying to authenticate 'admin' - running
+[2024-02-03 17:13:57] Authenticated 'admin' - success
+[2024-02-03 17:13:57] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:00] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:03] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:06] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:09] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:12] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:15] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:19] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:22] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:25] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:28] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:31] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:34] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:37] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:40] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:14:43] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:15:35] Server mode asked, starting api - info
+[2024-02-03 17:15:35] Register Key RkRrcitEQ3AnKThpU1BANjZwJjM9IlEoOixdNVBaNXI7JjwzREZAJEVHXE5HQFYvT3MrYCdoLzdTLkRqOFJhTUQ3MA== - info
+[2024-02-03 17:15:35] Starting Rest API - running
+[2024-02-03 17:15:35] Re-Generating listeners from db - running
+[2024-02-03 17:15:35] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:15:35] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:15:35] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:15:35] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:15:35] Re-Generated listeners from db - success
+[2024-02-03 17:15:36] Agent checkin - listener
+[2024-02-03 17:15:36] Agent checkin - listener
+[2024-02-03 17:15:39] Trying to authenticate 'admin' - running
+[2024-02-03 17:15:39] Authenticated 'admin' - success
+[2024-02-03 17:15:39] Token generated and stored - success
+[2024-02-03 17:15:41] Trying to authenticate 'admin' - running
+[2024-02-03 17:15:41] Authenticated 'admin' - success
+[2024-02-03 17:15:41] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:15:42] Trying to authenticate 'admin' - running
+[2024-02-03 17:15:42] Authenticated 'admin' - success
+[2024-02-03 17:15:44] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:17:01] Server mode asked, starting api - info
+[2024-02-03 17:17:01] Register Key RkRrcitEQ24xZkQsWHRfR10uSkQ2OmshaDBROmZMRDAnRSdDZlgvTTpmTCs/Rlw0R186SVpVKUZeL3UyOmJN - info
+[2024-02-03 17:17:01] Starting Rest API - running
+[2024-02-03 17:17:01] Re-Generating listeners from db - running
+[2024-02-03 17:17:01] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:17:01] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:17:01] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:17:01] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:17:01] Re-Generated listeners from db - success
+[2024-02-03 17:17:02] Agent checkin - listener
+[2024-02-03 17:17:02] Agent checkin - listener
+[2024-02-03 17:17:08] Trying to authenticate 'admin' - running
+[2024-02-03 17:17:08] Authenticated 'admin' - success
+[2024-02-03 17:17:08] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:17:09] Trying to authenticate 'admin' - running
+[2024-02-03 17:17:09] Authenticated 'admin' - success
+[2024-02-03 17:17:11] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:17:36] Server mode asked, starting api - info
+[2024-02-03 17:17:36] Register Key RkRrcitEQ28kZTBpVS8/PV5yXmtFXSxwQkE1UXVPO0ZrZE5FSDxkUzZwalJtRS01cj46TjgrKUNOOQ== - info
+[2024-02-03 17:17:36] Starting Rest API - running
+[2024-02-03 17:17:36] Re-Generating listeners from db - running
+[2024-02-03 17:17:36] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:17:36] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:17:36] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:17:36] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:17:36] Re-Generated listeners from db - success
+[2024-02-03 17:17:37] Agent checkin - listener
+[2024-02-03 17:17:37] Agent checkin - listener
+[2024-02-03 17:17:39] Trying to authenticate 'admin' - running
+[2024-02-03 17:17:39] Authenticated 'admin' - success
+[2024-02-03 17:17:39] Token generated and stored - success
+[2024-02-03 17:17:49] Trying to authenticate 'admin' - running
+[2024-02-03 17:17:49] Authenticated 'admin' - success
+[2024-02-03 17:17:49] Token generated and stored - success
+[2024-02-03 17:17:57] Trying to authenticate 'admin' - running
+[2024-02-03 17:17:57] Authenticated 'admin' - success
+[2024-02-03 17:17:57] Token generated and stored - success
+[2024-02-03 17:18:01] Trying to authenticate 'admin' - running
+[2024-02-03 17:18:01] Authenticated 'admin' - success
+[2024-02-03 17:18:01] Token generated and stored - success
+[2024-02-03 17:18:03] Trying to authenticate 'admin' - running
+[2024-02-03 17:18:03] Authenticated 'admin' - success
+[2024-02-03 17:18:03] Token generated and stored - success
+[2024-02-03 17:18:05] Trying to authenticate 'admin' - running
+[2024-02-03 17:18:05] Authenticated 'admin' - success
+[2024-02-03 17:18:05] Token generated and stored - success
+[2024-02-03 17:18:14] Trying to authenticate 'admin' - running
+[2024-02-03 17:18:14] Authenticated 'admin' - success
+[2024-02-03 17:18:14] Token generated and stored - success
+[2024-02-03 17:20:06] Server mode asked, starting api - info
+[2024-02-03 17:20:06] Register Key RkRrcitEQ21lZ0NhIT1HQkw0OkJEYilXVzMlbTcwOWhcKXBHcjdFWz0oT3JvM0hJa043b0ZPaz0pOztFRCM= - info
+[2024-02-03 17:20:06] Starting Rest API - running
+[2024-02-03 17:20:06] Re-Generating listeners from db - running
+[2024-02-03 17:20:06] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:20:06] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:20:06] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:20:06] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:20:06] Re-Generated listeners from db - success
+[2024-02-03 17:20:07] Agent checkin - listener
+[2024-02-03 17:20:07] Agent checkin - listener
+[2024-02-03 17:20:10] Trying to authenticate 'admin' - running
+[2024-02-03 17:20:10] Authenticated 'admin' - success
+[2024-02-03 17:20:10] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:20:11] Trying to authenticate 'admin' - running
+[2024-02-03 17:20:11] Authenticated 'admin' - success
+[2024-02-03 17:20:13] Someone tried to access a webpage without being authenticated/giving a good password - error
+[2024-02-03 17:21:42] Server mode asked, starting api - info
+[2024-02-03 17:21:42] Register Key RkRrcitEQ25SZDwtQy1DOU5sQmg3bE4iZzBpOi5sPT5yNlREL2pgODc7Yl9BOyshP1QyYkAn - info
+[2024-02-03 17:21:42] Starting Rest API - running
+[2024-02-03 17:21:42] Re-Generating listeners from db - running
+[2024-02-03 17:21:42] Listener 0.0.0.0:8183 created - success
+[2024-02-03 17:21:42] Listener 0.0.0.0:8181 created - success
+[2024-02-03 17:21:42] Starting listener 0.0.0.0:8181 - running
+[2024-02-03 17:21:42] Started listener 0.0.0.0:8181 - success
+[2024-02-03 17:21:42] Re-Generated listeners from db - success
+[2024-02-03 17:21:43] Agent checkin - listener
+[2024-02-03 17:21:43] Agent checkin - listener
+[2024-02-03 17:21:48] Trying to authenticate 'admin' - running
+[2024-02-03 17:21:48] Authenticated 'admin' - success
+[2024-02-03 17:21:48] Token generated and stored - success
+[2024-02-03 17:21:48] 'admin' asked for the agent list - running
+[2024-02-03 17:21:48] Agent list provided to 'admin' - success
+[2024-02-03 17:21:51] 'admin' asked for the agent list - running
+[2024-02-03 17:21:51] Agent list provided to 'admin' - success
+[2024-02-03 17:21:52] Vault list asked by 'admin' - running
+[2024-02-03 17:21:52] Vault list provided to 'admin' - success
+[2024-02-03 17:21:55] 'admin' asked for the agent list - running
+[2024-02-03 17:21:55] Agent list provided to 'admin' - success
+[2024-02-03 17:21:55] 'admin' asked for the agent list - running
+[2024-02-03 17:21:55] Agent list provided to 'admin' - success
+[2024-02-03 17:21:58] 'admin' asked for the agent list - running
+[2024-02-03 17:21:58] Agent list provided to 'admin' - success
+[2024-02-03 17:21:58] Trying to authenticate 'admin' - running
+[2024-02-03 17:21:58] Authenticated 'admin' - success
+[2024-02-03 17:21:58] Token generated and stored - success
+[2024-02-03 17:21:58] 'admin' asked for the agent list - running
+[2024-02-03 17:21:58] Agent list provided to 'admin' - success
+[2024-02-03 17:21:59] 'admin' asked for the agent list - running
+[2024-02-03 17:21:59] Agent list provided to 'admin' - success
+[2024-02-03 17:22:01] 'admin' asked for the agent list - running
+[2024-02-03 17:22:01] Agent list provided to 'admin' - success
+[2024-02-03 17:22:01] 'admin' asked for the agent list - running
+[2024-02-03 17:22:01] Agent list provided to 'admin' - success
+[2024-02-03 17:22:04] 'admin' asked for the agent list - running
+[2024-02-03 17:22:04] Agent list provided to 'admin' - success
+[2024-02-03 17:22:04] 'admin' asked for the agent list - running
+[2024-02-03 17:22:04] Agent list provided to 'admin' - success
+[2024-02-03 17:22:07] 'admin' asked for the agent list - running
+[2024-02-03 17:22:07] Agent list provided to 'admin' - success
+[2024-02-03 17:22:07] 'admin' asked for the agent list - running
+[2024-02-03 17:22:07] Agent list provided to 'admin' - success
+[2024-02-03 17:22:10] 'admin' asked for the agent list - running
+[2024-02-03 17:22:10] Agent list provided to 'admin' - success
+[2024-02-03 17:22:10] 'admin' asked for the agent list - running
+[2024-02-03 17:22:10] Agent list provided to 'admin' - success
+[2024-02-03 17:22:13] 'admin' asked for the agent list - running
+[2024-02-03 17:22:13] Agent list provided to 'admin' - success
+[2024-02-03 17:22:13] 'admin' asked for the agent list - running
+[2024-02-03 17:22:13] Agent list provided to 'admin' - success
+[2024-02-03 17:22:15] 'admin' asked for the agent list - running
+[2024-02-03 17:22:16] Agent list provided to 'admin' - success
+[2024-02-03 17:22:16] 'admin' asked for the agent list - running
+[2024-02-03 17:22:16] Agent list provided to 'admin' - success
+[2024-02-03 17:22:16] 'admin' asked for the agent list - running
+[2024-02-03 17:22:16] Agent list provided to 'admin' - success
+[2024-02-03 17:22:18] Giving all the jobs to admin - running
+[2024-02-03 17:22:18] All jobs given to admin - success
+[2024-02-03 17:22:19] 'admin' asked for the agent list - running
+[2024-02-03 17:22:19] Agent list provided to 'admin' - success
+[2024-02-03 17:22:19] 'admin' asked for the agent list - running
+[2024-02-03 17:22:19] Agent list provided to 'admin' - success
+[2024-02-03 17:22:21] Giving all the jobs to admin - running
+[2024-02-03 17:22:21] All jobs given to admin - success
+[2024-02-03 17:22:22] 'admin' asked for the agent list - running
+[2024-02-03 17:22:22] Agent list provided to 'admin' - success
+[2024-02-03 17:22:22] 'admin' asked for the agent list - running
+[2024-02-03 17:22:22] Agent list provided to 'admin' - success
+[2024-02-03 17:22:23] Giving all the jobs to admin - running
+[2024-02-03 17:22:23] All jobs given to admin - success
+[2024-02-03 17:22:25] 'admin' asked for the agent list - running
+[2024-02-03 17:22:25] Agent list provided to 'admin' - success
+[2024-02-03 17:22:25] 'admin' asked for the agent list - running
+[2024-02-03 17:22:25] Agent list provided to 'admin' - success
+[2024-02-03 17:22:25] 'admin' asked for the agent list - running
+[2024-02-03 17:22:25] Agent list provided to 'admin' - success
+[2024-02-03 17:22:26] Giving all the jobs to admin - running
+[2024-02-03 17:22:26] All jobs given to admin - success
+[2024-02-03 17:22:28] Giving all the jobs to admin - running
+[2024-02-03 17:22:28] All jobs given to admin - success
+[2024-02-03 17:22:28] 'admin' asked for the agent list - running
+[2024-02-03 17:22:28] Agent list provided to 'admin' - success
+[2024-02-03 17:22:28] Giving all the jobs to admin - running
+[2024-02-03 17:22:28] All jobs given to admin - success
+[2024-02-03 17:22:28] 'admin' asked for the agent list - running
+[2024-02-03 17:22:29] Agent list provided to 'admin' - success
+[2024-02-03 17:22:30] Giving all the jobs to admin - running
+[2024-02-03 17:22:30] All jobs given to admin - success
+[2024-02-03 17:22:31] Giving all the jobs to admin - running
+[2024-02-03 17:22:31] All jobs given to admin - success
+[2024-02-03 17:22:31] 'admin' asked for the agent list - running
+[2024-02-03 17:22:31] Agent list provided to 'admin' - success
+[2024-02-03 17:22:32] 'admin' asked for the agent list - running
+[2024-02-03 17:22:32] Agent list provided to 'admin' - success
+[2024-02-03 17:22:33] Giving all the jobs to admin - running
+[2024-02-03 17:22:33] All jobs given to admin - success
+[2024-02-03 17:22:33] Giving all the jobs to admin - running
+[2024-02-03 17:22:33] All jobs given to admin - success
+[2024-02-03 17:22:34] 'admin' asked for the agent list - running
+[2024-02-03 17:22:34] Agent list provided to 'admin' - success
+[2024-02-03 17:22:35] 'admin' asked for the agent list - running
+[2024-02-03 17:22:35] Agent list provided to 'admin' - success
+[2024-02-03 17:22:35] Giving all the jobs to admin - running
+[2024-02-03 17:22:35] All jobs given to admin - success
+[2024-02-03 17:22:36] Giving all the jobs to admin - running
+[2024-02-03 17:22:36] All jobs given to admin - success
+[2024-02-03 17:22:37] 'admin' asked for the agent list - running
+[2024-02-03 17:22:37] Agent list provided to 'admin' - success
+[2024-02-03 17:22:38] 'admin' asked for the agent list - running
+[2024-02-03 17:22:38] Agent list provided to 'admin' - success
+[2024-02-03 17:22:38] Giving all the jobs to admin - running
+[2024-02-03 17:22:38] All jobs given to admin - success
+[2024-02-03 17:22:39] Giving all the jobs to admin - running
+[2024-02-03 17:22:39] All jobs given to admin - success
+[2024-02-03 17:22:40] 'admin' asked for the agent list - running
+[2024-02-03 17:22:40] Agent list provided to 'admin' - success
+[2024-02-03 17:22:41] Giving all the jobs to admin - running
+[2024-02-03 17:22:41] All jobs given to admin - success
+[2024-02-03 17:22:41] 'admin' asked for the agent list - running
+[2024-02-03 17:22:41] Agent list provided to 'admin' - success
+[2024-02-03 17:22:41] Giving all the jobs to admin - running
+[2024-02-03 17:22:41] All jobs given to admin - success
+[2024-02-03 17:22:43] Giving all the jobs to admin - running
+[2024-02-03 17:22:43] All jobs given to admin - success
+[2024-02-03 17:22:43] 'admin' asked for the agent list - running
+[2024-02-03 17:22:43] Agent list provided to 'admin' - success
+[2024-02-03 17:22:44] Giving all the jobs to admin - running
+[2024-02-03 17:22:44] 'admin' asked for the agent list - running
+[2024-02-03 17:22:44] All jobs given to admin - success
+[2024-02-03 17:22:44] Agent list provided to 'admin' - success
+[2024-02-03 17:22:46] Giving all the jobs to admin - running
+[2024-02-03 17:22:46] All jobs given to admin - success
+[2024-02-03 17:22:46] 'admin' asked for the agent list - running
+[2024-02-03 17:22:47] Agent list provided to 'admin' - success
+[2024-02-03 17:22:47] 'admin' asked for the agent list - running
+[2024-02-03 17:22:47] Agent list provided to 'admin' - success
+[2024-02-03 17:22:48] Giving all the jobs to admin - running
+[2024-02-03 17:22:48] All jobs given to admin - success
+[2024-02-03 17:22:50] 'admin' asked for the agent list - running
+[2024-02-03 17:22:50] Agent list provided to 'admin' - success
+[2024-02-03 17:22:50] 'admin' asked for the agent list - running
+[2024-02-03 17:22:50] Agent list provided to 'admin' - success
+[2024-02-03 17:22:51] Giving all the jobs to admin - running
+[2024-02-03 17:22:51] All jobs given to admin - success
+[2024-02-03 17:22:53] 'admin' asked for the agent list - running
+[2024-02-03 17:22:53] Agent list provided to 'admin' - success

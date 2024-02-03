@@ -129,3 +129,7 @@ def get_job_by_jobid(job_id)->str:
 def set_job_reviewed(job_id)->str:
     command = f"UPDATE jobs SET displayed=1 WHERE id=='{job_id}';"
     return command
+
+def get_token_from_username_full(username:str)->str:
+    command = f"SELECT * FROM users WHERE username=='{username}'"
+    return command

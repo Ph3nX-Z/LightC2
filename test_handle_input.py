@@ -2,6 +2,7 @@ import readchar
 from threading import Thread
 import threading
 import time
+import readline
 
 class ThreadSafe:
 
@@ -9,23 +10,14 @@ class ThreadSafe:
         self.command = command
         self.lock = threading.Lock()
         self.prompt = prompt
-        self.stop_thread = False
-        self.stop_interact = False
 
 
     def thread_inputsafe(self,func):
         thread1 = Thread(target=func,args=[self.lock,self])
         thread1.start()
         return 
-    
-    def thread_inputsafe_arg(self,func,arg):
-        thread1 = Thread(target=func,args=[self.lock,self,arg])
-        thread1.start()
-        return 
         
-    def altprint(self,data):
-        print("\n"+f"{data}"+f"\n{self.prompt}{self.command}",end="",flush=True)
-
+    
     def safeinput(self,prompt):
         self.prompt = prompt
 
@@ -40,7 +32,6 @@ class ThreadSafe:
                         if char=="\n":
                             #print("\n"+self.command,flush=True)
                             command_output,self.command = self.command,""
-                            print(flush=True)
                             return command_output
 
                         elif char==readchar.key.BACKSPACE:
@@ -64,3 +55,16 @@ class ThreadSafe:
                     print("\r",end='\x1b[2K')
                     print(f"{self.prompt}{self.command}",end="",flush=True)
                 
+
+if __name__ == "__main__":
+
+    def print_various(lock,object):
+        for _ in range(10):
+            time.sleep(2)
+            with lock:
+                print("\n"+"[Ok From Thread]"+f"\n{object.prompt}{object.command}",end="")
+
+    threadsafe = ThreadSafe()
+    threadsafe.thread_inputsafe(print_various)
+    while True:
+        print("\n"+threadsafe.safeinput("Input >"),flush=True)

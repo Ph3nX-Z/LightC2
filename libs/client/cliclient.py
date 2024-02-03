@@ -101,7 +101,9 @@ class CLI_Client:
                 print('\033[91m'+"\n[Error] Disconnected from teamserver"+ '\033[0m')
                 break
             if not self.check_auth():
-                self.authenticate()
+                if not self.authenticate():
+                    print('\033[91m'+"\n[Error] Authentication failure\n"+ '\033[0m')
+                    break
             if command == "exit":
                 print('\033[91m'+"\n[Exit] Exiting the cli !"+ '\033[0m')
                 if input('\033[91m'+"\nAre you sure you want to exit ? (y/n) :"+ '\033[0m').lower()=="y":
@@ -229,7 +231,10 @@ class CLI_Client:
             elif "jobs" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "jobs"):
                 if command == "jobs":
                     all_jobs = self.get_all_jobs("all")
-                    print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
+                    if "[Error]" in all_jobs:
+                        print(all_jobs)
+                    else:
+                        print(str(tabulate(all_jobs, headers="keys", tablefmt="fancy_grid")))
                 elif len(command.split(" "))>1 and command.split(" ")[1]!="":
                     if command.split(" ")[1]=="all":
                         all_jobs = self.get_all_jobs("all")
@@ -253,6 +258,10 @@ class CLI_Client:
                             
             else:
                 print("\033[31m\n[Error] Argument not recognized\n\033[0m")
+        if not self.threadsafe.stop_thread:
+            self.threadsafe.stop_thread = True
+            print('\033[91m'+"[-] Quitting C2, killing threads"+ '\033[0m')
+        
 
     def notify_new_agents(self,lock,object):
         if not self.check_auth():
@@ -267,14 +276,16 @@ class CLI_Client:
 
         while not object.stop_thread:
             time.sleep(3)
-
             current_agents_req = self.craft_and_send_get_request("/agents").content.decode()
             num_agents_current = 0
             if not '[Error]' in current_agents_req:
-                current_agents_json = json.loads(current_agents_req)["result"]
-                for listener in current_agents_json.keys():
-                    num_agents_current += len(current_agents_json[listener].keys())
-            
+                try:
+                    current_agents_json = json.loads(current_agents_req)["result"]
+                    for listener in current_agents_json.keys():
+                        num_agents_current += len(current_agents_json[listener].keys())
+                except json.decoder.JSONDecodeError:
+                    num_agents_current = num_agents_last
+                
             if num_agents_current>num_agents_last:
                 num_agents_last = num_agents_current
                 with lock:
@@ -294,7 +305,7 @@ class CLI_Client:
             all_jobs = self.craft_and_send_get_request("/jobs/tasked").content
             
         if "[Error]" in all_jobs.decode():
-            return "[Error] Error while fetching data"
+            return "\033[31m\n[Error] Error while fetching data\033[0m\n"
         all_jobs = json.loads(all_jobs)
         ordered_jobs = {"\033[31mjob_id\033[0m":[],"\033[31magent_name\033[0m":[],"\033[31mmodule\033[0m":[],"\033[31margument\033[0m":[],"\033[31mdate_started\033[0m":[],"\033[31mstatus\033[0m":[]}
         for job_id in all_jobs.keys():
@@ -425,17 +436,20 @@ class CLI_Client:
             time.sleep(2.5)
             all_jobs = self.craft_and_send_get_request("/jobs/all").content
             if not "[Error]" in all_jobs.decode():
-                all_jobs = json.loads(all_jobs)
-                for job_id in all_jobs.keys():
-                    if all_jobs[job_id]["displayed"]==0 and all_jobs[job_id]["status"]=="finished" and agent_id==all_jobs[job_id]["agent_id"]:
-                        try:
-                            output_content = base64.b64decode(all_jobs[job_id]["output"]).decode()
-                        except:
-                            output_content = "Error decoding base64"
-                        with lock:
-                            object.altprint(f"\33[35m\n[+] Output from job {job_id} :\n\n{output_content}\n\n\033[0m")
-                        self.craft_and_send_post_request("/jobs/review",{"id":job_id})
-                        time.sleep(.2)
+                try:
+                    all_jobs = json.loads(all_jobs)
+                    for job_id in all_jobs.keys():
+                        if all_jobs[job_id]["displayed"]==0 and all_jobs[job_id]["status"]=="finished" and agent_id==all_jobs[job_id]["agent_id"]:
+                            try:
+                                output_content = base64.b64decode(all_jobs[job_id]["output"]).decode()
+                            except:
+                                output_content = "Error decoding base64"
+                            with lock:
+                                object.altprint(f"\33[35m\n[+] Output from job {job_id} :\n\n{output_content}\n\n\033[0m")
+                            self.craft_and_send_post_request("/jobs/review",{"id":job_id})
+                            time.sleep(.2)
+                except json.decoder.JSONDecodeError:
+                    pass
     
     def get_history_for_one_agent(self):
         pass
@@ -461,7 +475,7 @@ class CLI_Client:
                 all_listeners_ordered["\033[31msecret_key\033[0m"].append(listener["secret_key"])
             return str(tabulate(all_listeners_ordered, headers="keys", tablefmt="fancy_grid"))
                 
-        return "\033[91m[Error] No result found !\033[0m"
+        return "\033[91m\n[Error] No result found !\n\033[0m"
     
     def start_listener(self, id):
         output = self.craft_and_send_post_request("/listeners/start",{"id":id})
