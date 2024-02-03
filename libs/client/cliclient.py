@@ -60,15 +60,13 @@ class CLI_Client:
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34magents\33[0m        │ Manage agents (help for more informations)                                                               │ agents                             │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mmodules\33[0m       │ Show modules                                                                                             │ modules                            │
+│ \33[34mgenerate\33[0m      │ Generate payload using a template and a stager                                                           │ generate                           │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mgenerate\33[0m      │ Generate payload using a template                                                                        │ generate                           │
+│ \33[34mtemplates\33[0m     │ Show templates for the shellcodes                                                                        │ templates                          │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mtemplates\33[0m     │ Show templates                                                                                           │ templates                          │
+│ \33[34mstagers\33[0m       │ Show all stage0 loaders                                                                                  │ stagers                            │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34musemodule\33[0m     │ Use an module                                                                                            │ usemodule <module name>            │
-├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
-│ \33[34mshellcode\33[0m     │ Show available shellcodes                                                                                │ shellcode                          │
+│ \33[34mmodules\33[0m       │ Manage modules (pwsh modules / injectable modules / compilable modules)                                  │ modules                            │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34mexit\33[0m          │ Quit the cli                                                                                             │ shellcode                          │
 └───────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────┘
@@ -89,6 +87,9 @@ class CLI_Client:
         return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
 
     def cli_main_loop(self):
+        if not self.is_api_alive():
+            print('\033[91m'+"[Error] Teamserver doesn't seem to be up"+ '\033[0m')
+            sys.exit()
         self.threadsafe = ThreadSafe()
         self.threadsafe.thread_inputsafe(self.notify_new_agents)
         while True:
@@ -429,7 +430,9 @@ class CLI_Client:
                 print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
             elif command == "history":
                 print("\nOutputing last 10 commands/output for this agent\n")
-        return '\033[91m'+"[-] Quitting shell, killing threads\n"+ '\033[0m'
+            elif len(command.split(" "))>=2 and command.split()[0]=="module":
+                print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
+        return '\033[91m'+"[-] Passing module to shellcode and injecting it\n"+ '\033[0m'
 
     def get_call_for_one_agents(self,lock,object,agent_id):
         while not object.stop_interact:
