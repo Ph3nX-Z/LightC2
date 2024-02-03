@@ -87,3 +87,13 @@ tool usage:
 | C Agent | Agent  |  In progress|
 | thread safe input func | Cli Client  |  Implemented|
 | thread safe print func | Cli Client  |  Implemented|
+
+
+### Note to me
+
+Generate (following the listener id)
+  Stager --> generate client side (and specify the listener specified in generate)
+  shellcode for stage 0 : generate client side --> send to ts (host shellcode following the listener specified in the generate)
+Modules:
+  shellcode for modules : generated client side --> send to ts (hosted on all the listeners)
+  when module is called, method:module sent to the agent --> basic shellcode loader and output looting in the default named pipe.
