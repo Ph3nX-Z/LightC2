@@ -324,7 +324,10 @@ class CLI_Client:
             ordered_jobs["\033[31mjob_id\033[0m"].append("\33[34m"+str(job_id)+"\033[0m")
             ordered_jobs["\033[31magent_name\033[0m"].append(job["agent"]+f" ({job['agent_id']})")
             ordered_jobs["\033[31mmodule\033[0m"].append(job["module"])
-            ordered_jobs["\033[31margument\033[0m"].append(base64.b64decode(job["argument"]))
+            try:
+                ordered_jobs["\033[31margument\033[0m"].append(base64.b64decode(job["argument"]))
+            except:
+                ordered_jobs["\033[31margument\033[0m"].append(base64.b64decode(job["argument"]).decode("Windows-1252"))
 
             if job["status"]=="running":
                 ordered_jobs["\033[31mstatus\033[0m"].append('\033[93m'+job["status"]+"\033[0m")
@@ -345,9 +348,16 @@ class CLI_Client:
         for key in all_jobs.keys():
             if key=="output" or key=="argument":
                 if key=="output":
-                    value = "\33[35m"+"\n"+base64.b64decode(all_jobs[key]).decode()+"\033[0m"
+                    try:
+                        value = "\33[35m"+"\n"+base64.b64decode(all_jobs[key]).decode()+"\033[0m"
+                    except:
+                        value = "\33[35m"+"\n"+base64.b64decode(all_jobs[key]).decode("Windows-1252")+"\033[0m"
                 else:
-                    value = base64.b64decode(all_jobs[key]).decode()
+                    try:
+                        value = base64.b64decode(all_jobs[key]).decode()
+                    except:
+                        value = base64.b64decode(all_jobs[key]).decode("Windows-1252")
+                        
                 all_jobs_colors["\033[34m"+key+"\033[0m"] = value
             else:
                 all_jobs_colors["\033[34m"+key+"\033[0m"] = all_jobs[key]
@@ -445,8 +455,11 @@ class CLI_Client:
                         if all_jobs[job_id]["displayed"]==0 and all_jobs[job_id]["status"]=="finished" and agent_id==all_jobs[job_id]["agent_id"]:
                             try:
                                 output_content = base64.b64decode(all_jobs[job_id]["output"]).decode()
-                            except:
-                                output_content = "Error decoding base64"
+                            except UnicodeDecodeError:
+                                try:
+                                    output_content = base64.b64decode(all_jobs[job_id]["output"]).decode("Windows-1252")
+                                except:
+                                    output_content = "Error decoding base64"
                             with lock:
                                 object.altprint(f"\33[35m\n[+] Output from job {job_id} :\n\n{output_content}\n\n\033[0m")
                             self.craft_and_send_post_request("/jobs/review",{"id":job_id})

