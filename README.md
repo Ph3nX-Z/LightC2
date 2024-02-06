@@ -84,7 +84,7 @@ tool usage:
 | Multiprocess  | Global Api  |  Implemented |
 | HTTP/S  | Listener  |  Implemented |
 | Tasking in db  | Jobs  |  Implemented |
-| C Agent | Agent  |  In progress|
+| Nim Agent | Agent  |  In progress|
 | thread safe input func | Cli Client  |  Implemented|
 | thread safe print func | Cli Client  |  Implemented|
 
