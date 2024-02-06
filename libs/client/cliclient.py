@@ -215,7 +215,7 @@ class CLI_Client:
                                     agent["last_seen"] = "\033[31m"+str(agent["last_seen"])+"\033[0m"
                                 else:
                                     agent["last_seen"] = "\033[92m"+str(agent["last_seen"])+"\033[0m"
-                                ordered_agents["\033[31mid\033[0m"].append(agent["id"])
+                                ordered_agents["\033[31mid\033[0m"].append(str(agent["id"]))
                                 ordered_agents["\033[31mname\033[0m"].append("\33[34m"+agent["name"]+"\033[0m")
                                 ordered_agents["\033[31mlast_seen\033[0m"].append(agent["last_seen"])
                                 ordered_agents["\033[31muser\033[0m"].append(agent["user"])
@@ -432,7 +432,7 @@ class CLI_Client:
                 print("\nOutputing last 10 commands/output for this agent\n")
             elif len(command.split(" "))>=2 and command.split()[0]=="module":
                 print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
-        return '\033[91m'+"[-] Passing module to shellcode and injecting it\n"+ '\033[0m'
+        return '\033[91m'+"[-] Exiting shell\n"+ '\033[0m'
 
     def get_call_for_one_agents(self,lock,object,agent_id):
         while not object.stop_interact:

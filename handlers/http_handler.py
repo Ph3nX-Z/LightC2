@@ -89,8 +89,9 @@ class HTTP_Handler:
                     for agent in self.agents_using_listener:
                         if agent.id == agent_id:
                             data = request.json
-                            task_id = data["task_id"]
-                            db_exec(add_output_to_task(task_id,data["output"]),self.db_path)
+                            json_output = json.loads(data["command_output"])
+                            task_id = json_output[0]["task_id"]
+                            db_exec(add_output_to_task(task_id,json_output[0]["output"]),self.db_path)
                             db_exec(set_job_finished(task_id),self.db_path)
                             #agent.output_file.append(data)
                             return ""
