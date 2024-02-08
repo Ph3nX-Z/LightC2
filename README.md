@@ -99,3 +99,6 @@ Generate (following the listener id)
 Modules:
   - shellcode for modules : generated client side --> send to ts (hosted on all the listeners)
   - when module is called, method:module sent to the agent --> basic shellcode loader and output looting in the default named pipe.
+
+To add:
+  - Token Vault (steal token in session and reuse it in another session)
