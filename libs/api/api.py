@@ -15,6 +15,7 @@ from multiprocessing import Process
 import json
 import hashlib
 import urllib3
+import glob
 
 class C2_Rest_API:
 
@@ -618,6 +619,27 @@ class C2_Rest_API:
             job = job[0]
             job_dict = {"job_id":job[0],"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6]}
             return json.dumps(job_dict)
+        
+        @api.route("/hosted_files/upload",methods=["POST"])
+        def host_file():
+            pass
+
+        @api.route("/hosted_files/rm",methods=["POST"])
+        def remove_hosted_file():
+            pass
+
+        @api.route("/hosted_files/get",methods=["GET"])
+        def get_hosted_files():
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            log_info(f"{username} asked the teamserver for the hosted files","success")
+            full_path = self.api.instance_path.replace("instance","handlers/hosted_files/")
+            all_files = self.get_hosted_files_from_dir(full_path)
+            result = {"result":all_files}
+            return json.dumps(result)
             
             
 
@@ -639,6 +661,13 @@ class C2_Rest_API:
 
     def modules():
         pass
+
+    def get_hosted_files_from_dir(self,dir:str)->list:
+        list_of_files = []
+        for file in glob.glob(dir+"*"):
+            list_of_files.append(file.replace(dir,""))
+        return list_of_files
+        
 
     def generate_listeners_from_db(self)->None:
         log_info(f"Re-Generating listeners from db","running")

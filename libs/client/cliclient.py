@@ -68,6 +68,8 @@ class CLI_Client:
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34mmodules\33[0m       │ Manage modules (pwsh modules / injectable modules / compilable modules)                                  │ modules                            │
 ├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
+│ \33[34mhost\33[0m          │ Manage hosted files                                                                                      │ host                               │
+├───────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────┤
 │ \33[34mexit\33[0m          │ Quit the cli                                                                                             │ shellcode                          │
 └───────────────┴──────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────────────┘
 """
@@ -82,6 +84,8 @@ class CLI_Client:
                 help_dict = {"\33[31mOption\33[0m":["\33[34magents\33[0m","\33[34minteract\33[0m","\33[34mremove_stale\33[0m"],"\33[31mDescription\33[0m":["Get all the agents","Interact with an agent","Remove unresponsive agents"],"\33[31mUsage\33[0m":["agents","agents interact <agent id>","agents remove_stale"]}
             elif module == "jobs":
                 help_dict = {"\33[31mOption\33[0m":["\33[34mjobs\33[0m","\33[34mall\33[0m","\33[34mrunning\33[0m","\33[34mtasked\33[0m","\33[34mget\33[0m"],"\33[31mDescription\33[0m":["Get all the running jobs only","Get all jobs","Get only running jobs","Get only tasked jobs","Get a job by id"],"\33[31mUsage\33[0m":["jobs","jobs all","jobs running","jobs tasked","jobs get <job id>"]}
+            elif module == "host":
+                help_dict = {"\33[31mOption\33[0m":["\33[34mfile\33[0m","\33[34mget\33[0m","\33[34mremove\33[0m",],"\33[31mDescription\33[0m":["Host a file on all the listeners","Get all the hosted files","Delete an hosted file by name"],"\33[31mUsage\33[0m":["host file <local file path>","host get","host remove <file name>"]}
             else:
                 return "\033[31m\n[Error] No such argument available\n\033[0m"
         return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
@@ -250,7 +254,20 @@ class CLI_Client:
                         job_id = command.split(" ")[2]
                         one_job = self.get_job_by_id(job_id)
                         print(one_job)
+            
+            elif "host" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "host"):
+                if command == "host":
+                    print(self.help("host"))
+                elif len(command.split(" "))>1 and command.split(" ")[1]!="":
+                    if command.split(" ")[1]=="get":
+                        all_hosted_files = self.get_all_hosted_files_func()
+                        to_display = {"\033[31mHosted Files\033[0m":all_hosted_files}
+                        print(str(tabulate(to_display, headers="keys", tablefmt="fancy_grid",showindex=True)))
 
+                    elif len(command.split(" "))>2 and command.split(" ")[1]=="rm":
+                        filename = command.split(" ")[2]
+                    elif len(command.split(" "))>2 and command.split()[1]=="file":
+                        local_path = command.split(" ")[2]
 
 
 
@@ -443,6 +460,15 @@ class CLI_Client:
             elif len(command.split(" "))>=2 and command.split()[0]=="module":
                 print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
         return '\033[91m'+"[-] Exiting shell\n"+ '\033[0m'
+
+    def get_all_hosted_files_func(self)->list:
+        output = self.craft_and_send_get_request("/hosted_files/get").content
+        all_hosted_files = json.loads(output)
+        if "result" in all_hosted_files.keys():
+            return all_hosted_files["result"]
+        else:
+            return []
+
 
     def get_call_for_one_agents(self,lock,object,agent_id):
         while not object.stop_interact:

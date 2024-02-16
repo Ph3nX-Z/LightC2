@@ -98,14 +98,17 @@ class HTTP_Handler:
 
             return ""
 
-        @listener.route("/hosted_file",methods=["GET"])
+        @listener.route("/hosted_files",methods=["GET"])
         def hosted_file():
-            if self._is_authorization_valid(request.headers):
-                print(request.args.get("file"))
+            if request.method == "GET":
+                #print(request.args.get("file"))
                 if "file" in request.args.keys():
-                    filename = request.args.get("file")
-                    if re.match(r"[a-z0-9A-Z.]+",filename):
-                        return send_from_directory(listener.instance_path.replace("libs/instance","")+"hosted_files/",f"{filename}")
+                    try:
+                        filename = str(base64.b64decode(request.args.get("file")).decode())
+                    except:
+                        return ""
+                    if re.match(r"[a-z0-9A-Z_-]+\.[a-z]{1,6}",filename):
+                        return send_from_directory(listener.instance_path.replace("instance","")+"handlers/hosted_files/",f"{filename}")
                     else:
                         return ""
             return ""
