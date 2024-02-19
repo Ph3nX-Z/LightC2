@@ -59,20 +59,20 @@ class ThreadSafe:
                             pass
 
                         elif char==readchar.key.UP:
-                            if abs(self.index)!=9:
+                            if abs(self.index)!=len(self.command)-1 and len(self.command_buffer)>0:
                                 self.index -= 1
-                            self.command = self.command_buffer[self.index]
-                            with self.lock:
-                                print("\r",end='\x1b[2K')
-                                print(f"{self.prompt}{self.command}",end="",flush=True)
+                                self.command = self.command_buffer[self.index]
+                                with self.lock:
+                                    print("\r",end='\x1b[2K')
+                                    print(f"{self.prompt}{self.command}",end="",flush=True)
 
                         elif char==readchar.key.DOWN:
-                            if self.index!=-1:
+                            if self.index!=-1 and len(self.command_buffer)>0:
                                 self.index += 1
-                            self.command = self.command_buffer[self.index]
-                            with self.lock:
-                                print("\r",end='\x1b[2K')
-                                print(f"{self.prompt}{self.command}",end="",flush=True)
+                                self.command = self.command_buffer[self.index]
+                                with self.lock:
+                                    print("\r",end='\x1b[2K')
+                                    print(f"{self.prompt}{self.command}",end="",flush=True)
                         
                         
                         elif char in [readchar.key.RIGHT,readchar.key.LEFT]:
