@@ -11,6 +11,7 @@ import datetime
 import base64
 import time
 from requests_toolbelt.multipart.encoder import MultipartEncoder
+from libs.client.modules import module_holder
 
 class CLI_Client:
 
@@ -492,14 +493,13 @@ class CLI_Client:
                 self.threadsafe.stop_interact = True
                 print("")
                 break
-            if len(command.split(" "))>=2 and command.split()[0]=="psh":
-                print(self.exec_agent(agent_to_keep["id"],"psh"," ".join(command.split()[1:])))
-            elif len(command.split(" "))>=2 and command.split()[0]=="psm":
-                print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
+            holder = module_holder.ModuleHolder()
+            if holder.is_module_installed(command.split()[0]):
+                output = holder.execute_module(self,command.split()[0],command.split(),agent_to_keep)
             elif command == "history":
                 print("\nOutputing last 10 commands/output for this agent\n")
-            elif len(command.split(" "))>=2 and command.split()[0]=="module":
-                print(self.exec_agent(agent_to_keep["id"],"psm"," ".join(command.split()[1:])))
+            else:
+                print('\n\033[91m'+"[Error] Invalid module"+ '\033[0m\n')
         return '\033[91m'+"[-] Exiting shell\n"+ '\033[0m'
 
     def get_all_hosted_files_func(self)->list:
