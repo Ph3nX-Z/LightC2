@@ -16,6 +16,7 @@ import json
 import hashlib
 import urllib3
 import glob
+from werkzeug.utils import secure_filename
 
 class C2_Rest_API:
 
@@ -622,11 +623,36 @@ class C2_Rest_API:
         
         @api.route("/hosted_files/upload",methods=["POST"])
         def host_file():
-            pass
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            if not "file" in request.files.keys():
+                return "[Error] Please provide a file"
+            file = request.files["file"]
+            location = self.api.instance_path.replace("instance","handlers/hosted_files/")
+            file.save(location + secure_filename(file.filename))
+            log_info(f"{username} hosted file : {file.filename}","success")
+            return "[Success] File successfully uploaded"
 
         @api.route("/hosted_files/rm",methods=["POST"])
         def remove_hosted_file():
-            pass
+            if not "X-Auth" in request.headers.keys() or not self.verify_token(request.headers["X-Auth"]):
+                log_info("Someone tried to access a webpage without being authenticated/giving a good password","error")
+                return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
+            else:
+                username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
+            data = request.json
+            if not "filename" in data.keys():
+                return "[Error] Please provide all the required fields"
+            else:
+                filename = data["filename"]
+            full_path = self.api.instance_path.replace("instance","handlers/hosted_files/")
+            if not self.remove_hosted_file(filename,full_path):
+                return "[Error] File does not exist"
+            log_info(f"{username} asked to remove a hosted file : {filename}","success")
+            return "[Success] Hosted file removed"
 
         @api.route("/hosted_files/get",methods=["GET"])
         def get_hosted_files():
@@ -647,7 +673,7 @@ class C2_Rest_API:
         self.api = api
         
     def start_api(self):
-        log_info("Starting Rest API","running")
+        log_info(f"Starting Rest API on {self.host}:{str(self.port)}","running")
         if not self.api:
             self.init_api()
         self.generate_listeners_from_db()
@@ -693,6 +719,16 @@ class C2_Rest_API:
 
         log_info(f"Re-Generated listeners from db","success")
         return None
+
+    def remove_hosted_file(self,filename,full_path)->bool:
+        if full_path+filename in glob.glob(full_path+"*"):
+            try:
+                os.remove(full_path+filename)
+            except:
+                return False
+            return True
+        else:
+            return False
 
     def gen_token(self,username:str)->tuple:
         previous_token = db_exec(get_token_from_username_full(username),self.db_path)

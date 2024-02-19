@@ -10,6 +10,7 @@ import re
 import datetime
 import base64
 import time
+from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 class CLI_Client:
 
@@ -32,7 +33,26 @@ class CLI_Client:
             else:
                 return requests.get(f"{self.teamserver_url}{request}",headers=self.headers)
         except requests.exceptions.ConnectionError:
+            if request != "/agents":
+                print("[Error] Connectivity check failed")
+    
+    def craft_and_send_file_request(self,request,filepath):
+        try:
+            encoder = MultipartEncoder(
+            fields = {'file': (filepath.split("/")[-1],open(filepath, 'rb'))}
+            )
+        except FileNotFoundError:
+            return "[Error] Local file not found"
+        headers = self.headers
+        headers["Content-Type"]=encoder.content_type
+        try:
+            if self.ssl:
+                return requests.post(f"{self.teamserver_url}{request}",verify=False,data=encoder,headers=self.headers)
+            else:
+                return requests.post(f"{self.teamserver_url}{request}",data=encoder,headers=self.headers)
+        except requests.exceptions.ConnectionError:
             print("[Error] Connectivity check failed")
+    
         
     def craft_and_send_post_request(self,request,data):
         try:
@@ -85,7 +105,7 @@ class CLI_Client:
             elif module == "jobs":
                 help_dict = {"\33[31mOption\33[0m":["\33[34mjobs\33[0m","\33[34mall\33[0m","\33[34mrunning\33[0m","\33[34mtasked\33[0m","\33[34mget\33[0m"],"\33[31mDescription\33[0m":["Get all the running jobs only","Get all jobs","Get only running jobs","Get only tasked jobs","Get a job by id"],"\33[31mUsage\33[0m":["jobs","jobs all","jobs running","jobs tasked","jobs get <job id>"]}
             elif module == "host":
-                help_dict = {"\33[31mOption\33[0m":["\33[34mfile\33[0m","\33[34mget\33[0m","\33[34mremove\33[0m",],"\33[31mDescription\33[0m":["Host a file on all the listeners","Get all the hosted files","Delete an hosted file by name"],"\33[31mUsage\33[0m":["host file <local file path>","host get","host remove <file name>"]}
+                help_dict = {"\33[31mOption\33[0m":["\33[34mfile\33[0m","\33[34mget\33[0m","\33[34mrm\33[0m",],"\33[31mDescription\33[0m":["Host a file on all the listeners","Get all the hosted files","Delete an hosted file by name"],"\33[31mUsage\33[0m":["host file <local file path>","host get","host remove <file name>"]}
             else:
                 return "\033[31m\n[Error] No such argument available\n\033[0m"
         return str(tabulate(help_dict, headers="keys", tablefmt="fancy_grid"))
@@ -266,8 +286,19 @@ class CLI_Client:
 
                     elif len(command.split(" "))>2 and command.split(" ")[1]=="rm":
                         filename = command.split(" ")[2]
+                        result = self.remove_hosted_file(filename)
+                        print("\n"+result+"\n")
                     elif len(command.split(" "))>2 and command.split()[1]=="file":
                         local_path = command.split(" ")[2]
+                        output = self.craft_and_send_file_request("/hosted_files/upload",local_path)
+                        if not isinstance(output,str):
+                            output = output.content.decode()
+                        if "[Error]" in output:
+                            result = "\033[31m"+output+"\033[0m"
+                        else:
+                            result = "\033[92m"+output+"\033[0m"
+                        
+                        print("\n"+result+"\n")
 
 
 
@@ -294,22 +325,25 @@ class CLI_Client:
 
         while not object.stop_thread:
             time.sleep(3)
-            current_agents_req = self.craft_and_send_get_request("/agents").content.decode()
-            num_agents_current = 0
-            if not '[Error]' in current_agents_req:
-                try:
-                    current_agents_json = json.loads(current_agents_req)["result"]
-                    for listener in current_agents_json.keys():
-                        num_agents_current += len(current_agents_json[listener].keys())
-                except json.decoder.JSONDecodeError:
-                    num_agents_current = num_agents_last
-                
-            if num_agents_current>num_agents_last:
-                num_agents_last = num_agents_current
-                with lock:
-                    object.altprint("\33[35m\n[+] Agent just checked in !\n\33[0m")
-            if num_agents_current<num_agents_last:
-                num_agents_last = num_agents_current
+            try:
+                current_agents_req = self.craft_and_send_get_request("/agents").content.decode()
+                num_agents_current = 0
+                if not '[Error]' in current_agents_req:
+                    try:
+                        current_agents_json = json.loads(current_agents_req)["result"]
+                        for listener in current_agents_json.keys():
+                            num_agents_current += len(current_agents_json[listener].keys())
+                    except json.decoder.JSONDecodeError:
+                        num_agents_current = num_agents_last
+                    
+                if num_agents_current>num_agents_last:
+                    num_agents_last = num_agents_current
+                    with lock:
+                        object.altprint("\33[35m\n[+] Agent just checked in !\n\33[0m")
+                if num_agents_current<num_agents_last:
+                    num_agents_last = num_agents_current
+            except AttributeError:
+                pass
 
 
         
@@ -393,6 +427,13 @@ class CLI_Client:
                 return requests.get(f"{self.teamserver_url}/").status_code==200
         except requests.exceptions.ConnectionError:
             return False
+        
+    def remove_hosted_file(self,filename):
+        output = self.craft_and_send_post_request("/hosted_files/rm",{"filename":filename})
+        if "[Error]" in output.content.decode():
+            return "\033[31m"+output.content.decode()+"\033[0m"
+        else:
+            return '\033[92m'+output.content.decode()+"\033[0m"
     
     def check_auth(self):
         output = self.craft_and_send_get_request("/auth")
