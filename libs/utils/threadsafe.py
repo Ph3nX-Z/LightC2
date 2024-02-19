@@ -11,6 +11,8 @@ class ThreadSafe:
         self.prompt = prompt
         self.stop_thread = False
         self.stop_interact = False
+        self.command_buffer = []
+        self.index = -1
 
 
     def thread_inputsafe(self,func):
@@ -41,6 +43,10 @@ class ThreadSafe:
                             #print("\n"+self.command,flush=True)
                             command_output,self.command = self.command,""
                             print(flush=True)
+                            self.command_buffer.append(command_output)
+                            while len(self.command_buffer)>10:
+                                self.command_buffer.pop(0)
+                            self.index = 0
                             return command_output
 
                         elif char==readchar.key.BACKSPACE:
@@ -49,6 +55,27 @@ class ThreadSafe:
                                 print("\r",end='\x1b[2K')
                                 print(f"{self.prompt}{self.command}",end="",flush=True)
                         elif char==readchar.key.CTRL_C:
+                            self.index = 0
+                            pass
+
+                        elif char==readchar.key.UP:
+                            if abs(self.index)!=9:
+                                self.index -= 1
+                            self.command = self.command_buffer[self.index]
+                            with self.lock:
+                                print("\r",end='\x1b[2K')
+                                print(f"{self.prompt}{self.command}",end="",flush=True)
+
+                        elif char==readchar.key.DOWN:
+                            if self.index!=-1:
+                                self.index += 1
+                            self.command = self.command_buffer[self.index]
+                            with self.lock:
+                                print("\r",end='\x1b[2K')
+                                print(f"{self.prompt}{self.command}",end="",flush=True)
+                        
+                        
+                        elif char in [readchar.key.RIGHT,readchar.key.LEFT]:
                             pass
                             
                         else:
