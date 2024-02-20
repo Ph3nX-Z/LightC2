@@ -88,6 +88,7 @@ tool usage:
 | Nim Agent | Agent  |  In progress|
 | thread safe input func | Cli Client  |  Implemented|
 | thread safe print func | Cli Client  |  Implemented|
+| Ekko sleep obfuscation | Agent | Implemented |
 
 
 ### Note to me
