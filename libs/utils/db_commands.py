@@ -115,7 +115,7 @@ def get_jobs_running()->str:
     return command
 
 def get_jobs_all()->str:
-    command = "SELECT * FROM jobs LIMIT 100;"
+    command = "SELECT * FROM jobs ORDER BY id DESC LIMIT 100;"
     return command
 
 def get_jobs_tasked()->str:

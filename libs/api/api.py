@@ -460,7 +460,7 @@ class C2_Rest_API:
                 return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
             else:
                 username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
-            log_info(f"'{username}' asked for the agent list","running")
+            #log_info(f"'{username}' asked for the agent list","running")
             all_agents = {}
             for listener_id in self.all_listeners.keys():
                 listener = self.all_listeners[listener_id]
@@ -473,7 +473,7 @@ class C2_Rest_API:
                     headers = {"X-Auth":admin_key,"Accept":"application/json","Content-Type":"application/json"}
                     all_listener_agents = requests.get(url,headers=headers,verify=False).json()
                     all_agents[f"{listener.host}:{listener.port}"]=all_listener_agents
-            log_info(f"Agent list provided to '{username}'","success")
+            #log_info(f"Agent list provided to '{username}'","success")
             return json.dumps({"result":all_agents})
         
         @api.route("/agents/exec",methods=["POST"])
@@ -493,6 +493,7 @@ class C2_Rest_API:
                 return "[Error] Some fields contain invalid data"
             arguments = base64.b64encode(arguments.encode()).decode()
             db_exec(add_job_to_db(agent_id,method,arguments),self.db_path)
+            log_info(f"{username} sent a command","success")
             return "[Success] Job added to db"
         
         @api.route("/jobs",methods=["GET"])
@@ -534,7 +535,7 @@ class C2_Rest_API:
                 return "[Error] Please provide an API Key via X-Auth or correct the one you gave"
             else:
                 username = db_exec(get_user_from_token(request.headers["X-Auth"]),self.db_path)[0][0]
-            log_info(f"Giving all the jobs to {username}","running")
+            #log_info(f"Giving all the jobs to {username}","running")
             all_jobs = db_exec(get_jobs_all(),self.db_path)
             jobs_dict = {}
             all_agents = {}
@@ -556,7 +557,7 @@ class C2_Rest_API:
                 else:
                     agent_name = "Unknown"
                 jobs_dict[job[0]]={"agent":agent_name,"agent_id":job[1],"module":job[2],"argument":job[3],"output":job[4],"date_started":job[5],"status":job[6],"displayed":job[7]}
-            log_info(f"All jobs given to {username}","success")
+            #log_info(f"All jobs given to {username}","success")
             return jobs_dict
         
         @api.route("/jobs/tasked",methods=["GET"])

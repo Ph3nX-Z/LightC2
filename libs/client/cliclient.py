@@ -44,13 +44,13 @@ class CLI_Client:
             )
         except FileNotFoundError:
             return "[Error] Local file not found"
-        headers = self.headers
+        headers = dict(self.headers)
         headers["Content-Type"]=encoder.content_type
         try:
             if self.ssl:
-                return requests.post(f"{self.teamserver_url}{request}",verify=False,data=encoder,headers=self.headers)
+                return requests.post(f"{self.teamserver_url}{request}",verify=False,data=encoder,headers=headers)
             else:
-                return requests.post(f"{self.teamserver_url}{request}",data=encoder,headers=self.headers)
+                return requests.post(f"{self.teamserver_url}{request}",data=encoder,headers=headers)
         except requests.exceptions.ConnectionError:
             print("[Error] Connectivity check failed")
     

