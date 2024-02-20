@@ -494,12 +494,13 @@ class CLI_Client:
                 print("")
                 break
             holder = module_holder.ModuleHolder()
-            if holder.is_module_installed(command.split()[0]):
-                output = holder.execute_module(self,command.split()[0],command.split(),agent_to_keep)
-            elif command == "history":
-                print("\nOutputing last 10 commands/output for this agent\n")
-            else:
-                print('\n\033[91m'+"[Error] Invalid module"+ '\033[0m\n')
+            if len(command.split())>0:
+                if holder.is_module_installed(command.split()[0]):
+                    output = holder.execute_module(self,command.split()[0],command.split(),agent_to_keep)
+                elif command == "history":
+                    print("\nOutputing last 10 commands/output for this agent\n")
+                else:
+                    print('\n\033[91m'+"[Error] Invalid module"+ '\033[0m\n')
         return '\033[91m'+"[-] Exiting shell\n"+ '\033[0m'
 
     def get_all_hosted_files_func(self)->list:
