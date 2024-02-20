@@ -291,7 +291,7 @@ class CLI_Client:
                         print("\n"+result+"\n")
                     elif len(command.split(" "))>2 and command.split()[1]=="file":
                         local_path = command.split(" ")[2]
-                        output = self.craft_and_send_file_request("/hosted_files/upload",local_path)
+                        output = self.upload_file(local_path)
                         if not isinstance(output,str):
                             output = output.content.decode()
                         if "[Error]" in output:
@@ -312,6 +312,9 @@ class CLI_Client:
             self.threadsafe.stop_thread = True
             print('\033[91m'+"[-] Quitting C2, killing threads"+ '\033[0m')
         
+    def upload_file(self,filepath):
+        return self.craft_and_send_file_request("/hosted_files/upload",filepath)
+
 
     def notify_new_agents(self,lock,object):
         if not self.check_auth():

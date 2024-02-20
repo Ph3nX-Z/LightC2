@@ -1,12 +1,17 @@
 from libs.client.modules.whoami import *
-
+from libs.client.modules.steal_token import *
+from libs.client.modules.rev2self import *
+from libs.client.modules.powershell import *
 
 class ModuleHolder:
 
     def __init__(self):
         self.modules = {
             "execute-assembly":"",
-            "whoami":Whoami
+            "steal-token":StealToken,
+            "rev2self":Rev2Self,
+            "whoami":Whoami,
+            "powershell":Powershell
         }
 
     

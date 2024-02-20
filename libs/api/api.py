@@ -489,7 +489,7 @@ class C2_Rest_API:
             agent_id = data["agent_id"]
             method = data["method"]
             arguments = data["arguments"]
-            if not re.match(r"^[a-zA-Z0-9]+$",agent_id) or not re.match(r"^[a-z0-9A-Z_]+$",method):
+            if not re.match(r"^[a-zA-Z0-9]+$",agent_id) or not re.match(r"^[a-z0-9A-Z_-]+$",method):
                 return "[Error] Some fields contain invalid data"
             arguments = base64.b64encode(arguments.encode()).decode()
             db_exec(add_job_to_db(agent_id,method,arguments),self.db_path)

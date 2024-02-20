@@ -1,4 +1,4 @@
-class Whoami:
+class Powershell:
 
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
@@ -6,4 +6,4 @@ class Whoami:
         self.agent = agent
     
     def run(self):
-        self.ts.exec_agent(self.agent["id"],"whoami","")
+        self.ts.exec_agent(self.agent["id"],"psh"," ".join(self.entire_command[1:]))
