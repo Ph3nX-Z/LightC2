@@ -1,5 +1,8 @@
 class Rev2Self:
 
+    describe_module = "Revert token to default"
+    usage = "rev2self"
+
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
         self.entire_command = entire_command

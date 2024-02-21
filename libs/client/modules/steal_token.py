@@ -1,5 +1,8 @@
 class StealToken:
 
+    describe_module = "Steal the token of a process (can steal NT token)"
+    usage = "steal_token <pid>"
+
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
         self.entire_command = entire_command

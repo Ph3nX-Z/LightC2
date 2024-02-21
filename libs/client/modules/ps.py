@@ -1,5 +1,8 @@
 class GetProcess:
 
+    describe_module = "Display a process list"
+    usage = "ps"
+
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
         self.entire_command = entire_command

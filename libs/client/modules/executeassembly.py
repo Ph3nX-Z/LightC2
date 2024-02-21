@@ -1,9 +1,13 @@
 class ExecuteAssembly:
 
+    describe_module = "Execute .net executable via execute assembly"
+    usage = "execute-assembly <assembly local path> <args>"
+
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
         self.entire_command = entire_command
         self.agent = agent
+        
     
     def run(self):
         self.ts.upload_file(self.entire_command[1])

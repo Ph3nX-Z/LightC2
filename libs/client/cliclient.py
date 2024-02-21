@@ -251,7 +251,8 @@ class CLI_Client:
                 elif len(command.split(" "))>1 and command.split(" ")[1]!="":
                     if command.split(" ")[1]=="interact" and len(command.split(" "))>2 and command.split(" ")[2]!="":
                         id_agent = command.split(" ")[2]
-                        self.threadsafe.thread_inputsafe_arg(self.get_call_for_one_agents,id_agent)
+                        self.threadsafe_interact = ThreadSafe()
+                        self.threadsafe_interact.thread_inputsafe_arg(self.get_call_for_one_agents,id_agent)
                         print(self.interact_with_agent(id_agent))
             
             elif "jobs" in command and (len(command.split(" "))>=1 and command.split(" ")[0] == "jobs"):
@@ -475,25 +476,25 @@ class CLI_Client:
                     agent_to_keep = all_agents["result"][listener][agent]
                     listener_to_keep = listener
         if not (listener_to_keep and agent_to_keep):
-            self.threadsafe.stop_interact = True
+            self.threadsafe_interact.stop_interact = True
             return "\n\033[31m[Error] Check your agent id\033[0m\n"
         print('\n\033[92m'+"[Success] Getting semi-interactive shell\n\033[0m")
         print(gen_shell())
         while True:
             try:
-                command = self.threadsafe.safeinput(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
+                command = self.threadsafe_interact.safeinput(f"\033[31m[{agent_to_keep['name']}] #> \033[0m")
             except KeyboardInterrupt:
-                self.threadsafe.stop_interact = True
+                self.threadsafe_interact.stop_interact = True
                 print('\033[91m'+"\n\n[CTRL+C] Exiting !"+ '\033[0m')
                 break
             if not self.is_api_alive():
-                self.threadsafe.stop_interact = True
+                self.threadsafe_interact.stop_interact = True
                 print('\033[91m'+"[Error] Disconnected from teamserver"+ '\033[0m')
                 break
             if not self.check_auth():
                 self.authenticate()
             if command=="exit":
-                self.threadsafe.stop_interact = True
+                self.threadsafe_interact.stop_interact = True
                 print("")
                 break
             holder = module_holder.ModuleHolder()
@@ -504,6 +505,8 @@ class CLI_Client:
                     print("\nOutputing last 10 commands/output for this agent\n")
                 else:
                     print('\n\033[91m'+"[Error] Invalid module"+ '\033[0m\n')
+        self.threadsafe_interact.stop_interact = True
+        self.threadsafe_interact = None
         return '\033[91m'+"[-] Exiting shell\n"+ '\033[0m'
 
     def get_all_hosted_files_func(self)->list:

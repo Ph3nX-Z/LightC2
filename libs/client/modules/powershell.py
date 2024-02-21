@@ -1,5 +1,8 @@
 class Powershell:
 
+    describe_module = "Execute powershell commands"
+    usage = "powershell <args>"
+
     def __init__(self,teamserver_obj,entire_command,agent):
         self.ts = teamserver_obj
         self.entire_command = entire_command
