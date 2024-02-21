@@ -32,7 +32,7 @@ proc random_sleep(sleep_time:int):int =
 proc main() =
     randomize()
     var secret_key = "RkRrcitEQ28hYTwsWGNpMWJfPGZAczJIT0Z0dXJMMilBdSpHXipqaENmTmU="
-    var url = "https://192.168.0.40/"
+    var url = "https://192.168.79.73/"
     var identifier = $(int(rand(float(100000000000000000))))
     var sleep_time = 1
     #echo $(random_sleep(sleep_time))
