@@ -74,6 +74,8 @@ tool usage:
 
 ![image](https://github.com/Ph3nX-Z/LightC2/assets/66122220/be3b26a5-177c-46d2-ab4f-e277be5ff5b0)
 
+![image](https://github.com/Ph3nX-Z/LightC2/assets/66122220/11f8e13d-d9f4-473f-b609-a077825b2ec9)
+
 
 ## Features
 
